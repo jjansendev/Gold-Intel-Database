@@ -17,7 +17,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - name: Get the current data branch
         env:
@@ -28,13 +28,14 @@ jobs:
           rm -rf data-old/.git
           mkdir -p data && cp -a data-old/. data/
 
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: "3.12"
 
       - name: Fetch auction houses
         env:
-          BLIZZARD_CLIENT_ID: ${{ secrets.BLIZZARD_CLIENT_ID }}
+          # The client ID isn't secret, so a repository *variable* works too; the client secret must be a secret.
+          BLIZZARD_CLIENT_ID: ${{ secrets.BLIZZARD_CLIENT_ID || vars.BLIZZARD_CLIENT_ID }}
           BLIZZARD_CLIENT_SECRET: ${{ secrets.BLIZZARD_CLIENT_SECRET }}
           REGION: us
           RULESET: "1"           # 1 PvP, 2 Normal, 3 RP, 15 RP-PvP (all currently return the same houses)

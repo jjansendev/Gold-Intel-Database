@@ -223,8 +223,10 @@ def main() -> int:
     ap.add_argument("--item-limit", type=int, default=int(os.environ.get("ITEM_LIMIT", "400")))
     a = ap.parse_args()
     cid, sec = os.environ.get("BLIZZARD_CLIENT_ID"), os.environ.get("BLIZZARD_CLIENT_SECRET")
-    if not cid or not sec:
-        print("BLIZZARD_CLIENT_ID / BLIZZARD_CLIENT_SECRET are not set (add them as repository secrets).",
+    missing = [n for n, v in (("BLIZZARD_CLIENT_ID", cid), ("BLIZZARD_CLIENT_SECRET", sec)) if not v]
+    if missing:
+        print(f"::error::Missing {', '.join(missing)}. Add it under Settings -> Secrets and variables -> "
+              "Actions -> 'Repository secrets' (not 'Environment secrets'), with exactly that name in capitals.",
               file=sys.stderr)
         return 2
     summary = run(Api(a.region, cid, sec), Path(a.out), a.ruleset, a.keep_hours, a.item_limit)
