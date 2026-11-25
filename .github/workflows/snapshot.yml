@@ -1,0 +1,55 @@
+name: Auction snapshot
+
+on:
+  schedule:
+    - cron: "23 * * * *"        # hourly at :23 (UTC); GitHub may start a few minutes late
+  workflow_dispatch: {}          # "Run workflow" button for a manual run
+
+permissions:
+  contents: write                # push the data branch, nothing else
+
+concurrency:
+  group: snapshot
+  cancel-in-progress: false
+
+jobs:
+  snapshot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Get the current data branch
+        env:
+          TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git clone -q --depth 1 --branch data \
+            "https://x-access-token:${TOKEN}@github.com/${GITHUB_REPOSITORY}.git" data-old || mkdir -p data-old
+          rm -rf data-old/.git
+          mkdir -p data && cp -a data-old/. data/
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Fetch auction houses
+        env:
+          BLIZZARD_CLIENT_ID: ${{ secrets.BLIZZARD_CLIENT_ID }}
+          BLIZZARD_CLIENT_SECRET: ${{ secrets.BLIZZARD_CLIENT_SECRET }}
+          REGION: us
+          RULESET: "1"           # 1 PvP, 2 Normal, 3 RP, 15 RP-PvP (all currently return the same houses)
+          KEEP_HOURS: "24"
+        run: python fetch.py --out data
+
+      - name: Publish (one commit, force-pushed, so the repo never grows)
+        env:
+          TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          cd data
+          git init -q -b data
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -q -m "Snapshot $(date -u +%Y-%m-%dT%H:%MZ)"
+          git push -q --force "https://x-access-token:${TOKEN}@github.com/${GITHUB_REPOSITORY}.git" data:data
+          du -sh . | cut -f1 | xargs echo "data branch size:"
