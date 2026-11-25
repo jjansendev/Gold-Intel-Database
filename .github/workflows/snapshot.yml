@@ -40,6 +40,7 @@ jobs:
           REGION: us
           RULESET: "1"           # 1 PvP, 2 Normal, 3 RP, 15 RP-PvP (all currently return the same houses)
           KEEP_HOURS: "24"
+          HISTORY_DAYS: "30"     # daily history; Blizzard's terms: refresh or delete within 30 days
         run: python fetch.py --out data
 
       - name: Publish (one commit, force-pushed, so the repo never grows)

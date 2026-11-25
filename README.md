@@ -10,8 +10,10 @@ Hourly auction-house snapshots for **World of Warcraft: Forever (US)**, fetched 
   - `manifest.json`: houses, the list of snapshots (house, `items`/`commodities`, Blizzard's Last-Modified time, sha256, size) and any errors from the last run.
   - `snapshots/<house>/<scope>-<ms>.json.gz`: the API response as Blizzard sent it, gzipped.
   - `items.json.gz`: item name, quality, level and vendor price for every item seen. Each entry is refreshed within 25 days.
+  - `history/<house>/<day>.json.gz`: one row per item per finished UTC day: min, p10, median, mean, max, market value, units and listings (per snapshot), snapshot count, outliers removed and a thin-market flag, plus demand (units of auctions gone with 12h+ left, time covered, snapshot pairs). Computed by the same rules as Gold Intel's own daily rollups. Listed under `history` in the manifest with sha256.
+  - `history/partial/<house>/<day>.json.gz`: the day in progress; folded into the above about 3 hours after the day ends (UTC).
 
-Snapshots are kept for 24 hours (`KEEP_HOURS`). Blizzard's API terms require data to be refreshed or deleted within 30 days.
+Snapshots are kept for 24 hours (`KEEP_HOURS`), daily history for 30 days (`HISTORY_DAYS`). Blizzard's API terms require data to be refreshed or deleted within 30 days.
 
 ## Setup (owner)
 1. **Settings → Secrets and variables → Actions → New repository secret:** add `BLIZZARD_CLIENT_ID` and `BLIZZARD_CLIENT_SECRET` (from develop.battle.net).
