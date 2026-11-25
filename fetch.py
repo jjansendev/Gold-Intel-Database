@@ -147,7 +147,8 @@ def fetch_item(api: Api, iid: int, now: int) -> dict:
             return {"name": d.get("name"), "quality": {"POOR": 0, "COMMON": 1, "UNCOMMON": 2, "RARE": 3,
                                                        "EPIC": 4, "LEGENDARY": 5}.get(q),
                     "level": d.get("level"), "required_level": d.get("required_level"),
-                    "sell_price": d.get("sell_price"), "source": src, "fetched_at": now}
+                    "sell_price": d.get("sell_price"), "source": src, "fetched_at": now,
+                    "class": (d.get("item_class") or {}).get("id"), "subclass": (d.get("item_subclass") or {}).get("id")}
     return {"missing": True, "fetched_at": now}
 
 
@@ -409,7 +410,9 @@ def run(api: Api, out: Path, ruleset: int, keep_hours: float, item_limit: int, n
 
     items = load_items(out)
     todo = sorted(i for i in seen_items if str(i) not in items)
-    todo += sorted((int(k) for k, v in items.items() if t0 - v.get("fetched_at", 0) > ITEM_TTL_MS),
+    # expired, or fetched before item class was recorded (disenchant values need it)
+    todo += sorted((int(k) for k, v in items.items()
+                    if t0 - v.get("fetched_at", 0) > ITEM_TTL_MS or (not v.get("missing") and "class" not in v)),
                    key=lambda k: items[str(k)].get("fetched_at", 0))
     fetched = 0
     for iid in todo[:item_limit]:
