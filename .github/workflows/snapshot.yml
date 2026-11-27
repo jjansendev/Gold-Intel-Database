@@ -43,6 +43,12 @@ jobs:
           HISTORY_DAYS: "30"     # daily history; Blizzard's terms: refresh or delete within 30 days
         run: python fetch.py --out data
 
+      - name: Recipe database (weekly; WoW Forever client tables via wago.tools)
+        continue-on-error: true        # never blocks the auction data
+        env:
+          FOREVER_BUILD: ${{ vars.FOREVER_BUILD || '1.60.1.71139' }}
+        run: python recipes.py --out data
+
       - name: Publish (one commit, force-pushed, so the repo never grows)
         env:
           TOKEN: ${{ secrets.GITHUB_TOKEN }}

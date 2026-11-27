@@ -435,6 +435,9 @@ def run(api: Api, out: Path, ruleset: int, keep_hours: float, item_limit: int, n
                   "pending": max(0, len(todo) - fetched)},
         "errors": errors[:50],
     }
+    prev = load_manifest(out)
+    if prev.get("recipes"):                      # written by recipes.py (weekly); keep it listed
+        manifest["recipes"] = prev["recipes"]
     (out / "manifest.json").write_text(json.dumps(manifest, indent=1))
     return {"houses": len(houses), "new_snapshots": new, "kept": len(snaps), "items_fetched": fetched,
             "items_pending": manifest["items"]["pending"], "errors": len(errors), "history_days": len({h["day"] for h in history}),
