@@ -165,16 +165,21 @@ def build_recipes(t: dict[str, list[dict]]) -> dict:
             items.add(makes[0])
         if teach:
             items.add(teach[0])
+    # every item in the client (not only recipe ones): names and vendor prices straight from Forever's
+    # game data, so the app never uses Retail's vendor prices or shows "Item 14047"
     item_info = {}
-    for i in sorted(items):
-        s = sparse.get(i)
-        if s:
-            item_info[str(i)] = {"name": s.get("Display_lang") or None, "buy": _i(s.get("BuyPrice")) or None,
-                                 "sell": _i(s.get("SellPrice")) or None}
+    for i, s in sorted(sparse.items()):
+        name = s.get("Display_lang") or None
+        if not name and i not in items:
+            continue
+        e = {"name": name, "buy": _i(s.get("BuyPrice")) or None, "sell": _i(s.get("SellPrice")) or None,
+             "q": _i(s.get("OverallQualityID"), None), "ilvl": _i(s.get("ItemLevel"), None) or None,
+             "req": _i(s.get("RequiredLevel"), None) or None}
+        item_info[str(i)] = {k: v for k, v in e.items() if v is not None}
     by_prof = defaultdict(int)
     for r in recipes:
         by_prof[r["profession"]] += 1
-    return {"format": 1, "build": BUILD, "professions": {str(k): v for k, v in PROFESSIONS.items()},
+    return {"format": 1, "items_scope": "all", "build": BUILD, "professions": {str(k): v for k, v in PROFESSIONS.items()},
             "recipes": recipes, "items": item_info, "counts": dict(by_prof), "skipped": dict(skipped),
             "source": f"WoW: Forever client tables (build {BUILD}) via wago.tools; Blizzard Entertainment's game data"}
 
@@ -189,7 +194,7 @@ def run(out: Path, cache: Path | None = None, force: bool = False, now: int | No
     man_path = out / "manifest.json"
     man = json.loads(man_path.read_text()) if man_path.exists() else {}
     cur = man.get("recipes") or {}
-    if not force and cur.get("build") == BUILD and now - (cur.get("generated_at") or 0) < MAX_AGE_MS \
+    if not force and cur.get("items_scope") == "all" and cur.get("build") == BUILD and now - (cur.get("generated_at") or 0) < MAX_AGE_MS \
             and (out / "recipes.json.gz").exists():
         print(f"recipes: up to date ({cur.get('count')} recipes, build {BUILD})")
         return cur
@@ -197,7 +202,7 @@ def run(out: Path, cache: Path | None = None, force: bool = False, now: int | No
     payload = build_recipes(tables)
     raw = json.dumps(payload, separators=(",", ":"), sort_keys=True).encode()
     (out / "recipes.json.gz").write_bytes(gzip.compress(raw, mtime=0))
-    entry = {"path": "recipes.json.gz", "build": BUILD, "generated_at": now, "count": len(payload["recipes"]),
+    entry = {"path": "recipes.json.gz", "build": BUILD, "items_scope": "all", "items": len(payload["items"]), "generated_at": now, "count": len(payload["recipes"]),
              "sha256": hashlib.sha256(raw).hexdigest()}
     man = json.loads(man_path.read_text()) if man_path.exists() else {}
     man["recipes"] = entry
