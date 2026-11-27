@@ -2,7 +2,10 @@ name: Auction snapshot
 
 on:
   schedule:
-    - cron: "23 * * * *"        # hourly at :23 (UTC); GitHub may start a few minutes late
+    # GitHub runs scheduled jobs late or skips them (hourly cron fired every 4-10 h), so each run
+    # stays up ~5.5 h and takes a snapshot every hour itself. Hourly snapshots are what make the
+    # demand numbers trustworthy (auctions last 2/8/24 h).
+    - cron: "23 */3 * * *"
   workflow_dispatch: {}          # "Run workflow" button for a manual run
 
 permissions:
@@ -15,7 +18,7 @@ concurrency:
 jobs:
   snapshot:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 350
     steps:
       - uses: actions/checkout@v5
 
@@ -32,7 +35,7 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Fetch auction houses
+      - name: Fetch and publish every hour for ~5.5 h
         env:
           # The client ID isn't secret, so a repository *variable* works too; the client secret must be a secret.
           BLIZZARD_CLIENT_ID: ${{ secrets.BLIZZARD_CLIENT_ID || vars.BLIZZARD_CLIENT_ID }}
@@ -41,23 +44,24 @@ jobs:
           RULESET: "1"           # 1 PvP, 2 Normal, 3 RP, 15 RP-PvP (all currently return the same houses)
           KEEP_HOURS: "24"
           HISTORY_DAYS: "30"     # daily history; Blizzard's terms: refresh or delete within 30 days
-        run: python fetch.py --out data
-
-      - name: Recipe database (weekly; WoW Forever client tables via wago.tools)
-        continue-on-error: true        # never blocks the auction data
-        env:
           FOREVER_BUILD: ${{ vars.FOREVER_BUILD || '1.60.1.71139' }}
-        run: python recipes.py --out data
-
-      - name: Publish (one commit, force-pushed, so the repo never grows)
-        env:
           TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          LOOP_MINUTES: ${{ github.event_name == 'workflow_dispatch' && '0' || '330' }}
         run: |
-          cd data
-          git init -q -b data
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A
-          git commit -q -m "Snapshot $(date -u +%Y-%m-%dT%H:%MZ)"
-          git push -q --force "https://x-access-token:${TOKEN}@github.com/${GITHUB_REPOSITORY}.git" data:data
-          du -sh . | cut -f1 | xargs echo "data branch size:"
+          start=$(date +%s)
+          publish() {
+            ( cd data && rm -rf .git && git init -q -b data \
+              && git config user.name "github-actions[bot]" \
+              && git config user.email "41898282+github-actions[bot]@users.noreply.github.com" \
+              && git add -A && git commit -q -m "Snapshot $(date -u +%Y-%m-%dT%H:%MZ)" \
+              && git push -q --force "https://x-access-token:${TOKEN}@github.com/${GITHUB_REPOSITORY}.git" data:data \
+              && du -sh . | cut -f1 | xargs echo "data branch size:" )
+          }
+          while true; do
+            python fetch.py --out data || echo "::warning::fetch failed this round"
+            python recipes.py --out data || echo "::warning::recipe database not refreshed"
+            publish || echo "::warning::publish failed this round"
+            elapsed=$(( ($(date +%s) - start) / 60 ))
+            if [ $(( elapsed + 62 )) -gt "$LOOP_MINUTES" ]; then break; fi
+            sleep $(( 3600 - ($(date +%s) - start) % 3600 ))
+          done

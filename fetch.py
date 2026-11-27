@@ -34,6 +34,9 @@ from email.utils import parsedate_to_datetime
 from pathlib import Path
 from statistics import median
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import lifecycle  # noqa: E402  (demand classifier, shared with Gold Intel)
+
 FORMAT = 1
 TOKEN_URL = "https://oauth.battle.net/token"
 UA = "ForeverGoldIntel-DataRepo/1.0"
@@ -41,8 +44,6 @@ ITEM_TTL_MS = 25 * 86_400_000
 DAY_MS = 86_400_000
 HISTORY_FORMAT = 1
 FINALIZE_GRACE_MS = 3 * 3_600_000      # a day is folded once its last hour has surely been fetched
-MAX_PAIR_GAP_MS = 48 * 3_600_000
-EARLY = ("LONG", "VERY_LONG")
 DAY_FIELDS = ["min_unit", "p10_unit", "median_unit", "mean_unit", "max_unit", "market_value",
               "units_listed", "listings", "snapshots", "outliers_removed", "thin"]
 ATTRIBUTION = ("Auction data from the Blizzard Battle.net API (World of Warcraft: Forever). "
@@ -177,7 +178,7 @@ def _int(v):
 
 
 def parse_house(raw: bytes) -> tuple[dict, dict]:
-    """-> ({item_key: [(unit, qty), ...]} buyout listings, {auction_id: (item_key, qty, time_left)})."""
+    """-> ({item_key: [(unit, qty), ...]} buyout listings, {auction_id: (item_key, qty, unit, time_left)})."""
     listings, refs = {}, {}
     try:
         doc = json.loads(raw)
@@ -197,7 +198,7 @@ def parse_house(raw: bytes) -> tuple[dict, dict]:
             tl = str(a.get("time_left") or "UNKNOWN").upper()
         except (ValueError, TypeError, AttributeError):
             continue
-        refs[f"bz:{aid}"] = (key, qty, tl)
+        refs[f"bz:{aid}"] = (key, qty, unit, tl)
         if unit is not None:
             listings.setdefault(key, []).append((unit, qty))
     return listings, refs
@@ -281,6 +282,7 @@ def update_history(out: Path, snaps: list[dict], houses: list[dict], old: list[d
         if k not in partials:
             p = out / f"history/partial/{house}/{day}.json.gz"
             partials[k] = _read_gz_json(p) or {"day": day, "house_id": house, "snaps": [], "items": {}, "demand": {}}
+            partials[k].setdefault("demand2", {})
         return partials[k]
 
     for f in (out / "history/partial").glob("*/*.json.gz") if (out / "history/partial").exists() else []:
@@ -312,17 +314,13 @@ def update_history(out: Path, snaps: list[dict], houses: list[dict], old: list[d
                     if st:
                         d["items"].setdefault(key, []).append(st)
                 prev = series[i - 1] if i else None
-                if prev and 0 < s["last_modified"] - prev["last_modified"] <= MAX_PAIR_GAP_MS:
+                if prev and 0 < s["last_modified"] - prev["last_modified"] <= lifecycle.MAX_GAP_MS:
                     gap = s["last_modified"] - prev["last_modified"]
                     _, before = load(prev)
-                    removed: dict[str, int] = {}
-                    for ref, (key, qty, tl) in before.items():
-                        removed[key] = removed.get(key, 0) + (qty if ref not in refs and tl in EARLY else 0)
-                    for key, _q, _t in refs.values():
-                        removed.setdefault(key, 0)
-                    for key, n in removed.items():
-                        r = d["demand"].setdefault(key, [0, 0, 0])
-                        r[0] += n; r[1] += gap; r[2] += 1
+                    # demand v2: bought / gone before it could expire / maybe expired (lifecycle.py,
+                    # the same module Gold Intel runs on its own snapshots)
+                    for key, row in lifecycle.classify_pair(before, refs, gap, s["scope"] == "commodities").items():
+                        d["demand2"][key] = lifecycle.add(d["demand2"].get(key), row)
                 d["snaps"].append(sid)
             except (OSError, ValueError) as e:
                 errors.append(f"history {s['path']}: {e}")
@@ -334,7 +332,8 @@ def update_history(out: Path, snaps: list[dict], houses: list[dict], old: list[d
             doc = {"format": HISTORY_FORMAT, "house_id": house, "house_name": names.get(house, ""), "day": day,
                    "snapshots": len(d["snaps"]), "fields": DAY_FIELDS,
                    "items": {k: fold_day(v) for k, v in sorted(d["items"].items()) if v},
-                   "demand": {k: v for k, v in sorted(d["demand"].items())}}
+                   "demand2_fields": lifecycle.FIELDS, "demand_version": lifecycle.VERSION,
+                   "demand2": {k: v for k, v in sorted((d.get("demand2") or {}).items())}}
             raw = json.dumps(doc, separators=(",", ":")).encode()
             rel = f"history/{house}/{day}.json.gz"
             data = gz(raw)
