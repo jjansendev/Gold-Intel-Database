@@ -111,6 +111,12 @@ def build_recipes(t: dict[str, list[dict]]) -> dict:
                 if sp not in teaches or rank < teaches[sp][1]:
                     teaches[sp] = (item, rank)
 
+    cooldown: dict[int, int] = {}
+    for r in t.get("SpellCooldowns") or []:
+        if _i(r.get("DifficultyID")) == 0:
+            cd = max(_i(r.get("RecoveryTime")), _i(r.get("CategoryRecoveryTime")))
+            if cd > 0:
+                cooldown[_i(r["SpellID"])] = cd
     recipes, skipped, items = [], defaultdict(int), set()
     reagents_of: dict[int, list] = {}
     for r in t["SpellReagents"]:
@@ -158,7 +164,8 @@ def build_recipes(t: dict[str, list[dict]]) -> dict:
         rec = {"id": sp, "name": names.get(sp) or f"Spell {sp}", "skill": sl, "profession": PROFESSIONS[sl],
                "reagents": [[a, b] for a, b in reagents], "makes": makes,
                "orange": orange, "orange_source": orange_src, "yellow": yellow, "green": green, "grey": grey,
-               "learn": learn, "teach_item": teach[0] if teach else None, "teach_skill": teach[1] if teach else None}
+               "learn": learn, "teach_item": teach[0] if teach else None, "teach_skill": teach[1] if teach else None,
+               "cooldown_ms": cooldown.get(sp) or None}
         recipes.append(rec)
         items.update(a for a, _ in reagents)
         if makes:
@@ -184,7 +191,7 @@ def build_recipes(t: dict[str, list[dict]]) -> dict:
             "source": f"WoW: Forever client tables (build {BUILD}) via wago.tools; Blizzard Entertainment's game data"}
 
 
-TABLES = {"SkillLine": None, "SpellName": None, "SpellEffect": None, "SkillLineAbility": None, "SpellReagents": None,
+TABLES = {"SpellCooldowns": None, "SkillLine": None, "SpellName": None, "SpellEffect": None, "SkillLineAbility": None, "SpellReagents": None,
           "ItemSparse": None, "ItemEffect": None, "ItemXItemEffect": None}
 
 
@@ -194,7 +201,7 @@ def run(out: Path, cache: Path | None = None, force: bool = False, now: int | No
     man_path = out / "manifest.json"
     man = json.loads(man_path.read_text()) if man_path.exists() else {}
     cur = man.get("recipes") or {}
-    if not force and cur.get("items_scope") == "all" and cur.get("build") == BUILD and now - (cur.get("generated_at") or 0) < MAX_AGE_MS \
+    if not force and cur.get("cooldowns") and cur.get("items_scope") == "all" and cur.get("build") == BUILD and now - (cur.get("generated_at") or 0) < MAX_AGE_MS \
             and (out / "recipes.json.gz").exists():
         print(f"recipes: up to date ({cur.get('count')} recipes, build {BUILD})")
         return cur
@@ -202,7 +209,7 @@ def run(out: Path, cache: Path | None = None, force: bool = False, now: int | No
     payload = build_recipes(tables)
     raw = json.dumps(payload, separators=(",", ":"), sort_keys=True).encode()
     (out / "recipes.json.gz").write_bytes(gzip.compress(raw, mtime=0))
-    entry = {"path": "recipes.json.gz", "build": BUILD, "items_scope": "all", "items": len(payload["items"]), "generated_at": now, "count": len(payload["recipes"]),
+    entry = {"path": "recipes.json.gz", "build": BUILD, "items_scope": "all", "cooldowns": True, "items": len(payload["items"]), "generated_at": now, "count": len(payload["recipes"]),
              "sha256": hashlib.sha256(raw).hexdigest()}
     man = json.loads(man_path.read_text()) if man_path.exists() else {}
     man["recipes"] = entry
