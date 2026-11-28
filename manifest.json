@@ -1,0 +1,5344 @@
+{
+ "format": 1,
+ "generated_at": 1795894742284,
+ "region": "us",
+ "ruleset": 1,
+ "keep_hours": 24.0,
+ "attribution": "Auction data from the Blizzard Battle.net API (World of Warcraft: Forever). Not affiliated with or endorsed by Blizzard Entertainment. Free to use; never sold.",
+ "houses": [
+  {
+   "id": 110,
+   "name": "Alliance Auction House"
+  },
+  {
+   "id": 111,
+   "name": "Alliance Auction House"
+  },
+  {
+   "id": 112,
+   "name": "Alliance Auction House"
+  },
+  {
+   "id": 113,
+   "name": "Horde Auction House"
+  },
+  {
+   "id": 114,
+   "name": "Horde Auction House"
+  },
+  {
+   "id": 115,
+   "name": "Horde Auction House"
+  },
+  {
+   "id": 116,
+   "name": "Blackwater Auction House"
+  },
+  {
+   "id": 117,
+   "name": "Blackwater Auction House"
+  },
+  {
+   "id": 118,
+   "name": "Blackwater Auction House"
+  },
+  {
+   "id": 119,
+   "name": "Alliance Auction House"
+  },
+  {
+   "id": 120,
+   "name": "Horde Auction House"
+  },
+  {
+   "id": 121,
+   "name": "Blackwater Auction House"
+  },
+  {
+   "id": 123,
+   "name": "Alliance Auction House"
+  },
+  {
+   "id": 124,
+   "name": "Horde Auction House"
+  },
+  {
+   "id": 125,
+   "name": "Blackwater Auction House"
+  }
+ ],
+ "snapshots": [
+  {
+   "path": "snapshots/112/commodities-1795821964000.json.gz",
+   "house_id": 112,
+   "house_name": "Alliance Auction House",
+   "scope": "commodities",
+   "last_modified": 1795821964000,
+   "fetched_at": 1795822396535,
+   "sha256": "2a4bad77c01a7c963df6592596209e63a0480244e6f0f90ecdc9366c2365d654",
+   "bytes": 129
+  },
+  {
+   "path": "snapshots/112/items-1795821964000.json.gz",
+   "house_id": 112,
+   "house_name": "Alliance Auction House",
+   "scope": "items",
+   "last_modified": 1795821964000,
+   "fetched_at": 1795822396535,
+   "sha256": "a96f3035eae9ec9799385a64794aa36391916de5a79ca3da9aed415daea5a1b3",
+   "bytes": 179
+  },
+  {
+   "path": "snapshots/115/commodities-1795821964000.json.gz",
+   "house_id": 115,
+   "house_name": "Horde Auction House",
+   "scope": "commodities",
+   "last_modified": 1795821964000,
+   "fetched_at": 1795822396535,
+   "sha256": "db3f6d72d5832ab1edf2d9be5df57f613581224a3f6a2232287b59639c0e3d6e",
+   "bytes": 130
+  },
+  {
+   "path": "snapshots/115/items-1795821964000.json.gz",
+   "house_id": 115,
+   "house_name": "Horde Auction House",
+   "scope": "items",
+   "last_modified": 1795821964000,
+   "fetched_at": 1795822396535,
+   "sha256": "b0375af040e77c860cc8ce46762811b715e04642b54a14ea51083f379893e0b7",
+   "bytes": 178
+  },
+  {
+   "path": "snapshots/118/commodities-1795821964000.json.gz",
+   "house_id": 118,
+   "house_name": "Blackwater Auction House",
+   "scope": "commodities",
+   "last_modified": 1795821964000,
+   "fetched_at": 1795822396535,
+   "sha256": "351c82cab1940c8507152d26ceaa569efc2c8252c2fcb2910ce31ace3061cb42",
+   "bytes": 130
+  },
+  {
+   "path": "snapshots/118/items-1795821964000.json.gz",
+   "house_id": 118,
+   "house_name": "Blackwater Auction House",
+   "scope": "items",
+   "last_modified": 1795821964000,
+   "fetched_at": 1795822396535,
+   "sha256": "d57d5a40ccb5c0b45eb48fba380451db7ee35ce49a999cca36876911ab4cd704",
+   "bytes": 181
+  },
+  {
+   "path": "snapshots/121/commodities-1795821964000.json.gz",
+   "house_id": 121,
+   "house_name": "Blackwater Auction House",
+   "scope": "commodities",
+   "last_modified": 1795821964000,
+   "fetched_at": 1795822396535,
+   "sha256": "d7601d80690a69da4d82316600e9b53acb51081bce9ceb477ab2a6bef07261b9",
+   "bytes": 24738
+  },
+  {
+   "path": "snapshots/121/items-1795821964000.json.gz",
+   "house_id": 121,
+   "house_name": "Blackwater Auction House",
+   "scope": "items",
+   "last_modified": 1795821964000,
+   "fetched_at": 1795822396535,
+   "sha256": "aa2a32e96efdc7a6a4e47585f789b8b319038402e5123e17d54b11617cb907a3",
+   "bytes": 10248
+  },
+  {
+   "path": "snapshots/125/commodities-1795821964000.json.gz",
+   "house_id": 125,
+   "house_name": "Blackwater Auction House",
+   "scope": "commodities",
+   "last_modified": 1795821964000,
+   "fetched_at": 1795822396535,
+   "sha256": "0d66be43ec0a104ffab5fe97c57cc521c0ccb2514ea44117726d8b9adce6f181",
+   "bytes": 29463
+  },
+  {
+   "path": "snapshots/125/items-1795821964000.json.gz",
+   "house_id": 125,
+   "house_name": "Blackwater Auction House",
+   "scope": "items",
+   "last_modified": 1795821964000,
+   "fetched_at": 1795822396535,
+   "sha256": "5aff9abe5e6ad42d4290a9434529f5881702d308c61b00321e3c23727aad18be",
+   "bytes": 16072
+  },
+  {
+   "path": "snapshots/116/commodities-1795821968000.json.gz",
+   "house_id": 116,
+   "house_name": "Blackwater Auction House",
+   "scope": "commodities",
+   "last_modified": 1795821968000,
+   "fetched_at": 1795822396535,
+   "sha256": "24a8b251e7abaa99b966fe887b5767443989f659aa1b2396f22d4094f572b78a",
+   "bytes": 232630
+  },
+  {
+   "path": "snapshots/116/items-1795821968000.json.gz",
+   "house_id": 116,
+   "house_name": "Blackwater Auction House",
+   "scope": "items",
+   "last_modified": 1795821968000,
+   "fetched_at": 1795822396535,
+   "sha256": "7c21b9f2f81c997309e97cd61e0a4b2ffd78a5535fe83b07d2c11c98d24a030d",
+   "bytes": 145022
+  },
+  {
+   "path": "snapshots/117/commodities-1795821968000.json.gz",
+   "house_id": 117,
+   "house_name": "Blackwater Auction House",
+   "scope": "commodities",
+   "last_modified": 1795821968000,
+   "fetched_at": 1795822396535,
+   "sha256": "477f72b761a85434cc162200251a0f398d57a6bf7316bfcae5b3c6df7bf3dda4",
+   "bytes": 237718
+  },
+  {
+   "path": "snapshots/117/items-1795821968000.json.gz",
+   "house_id": 117,
+   "house_name": "Blackwater Auction House",
+   "scope": "items",
+   "last_modified": 1795821968000,
+   "fetched_at": 1795822396535,
+   "sha256": "c8a6ac24592503dff15d2c7c2d64116dfb07537e2f1ab195e8da95a99c93b7fe",
+   "bytes": 183382
+  },
+  {
+   "path": "snapshots/120/commodities-1795821969000.json.gz",
+   "house_id": 120,
+   "house_name": "Horde Auction House",
+   "scope": "commodities",
+   "last_modified": 1795821969000,
+   "fetched_at": 1795822396535,
+   "sha256": "b99e3fc7160d91f74e6135020bbcbf15d47e4828469373641bc4de8aebb86c87",
+   "bytes": 246712
+  },
+  {
+   "path": "snapshots/120/items-1795821969000.json.gz",
+   "house_id": 120,
+   "house_name": "Horde Auction House",
+   "scope": "items",
+   "last_modified": 1795821969000,
+   "fetched_at": 1795822396535,
+   "sha256": "a803d00d794935aaa7d1cd636aa9085e2a9a5c3f1c2e3d113c3c55e2b5a1a5b7",
+   "bytes": 258276
+  },
+  {
+   "path": "snapshots/119/commodities-1795821971000.json.gz",
+   "house_id": 119,
+   "house_name": "Alliance Auction House",
+   "scope": "commodities",
+   "last_modified": 1795821971000,
+   "fetched_at": 1795822396535,
+   "sha256": "b665904f9fd5d2707b8e939d6eabd11d9914b8120839f2ebed4a56056e8af86f",
+   "bytes": 318612
+  },
+  {
+   "path": "snapshots/119/items-1795821971000.json.gz",
+   "house_id": 119,
+   "house_name": "Alliance Auction House",
+   "scope": "items",
+   "last_modified": 1795821971000,
+   "fetched_at": 1795822396535,
+   "sha256": "6b914f518b1f84c85fd1b4835171083d7b75ea5b9d87ed67f4808e38a7d441d2",
+   "bytes": 379718
+  },
+  {
+   "path": "snapshots/123/commodities-1795821971000.json.gz",
+   "house_id": 123,
+   "house_name": "Alliance Auction House",
+   "scope": "commodities",
+   "last_modified": 1795821971000,
+   "fetched_at": 1795822396535,
+   "sha256": "3c57524f8186ce3071e96d9a68ae5ee9d5c2c714f17fe827b21fe5b38d480bf8",
+   "bytes": 310688
+  },
+  {
+   "path": "snapshots/123/items-1795821971000.json.gz",
+   "house_id": 123,
+   "house_name": "Alliance Auction House",
+   "scope": "items",
+   "last_modified": 1795821971000,
+   "fetched_at": 1795822396535,
+   "sha256": "ba01fbc9019a42f10e6219740efb48f16479cfa1eb9a1efb867e52cebd646eed",
+   "bytes": 344924
+  },
+  {
+   "path": "snapshots/124/commodities-1795821971000.json.gz",
+   "house_id": 124,
+   "house_name": "Horde Auction House",
+   "scope": "commodities",
+   "last_modified": 1795821971000,
+   "fetched_at": 1795822396535,
+   "sha256": "8052fff18339298308b33f8deb578dcf98d2b0259c54c0ede4409e9163f3fe3f",
+   "bytes": 320660
+  },
+  {
+   "path": "snapshots/124/items-1795821971000.json.gz",
+   "house_id": 124,
+   "house_name": "Horde Auction House",
+   "scope": "items",
+   "last_modified": 1795821971000,
+   "fetched_at": 1795822396535,
+   "sha256": "f44f5550b173884f952ec0d5795124bac0cf3fb74c850db21764eb6cd5ce146d",
+   "bytes": 388075
+  },
+  {
+   "path": "snapshots/110/commodities-1795821984000.json.gz",
+   "house_id": 110,
+   "house_name": "Alliance Auction House",
+   "scope": "commodities",
+   "last_modified": 1795821984000,
+   "fetched_at": 1795822396535,
+   "sha256": "99fa6e8cb5178d6671c20b497915515576da1826916a199aba03fbb9bf4c416d",
+   "bytes": 879653
+  },
+  {
+   "path": "snapshots/110/items-1795821984000.json.gz",
+   "house_id": 110,
+   "house_name": "Alliance Auction House",
+   "scope": "items",
+   "last_modified": 1795821984000,
+   "fetched_at": 1795822396535,
+   "sha256": "7627e8cb518d46a3fff4aca56261929b6e54dffeb9b3006cd3a2edf42507dde6",
+   "bytes": 1470216
+  },
+  {
+   "path": "snapshots/111/commodities-1795821986000.json.gz",
+   "house_id": 111,
+   "house_name": "Alliance Auction House",
+   "scope": "commodities",
+   "last_modified": 1795821986000,
+   "fetched_at": 1795822396535,
+   "sha256": "e9ac6f1a6a42960ae4c82080b2a9ff038423878708dd85652a2d3ecad9674c23",
+   "bytes": 971959
+  },
+  {
+   "path": "snapshots/111/items-1795821986000.json.gz",
+   "house_id": 111,
+   "house_name": "Alliance Auction House",
+   "scope": "items",
+   "last_modified": 1795821986000,
+   "fetched_at": 1795822396535,
+   "sha256": "45badbc2d337075e302443208971cb9eaf11aba4769f89eaea1e8db89b6f32f5",
+   "bytes": 1597617
+  },
+  {
+   "path": "snapshots/113/commodities-1795821986000.json.gz",
+   "house_id": 113,
+   "house_name": "Horde Auction House",
+   "scope": "commodities",
+   "last_modified": 1795821986000,
+   "fetched_at": 1795822396535,
+   "sha256": "78afa60d46270e4fb760ba389e5b1731274791087cbbee93a326e6569a7aeaf9",
+   "bytes": 924879
+  },
+  {
+   "path": "snapshots/113/items-1795821986000.json.gz",
+   "house_id": 113,
+   "house_name": "Horde Auction House",
+   "scope": "items",
+   "last_modified": 1795821986000,
+   "fetched_at": 1795822396535,
+   "sha256": "f0856fb1c35184053675fc88755fb8f963ee5199601e2ad174d2d4b82267c32f",
+   "bytes": 1700927
+  },
+  {
+   "path": "snapshots/114/commodities-1795821987000.json.gz",
+   "house_id": 114,
+   "house_name": "Horde Auction House",
+   "scope": "commodities",
+   "last_modified": 1795821987000,
+   "fetched_at": 1795822396535,
+   "sha256": "93f51c7f21e897cbfdc69829695e36745b053c4773bbdf8230bc87e7bcf1cc9a",
+   "bytes": 1000421
+  },
+  {
+   "path": "snapshots/114/items-1795821987000.json.gz",
+   "house_id": 114,
+   "house_name": "Horde Auction House",
+   "scope": "items",
+   "last_modified": 1795821987000,
+   "fetched_at": 1795822396535,
+   "sha256": "57120389d7c00bff9444b975c4abb8c06302cff10a2261d2f243f5bb8ac4bd1b",
+   "bytes": 1675467
+  },
+  {
+   "path": "snapshots/112/commodities-1795825564000.json.gz",
+   "house_id": 112,
+   "house_name": "Alliance Auction House",
+   "scope": "commodities",
+   "last_modified": 1795825564000,
+   "fetched_at": 1795825995719,
+   "sha256": "2a4bad77c01a7c963df6592596209e63a0480244e6f0f90ecdc9366c2365d654",
+   "bytes": 129
+  },
+  {
+   "path": "snapshots/112/items-1795825564000.json.gz",
+   "house_id": 112,
+   "house_name": "Alliance Auction House",
+   "scope": "items",
+   "last_modified": 1795825564000,
+   "fetched_at": 1795825995719,
+   "sha256": "a96f3035eae9ec9799385a64794aa36391916de5a79ca3da9aed415daea5a1b3",
+   "bytes": 179
+  },
+  {
+   "path": "snapshots/115/commodities-1795825564000.json.gz",
+   "house_id": 115,
+   "house_name": "Horde Auction House",
+   "scope": "commodities",
+   "last_modified": 1795825564000,
+   "fetched_at": 1795825995719,
+   "sha256": "db3f6d72d5832ab1edf2d9be5df57f613581224a3f6a2232287b59639c0e3d6e",
+   "bytes": 130
+  },
+  {
+   "path": "snapshots/115/items-1795825564000.json.gz",
+   "house_id": 115,
+   "house_name": "Horde Auction House",
+   "scope": "items",
+   "last_modified": 1795825564000,
+   "fetched_at": 1795825995719,
+   "sha256": "b0375af040e77c860cc8ce46762811b715e04642b54a14ea51083f379893e0b7",
+   "bytes": 178
+  },
+  {
+   "path": "snapshots/118/commodities-1795825564000.json.gz",
+   "house_id": 118,
+   "house_name": "Blackwater Auction House",
+   "scope": "commodities",
+   "last_modified": 1795825564000,
+   "fetched_at": 1795825995719,
+   "sha256": "351c82cab1940c8507152d26ceaa569efc2c8252c2fcb2910ce31ace3061cb42",
+   "bytes": 130
+  },
+  {
+   "path": "snapshots/118/items-1795825564000.json.gz",
+   "house_id": 118,
+   "house_name": "Blackwater Auction House",
+   "scope": "items",
+   "last_modified": 1795825564000,
+   "fetched_at": 1795825995719,
+   "sha256": "d57d5a40ccb5c0b45eb48fba380451db7ee35ce49a999cca36876911ab4cd704",
+   "bytes": 181
+  },
+  {
+   "path": "snapshots/121/commodities-1795825564000.json.gz",
+   "house_id": 121,
+   "house_name": "Blackwater Auction House",
+   "scope": "commodities",
+   "last_modified": 1795825564000,
+   "fetched_at": 1795825995719,
+   "sha256": "95512e0ac638a8620828f2c9e9c28fec38b14f0ffb56c157cde40af78aaefad3",
+   "bytes": 25593
+  },
+  {
+   "path": "snapshots/121/items-1795825564000.json.gz",
+   "house_id": 121,
+   "house_name": "Blackwater Auction House",
+   "scope": "items",
+   "last_modified": 1795825564000,
+   "fetched_at": 1795825995719,
+   "sha256": "4acc7836f594feef1720940205d2e27a4d3bda93f828a7c351f8d8bb59444732",
+   "bytes": 10308
+  },
+  {
+   "path": "snapshots/125/commodities-1795825564000.json.gz",
+   "house_id": 125,
+   "house_name": "Blackwater Auction House",
+   "scope": "commodities",
+   "last_modified": 1795825564000,
+   "fetched_at": 1795825995719,
+   "sha256": "be8296436a174e27826b21459127616fedfaaf927bf1f303f921d2b8d23c3148",
+   "bytes": 29609
+  },
+  {
+   "path": "snapshots/125/items-1795825564000.json.gz",
+   "house_id": 125,
+   "house_name": "Blackwater Auction House",
+   "scope": "items",
+   "last_modified": 1795825564000,
+   "fetched_at": 1795825995719,
+   "sha256": "fa4785239da1729bb801dc5438ca27b4035bca04491c3c666ed04f194358d05e",
+   "bytes": 15611
+  },
+  {
+   "path": "snapshots/116/commodities-1795825568000.json.gz",
+   "house_id": 116,
+   "house_name": "Blackwater Auction House",
+   "scope": "commodities",
+   "last_modified": 1795825568000,
+   "fetched_at": 1795825995719,
+   "sha256": "23ffac817c6bf659e799adca7c5bf9e4d430deb7cd837f57673af881ecd0f280",
+   "bytes": 232207
+  },
+  {
+   "path": "snapshots/116/items-1795825568000.json.gz",
+   "house_id": 116,
+   "house_name": "Blackwater Auction House",
+   "scope": "items",
+   "last_modified": 1795825568000,
+   "fetched_at": 1795825995719,
+   "sha256": "f6546388621207a83b4f4bd9d6678746db524007feabb7eeb6853717022b6c49",
+   "bytes": 148789
+  },
+  {
+   "path": "snapshots/117/commodities-1795825569000.json.gz",
+   "house_id": 117,
+   "house_name": "Blackwater Auction House",
+   "scope": "commodities",
+   "last_modified": 1795825569000,
+   "fetched_at": 1795825995719,
+   "sha256": "a4921d25911014cfa66f182c77b4c08993b25cbce43c944166fed2c295eef0d8",
+   "bytes": 244940
+  },
+  {
+   "path": "snapshots/117/items-1795825569000.json.gz",
+   "house_id": 117,
+   "house_name": "Blackwater Auction House",
+   "scope": "items",
+   "last_modified": 1795825569000,
+   "fetched_at": 1795825995719,
+   "sha256": "56c66538e9bf40a5619ecf7ce9252c058dce1f7cda564ca9e6ef0974ed07efe4",
+   "bytes": 193619
+  },
+  {
+   "path": "snapshots/120/commodities-1795825570000.json.gz",
+   "house_id": 120,
+   "house_name": "Horde Auction House",
+   "scope": "commodities",
+   "last_modified": 1795825570000,
+   "fetched_at": 1795825995719,
+   "sha256": "f7e0fe190f09955f8b173828031bfa4c18e202e4e7aec12c16c7eb5456078d9f",
+   "bytes": 252482
+  },
+  {
+   "path": "snapshots/120/items-1795825570000.json.gz",
+   "house_id": 120,
+   "house_name": "Horde Auction House",
+   "scope": "items",
+   "last_modified": 1795825570000,
+   "fetched_at": 1795825995719,
+   "sha256": "c44d6593ad085b9f8b1b8155bf08d97f208fec48aa6f13235f1216ef6c950529",
+   "bytes": 262843
+  },
+  {
+   "path": "snapshots/119/commodities-1795825572000.json.gz",
+   "house_id": 119,
+   "house_name": "Alliance Auction House",
+   "scope": "commodities",
+   "last_modified": 1795825572000,
+   "fetched_at": 1795825995719,
+   "sha256": "e303824deec48cbd5360991d518474146ac4f7993f427ab8b07c4b32d6703438",
+   "bytes": 319123
+  },
+  {
+   "path": "snapshots/119/items-1795825572000.json.gz",
+   "house_id": 119,
+   "house_name": "Alliance Auction House",
+   "scope": "items",
+   "last_modified": 1795825572000,
+   "fetched_at": 1795825995719,
+   "sha256": "a34860dc0d3ebf8f20ab3a1647cf2ca8c677153a20327d88b23761d555a1dcae",
+   "bytes": 382615
+  },
+  {
+   "path": "snapshots/123/commodities-1795825572000.json.gz",
+   "house_id": 123,
+   "house_name": "Alliance Auction House",
+   "scope": "commodities",
+   "last_modified": 1795825572000,
+   "fetched_at": 1795825995719,
+   "sha256": "729ba3d5912db61e2d23fd2013473470746c03d0b94e99beaeeffa9716c6a1e3",
+   "bytes": 321427
+  },
+  {
+   "path": "snapshots/123/items-1795825572000.json.gz",
+   "house_id": 123,
+   "house_name": "Alliance Auction House",
+   "scope": "items",
+   "last_modified": 1795825572000,
+   "fetched_at": 1795825995719,
+   "sha256": "c87004e4d5f230a499e873bca6a6ec0a86471b40c483c20c8428e08a38a94538",
+   "bytes": 353634
+  },
+  {
+   "path": "snapshots/124/commodities-1795825572000.json.gz",
+   "house_id": 124,
+   "house_name": "Horde Auction House",
+   "scope": "commodities",
+   "last_modified": 1795825572000,
+   "fetched_at": 1795825995719,
+   "sha256": "d629c1645549d89590efa33b4d240623cfa118673005672537d21cf663dede5d",
+   "bytes": 315711
+  },
+  {
+   "path": "snapshots/124/items-1795825572000.json.gz",
+   "house_id": 124,
+   "house_name": "Horde Auction House",
+   "scope": "items",
+   "last_modified": 1795825572000,
+   "fetched_at": 1795825995719,
+   "sha256": "3e881c8b0688c514044c562c426f7c369488c2488f023991f582841b0d217301",
+   "bytes": 399426
+  },
+  {
+   "path": "snapshots/110/commodities-1795825586000.json.gz",
+   "house_id": 110,
+   "house_name": "Alliance Auction House",
+   "scope": "commodities",
+   "last_modified": 1795825586000,
+   "fetched_at": 1795825995719,
+   "sha256": "dc3fdea379ffab2e43be64a7acc4faf7f2666f5d4533c929da8a44b96430ceca",
+   "bytes": 902985
+  },
+  {
+   "path": "snapshots/110/items-1795825586000.json.gz",
+   "house_id": 110,
+   "house_name": "Alliance Auction House",
+   "scope": "items",
+   "last_modified": 1795825586000,
+   "fetched_at": 1795825995719,
+   "sha256": "4413d93001c7c79746c7ec070fe29c094db7fe2d6b2a6c7d146aadcdf4d889da",
+   "bytes": 1513793
+  },
+  {
+   "path": "snapshots/111/commodities-1795825588000.json.gz",
+   "house_id": 111,
+   "house_name": "Alliance Auction House",
+   "scope": "commodities",
+   "last_modified": 1795825588000,
+   "fetched_at": 1795825995719,
+   "sha256": "e5ed531bc6023199324a8945ccb5be73c54b7ee157b3ee332651388831ac6344",
+   "bytes": 1018926
+  },
+  {
+   "path": "snapshots/111/items-1795825588000.json.gz",
+   "house_id": 111,
+   "house_name": "Alliance Auction House",
+   "scope": "items",
+   "last_modified": 1795825588000,
+   "fetched_at": 1795825995719,
+   "sha256": "719f804917e1ac968f0f03481b94f1d0f15849331eab586f21c2160383363392",
+   "bytes": 1632044
+  },
+  {
+   "path": "snapshots/113/commodities-1795825589000.json.gz",
+   "house_id": 113,
+   "house_name": "Horde Auction House",
+   "scope": "commodities",
+   "last_modified": 1795825589000,
+   "fetched_at": 1795825995719,
+   "sha256": "9e2b3022d269cd902615191286ff68723df7f8fe2f6afdd97963366479099732",
+   "bytes": 960597
+  },
+  {
+   "path": "snapshots/113/items-1795825589000.json.gz",
+   "house_id": 113,
+   "house_name": "Horde Auction House",
+   "scope": "items",
+   "last_modified": 1795825589000,
+   "fetched_at": 1795825995719,
+   "sha256": "a5c0a9f718ffea29c0ac42cc0807c7a9bbd3bcb4588734ef22e534f3f4cbaef4",
+   "bytes": 1721629
+  },
+  {
+   "path": "snapshots/114/commodities-1795825589000.json.gz",
+   "house_id": 114,
+   "house_name": "Horde Auction House",
+   "scope": "commodities",
+   "last_modified": 1795825589000,
+   "fetched_at": 1795825995719,
+   "sha256": "39265a879d46c52f3ab5c273ca090232f5b5b0744bd524dd9df3dea3dbb1d7d8",
+   "bytes": 1033111
+  },
+  {
+   "path": "snapshots/114/items-1795825589000.json.gz",
+   "house_id": 114,
+   "house_name": "Horde Auction House",
+   "scope": "items",
+   "last_modified": 1795825589000,
+   "fetched_at": 1795825995719,
+   "sha256": "8a629d164afb30c4b241e437e3d48bdb940fe0ff41f1a75f8c49d5016514636a",
+   "bytes": 1713502
+  },
+  {
+   "path": "snapshots/112/commodities-1795829164000.json.gz",
+   "house_id": 112,
+   "house_name": "Alliance Auction House",
+   "scope": "commodities",
+   "last_modified": 1795829164000,
+   "fetched_at": 1795829595902,
+   "sha256": "2a4bad77c01a7c963df6592596209e63a0480244e6f0f90ecdc9366c2365d654",
+   "bytes": 129
+  },
+  {
+   "path": "snapshots/112/items-1795829164000.json.gz",
+   "house_id": 112,
+   "house_name": "Alliance Auction House",
+   "scope": "items",
+   "last_modified": 1795829164000,
+   "fetched_at": 1795829595902,
+   "sha256": "a96f3035eae9ec9799385a64794aa36391916de5a79ca3da9aed415daea5a1b3",
+   "bytes": 179
+  },
+  {
+   "path": "snapshots/115/commodities-1795829164000.json.gz",
+   "house_id": 115,
+   "house_name": "Horde Auction House",
+   "scope": "commodities",
+   "last_modified": 1795829164000,
+   "fetched_at": 1795829595902,
+   "sha256": "db3f6d72d5832ab1edf2d9be5df57f613581224a3f6a2232287b59639c0e3d6e",
+   "bytes": 130
+  },
+  {
+   "path": "snapshots/115/items-1795829164000.json.gz",
+   "house_id": 115,
+   "house_name": "Horde Auction House",
+   "scope": "items",
+   "last_modified": 1795829164000,
+   "fetched_at": 1795829595902,
+   "sha256": "b0375af040e77c860cc8ce46762811b715e04642b54a14ea51083f379893e0b7",
+   "bytes": 178
+  },
+  {
+   "path": "snapshots/118/commodities-1795829164000.json.gz",
+   "house_id": 118,
+   "house_name": "Blackwater Auction House",
+   "scope": "commodities",
+   "last_modified": 1795829164000,
+   "fetched_at": 1795829595902,
+   "sha256": "351c82cab1940c8507152d26ceaa569efc2c8252c2fcb2910ce31ace3061cb42",
+   "bytes": 130
+  },
+  {
+   "path": "snapshots/118/items-1795829164000.json.gz",
+   "house_id": 118,
+   "house_name": "Blackwater Auction House",
+   "scope": "items",
+   "last_modified": 1795829164000,
+   "fetched_at": 1795829595902,
+   "sha256": "d57d5a40ccb5c0b45eb48fba380451db7ee35ce49a999cca36876911ab4cd704",
+   "bytes": 181
+  },
+  {
+   "path": "snapshots/121/commodities-1795829164000.json.gz",
+   "house_id": 121,
+   "house_name": "Blackwater Auction House",
+   "scope": "commodities",
+   "last_modified": 1795829164000,
+   "fetched_at": 1795829595902,
+   "sha256": "e1701bbc26d453e64eb9cd60a186a1a5e95c9a444771aeeab9a1e85bd503f18a",
+   "bytes": 26689
+  },
+  {
+   "path": "snapshots/121/items-1795829164000.json.gz",
+   "house_id": 121,
+   "house_name": "Blackwater Auction House",
+   "scope": "items",
+   "last_modified": 1795829164000,
+   "fetched_at": 1795829595902,
+   "sha256": "8dea2747fea611006b54d8c82e0e82267f0dd86965f5abc8291862252602a07b",
+   "bytes": 10369
+  },
+  {
+   "path": "snapshots/125/commodities-1795829164000.json.gz",
+   "house_id": 125,
+   "house_name": "Blackwater Auction House",
+   "scope": "commodities",
+   "last_modified": 1795829164000,
+   "fetched_at": 1795829595902,
+   "sha256": "48af6627d69fb8548fc4bf1d13d72582bdaaf43f0a03dc4b4be07fce1e219081",
+   "bytes": 30590
+  },
+  {
+   "path": "snapshots/125/items-1795829164000.json.gz",
+   "house_id": 125,
+   "house_name": "Blackwater Auction House",
+   "scope": "items",
+   "last_modified": 1795829164000,
+   "fetched_at": 1795829595902,
+   "sha256": "8e6673bdc25d551604aa200d86ddbe6a839f5fab824cb69cc533e48765bc17dc",
+   "bytes": 17399
+  },
+  {
+   "path": "snapshots/116/commodities-1795829169000.json.gz",
+   "house_id": 116,
+   "house_name": "Blackwater Auction House",
+   "scope": "commodities",
+   "last_modified": 1795829169000,
+   "fetched_at": 1795829595902,
+   "sha256": "ee3b0e7f4143467b48f843cfe3b0f2cc1f97ce79daae4ae4b01e556eeee782fc",
+   "bytes": 236648
+  },
+  {
+   "path": "snapshots/116/items-1795829169000.json.gz",
+   "house_id": 116,
+   "house_name": "Blackwater Auction House",
+   "scope": "items",
+   "last_modified": 1795829169000,
+   "fetched_at": 1795829595902,
+   "sha256": "260c8cbf42e50a40b6cb32f997cd2c77ec8e17cbd108a5fdb0fbff4a887e7899",
+   "bytes": 154079
+  },
+  {
+   "path": "snapshots/117/commodities-1795829170000.json.gz",
+   "house_id": 117,
+   "house_name": "Blackwater Auction House",
+   "scope": "commodities",
+   "last_modified": 1795829170000,
+   "fetched_at": 1795829595902,
+   "sha256": "71c11a1e2892cddd2559202b319e05ab5cf1f830c85097e4d06290ff7a168e4a",
+   "bytes": 254996
+  },
+  {
+   "path": "snapshots/117/items-1795829170000.json.gz",
+   "house_id": 117,
+   "house_name": "Blackwater Auction House",
+   "scope": "items",
+   "last_modified": 1795829170000,
+   "fetched_at": 1795829595902,
+   "sha256": "5f4452bb2e9d477575ab561c4fefcdf2741450278e76cc876233eb3975956b7a",
+   "bytes": 206523
+  },
+  {
+   "path": "snapshots/120/commodities-1795829171000.json.gz",
+   "house_id": 120,
+   "house_name": "Horde Auction House",
+   "scope": "commodities",
+   "last_modified": 1795829171000,
+   "fetched_at": 1795829595902,
+   "sha256": "4a71abf2ef8faab55047fc1e94b8683ca9b8306396c66b98b8b95aa818c47176",
+   "bytes": 255483
+  },
+  {
+   "path": "snapshots/120/items-1795829171000.json.gz",
+   "house_id": 120,
+   "house_name": "Horde Auction House",
+   "scope": "items",
+   "last_modified": 1795829171000,
+   "fetched_at": 1795829595902,
+   "sha256": "0eb7b1cc106d41215e3b162bf241e029a0038668542e674e0c5dcacbf7a7764f",
+   "bytes": 269456
+  },
+  {
+   "path": "snapshots/119/commodities-1795829173000.json.gz",
+   "house_id": 119,
+   "house_name": "Alliance Auction House",
+   "scope": "commodities",
+   "last_modified": 1795829173000,
+   "fetched_at": 1795829595902,
+   "sha256": "2eff5f6b181d528d18cef493c0294ca3b8a3491cbeeae0748fd27ccd9bd6f9ba",
+   "bytes": 320990
+  },
+  {
+   "path": "snapshots/119/items-1795829173000.json.gz",
+   "house_id": 119,
+   "house_name": "Alliance Auction House",
+   "scope": "items",
+   "last_modified": 1795829173000,
+   "fetched_at": 1795829595902,
+   "sha256": "51b6b8b641ea61b58a05a16daaac8701b94168a64de68f28880aa6d3b360676e",
+   "bytes": 391623
+  },
+  {
+   "path": "snapshots/123/commodities-1795829173000.json.gz",
+   "house_id": 123,
+   "house_name": "Alliance Auction House",
+   "scope": "commodities",
+   "last_modified": 1795829173000,
+   "fetched_at": 1795829595902,
+   "sha256": "e0e98b33fcfd1c5c6fd43da9d4842212a4b931e5f4bd4adb671fd5e881112bb3",
+   "bytes": 322328
+  },
+  {
+   "path": "snapshots/123/items-1795829173000.json.gz",
+   "house_id": 123,
+   "house_name": "Alliance Auction House",
+   "scope": "items",
+   "last_modified": 1795829173000,
+   "fetched_at": 1795829595902,
+   "sha256": "db47c8280f566838ff3cc2449f384aafae98398312ac43b377802c50b8364c76",
+   "bytes": 356816
+  },
+  {
+   "path": "snapshots/124/commodities-1795829174000.json.gz",
+   "house_id": 124,
+   "house_name": "Horde Auction House",
+   "scope": "commodities",
+   "last_modified": 1795829174000,
+   "fetched_at": 1795829595902,
+   "sha256": "bd13ee26e5274b44aae7b6a0dd9379c2020d4c558fe5c6ffa9d0cabfa2ea8748",
+   "bytes": 335298
+  },
+  {
+   "path": "snapshots/124/items-1795829174000.json.gz",
+   "house_id": 124,
+   "house_name": "Horde Auction House",
+   "scope": "items",
+   "last_modified": 1795829174000,
+   "fetched_at": 1795829595902,
+   "sha256": "32bb0931422e230f405006a072e4cb5dd0926e503dc4ebe6d2888b4a33b68b06",
+   "bytes": 408300
+  },
+  {
+   "path": "snapshots/110/commodities-1795829190000.json.gz",
+   "house_id": 110,
+   "house_name": "Alliance Auction House",
+   "scope": "commodities",
+   "last_modified": 1795829190000,
+   "fetched_at": 1795829595902,
+   "sha256": "2dbeada82deb169d16ea0675a51217257841af03086e0af37dec17e925316dbf",
+   "bytes": 934809
+  },
+  {
+   "path": "snapshots/110/items-1795829190000.json.gz",
+   "house_id": 110,
+   "house_name": "Alliance Auction House",
+   "scope": "items",
+   "last_modified": 1795829190000,
+   "fetched_at": 1795829595902,
+   "sha256": "64bf42d78f5934d489cae00998ac0e0c2ddfb11dac2a6f808767c5ed4d238882",
+   "bytes": 1525595
+  },
+  {
+   "path": "snapshots/111/commodities-1795829192000.json.gz",
+   "house_id": 111,
+   "house_name": "Alliance Auction House",
+   "scope": "commodities",
+   "last_modified": 1795829192000,
+   "fetched_at": 1795829595902,
+   "sha256": "1877d50700090a5cf48532be78ab75201821c7ac866b4e2a58673363c7fd536b",
+   "bytes": 1014913
+  },
+  {
+   "path": "snapshots/111/items-1795829192000.json.gz",
+   "house_id": 111,
+   "house_name": "Alliance Auction House",
+   "scope": "items",
+   "last_modified": 1795829192000,
+   "fetched_at": 1795829595902,
+   "sha256": "5f1dc3b3575829266e868f8429f6a4c39d18bc212793816385c2677deaf577cf",
+   "bytes": 1670139
+  },
+  {
+   "path": "snapshots/113/commodities-1795829193000.json.gz",
+   "house_id": 113,
+   "house_name": "Horde Auction House",
+   "scope": "commodities",
+   "last_modified": 1795829193000,
+   "fetched_at": 1795829595902,
+   "sha256": "dff70a5299d948a483491193d10bcb6db1b296823c26a27d54b7907203d681a8",
+   "bytes": 995906
+  },
+  {
+   "path": "snapshots/113/items-1795829193000.json.gz",
+   "house_id": 113,
+   "house_name": "Horde Auction House",
+   "scope": "items",
+   "last_modified": 1795829193000,
+   "fetched_at": 1795829595902,
+   "sha256": "789f95f43cde1eff431b2af1e6810991d82e3b35eac052c6eced227a56351024",
+   "bytes": 1767562
+  },
+  {
+   "path": "snapshots/114/commodities-1795829193000.json.gz",
+   "house_id": 114,
+   "house_name": "Horde Auction House",
+   "scope": "commodities",
+   "last_modified": 1795829193000,
+   "fetched_at": 1795829595902,
+   "sha256": "4c08242daba3d60b9ad95bdd42e9961d78e8767baac13b8643568a16bb92251f",
+   "bytes": 1061601
+  },
+  {
+   "path": "snapshots/114/items-1795829193000.json.gz",
+   "house_id": 114,
+   "house_name": "Horde Auction House",
+   "scope": "items",
+   "last_modified": 1795829193000,
+   "fetched_at": 1795829595902,
+   "sha256": "b2e5ee2aec7aeb9c48f6df5d304c6242e1e8d2d9a6f7ea4052394805d47d173b",
+   "bytes": 1763775
+  },
+  {
+   "path": "snapshots/112/commodities-1795832764000.json.gz",
+   "house_id": 112,
+   "house_name": "Alliance Auction House",
+   "scope": "commodities",
+   "last_modified": 1795832764000,
+   "fetched_at": 1795833195367,
+   "sha256": "2a4bad77c01a7c963df6592596209e63a0480244e6f0f90ecdc9366c2365d654",
+   "bytes": 129
+  },
+  {
+   "path": "snapshots/112/items-1795832764000.json.gz",
+   "house_id": 112,
+   "house_name": "Alliance Auction House",
+   "scope": "items",
+   "last_modified": 1795832764000,
+   "fetched_at": 1795833195367,
+   "sha256": "a96f3035eae9ec9799385a64794aa36391916de5a79ca3da9aed415daea5a1b3",
+   "bytes": 179
+  },
+  {
+   "path": "snapshots/115/commodities-1795832764000.json.gz",
+   "house_id": 115,
+   "house_name": "Horde Auction House",
+   "scope": "commodities",
+   "last_modified": 1795832764000,
+   "fetched_at": 1795833195367,
+   "sha256": "db3f6d72d5832ab1edf2d9be5df57f613581224a3f6a2232287b59639c0e3d6e",
+   "bytes": 130
+  },
+  {
+   "path": "snapshots/115/items-1795832764000.json.gz",
+   "house_id": 115,
+   "house_name": "Horde Auction House",
+   "scope": "items",
+   "last_modified": 1795832764000,
+   "fetched_at": 1795833195367,
+   "sha256": "b0375af040e77c860cc8ce46762811b715e04642b54a14ea51083f379893e0b7",
+   "bytes": 178
+  },
+  {
+   "path": "snapshots/118/commodities-1795832764000.json.gz",
+   "house_id": 118,
+   "house_name": "Blackwater Auction House",
+   "scope": "commodities",
+   "last_modified": 1795832764000,
+   "fetched_at": 1795833195367,
+   "sha256": "351c82cab1940c8507152d26ceaa569efc2c8252c2fcb2910ce31ace3061cb42",
+   "bytes": 130
+  },
+  {
+   "path": "snapshots/118/items-1795832764000.json.gz",
+   "house_id": 118,
+   "house_name": "Blackwater Auction House",
+   "scope": "items",
+   "last_modified": 1795832764000,
+   "fetched_at": 1795833195367,
+   "sha256": "d57d5a40ccb5c0b45eb48fba380451db7ee35ce49a999cca36876911ab4cd704",
+   "bytes": 181
+  },
+  {
+   "path": "snapshots/121/commodities-1795832764000.json.gz",
+   "house_id": 121,
+   "house_name": "Blackwater Auction House",
+   "scope": "commodities",
+   "last_modified": 1795832764000,
+   "fetched_at": 1795833195367,
+   "sha256": "1d1ac23d75006af82f5b3d67e2dffe0cb47492e779901254a1707ccb884e5f1f",
+   "bytes": 28378
+  },
+  {
+   "path": "snapshots/121/items-1795832764000.json.gz",
+   "house_id": 121,
+   "house_name": "Blackwater Auction House",
+   "scope": "items",
+   "last_modified": 1795832764000,
+   "fetched_at": 1795833195367,
+   "sha256": "997bb1310e82622c692cc8df93444eb402e9f6503ba1bccaba72a8a88a1be2d4",
+   "bytes": 10290
+  },
+  {
+   "path": "snapshots/125/commodities-1795832764000.json.gz",
+   "house_id": 125,
+   "house_name": "Blackwater Auction House",
+   "scope": "commodities",
+   "last_modified": 1795832764000,
+   "fetched_at": 1795833195367,
+   "sha256": "158247cb14edb9957d922656e36707ce6a32aa73f20bcdc87175111198964648",
+   "bytes": 32470
+  },
+  {
+   "path": "snapshots/125/items-1795832764000.json.gz",
+   "house_id": 125,
+   "house_name": "Blackwater Auction House",
+   "scope": "items",
+   "last_modified": 1795832764000,
+   "fetched_at": 1795833195367,
+   "sha256": "1c979f383d69e9928f1771480f5f74f4bc5f6de2a4554bc0e969fd6365369d60",
+   "bytes": 18234
+  },
+  {
+   "path": "snapshots/116/commodities-1795832769000.json.gz",
+   "house_id": 116,
+   "house_name": "Blackwater Auction House",
+   "scope": "commodities",
+   "last_modified": 1795832769000,
+   "fetched_at": 1795833195367,
+   "sha256": "9fc3f355ea4c387fbd7066f2a42f03f39a35c1d5e692dc47e45c7515fc45c78b",
+   "bytes": 235440
+  },
+  {
+   "path": "snapshots/116/items-1795832769000.json.gz",
+   "house_id": 116,
+   "house_name": "Blackwater Auction House",
+   "scope": "items",
+   "last_modified": 1795832769000,
+   "fetched_at": 1795833195367,
+   "sha256": "de1dc8303e26fca73d7c270c92d056b79285eb3e2be3809401cd7b9229d59f04",
+   "bytes": 160318
+  },
+  {
+   "path": "snapshots/117/commodities-1795832770000.json.gz",
+   "house_id": 117,
+   "house_name": "Blackwater Auction House",
+   "scope": "commodities",
+   "last_modified": 1795832770000,
+   "fetched_at": 1795833195367,
+   "sha256": "4c25bd0714a3c794afe9720995a519efe90ff0310ebb46912d86d467d2a13ffd",
+   "bytes": 258077
+  },
+  {
+   "path": "snapshots/117/items-1795832770000.json.gz",
+   "house_id": 117,
+   "house_name": "Blackwater Auction House",
+   "scope": "items",
+   "last_modified": 1795832770000,
+   "fetched_at": 1795833195367,
+   "sha256": "a32ff001df9c8a911e9a8a38d1bb107355e99a55dccd53ad1fc10b37e9ab2d64",
+   "bytes": 220116
+  },
+  {
+   "path": "snapshots/120/commodities-1795832771000.json.gz",
+   "house_id": 120,
+   "house_name": "Horde Auction House",
+   "scope": "commodities",
+   "last_modified": 1795832771000,
+   "fetched_at": 1795833195367,
+   "sha256": "59bff088f4a13e383b5521ff3c72747780ee9b8bfcd08ce79974dc76d08346ee",
+   "bytes": 253855
+  },
+  {
+   "path": "snapshots/120/items-1795832771000.json.gz",
+   "house_id": 120,
+   "house_name": "Horde Auction House",
+   "scope": "items",
+   "last_modified": 1795832771000,
+   "fetched_at": 1795833195367,
+   "sha256": "ae6a5be0cd28474d783602716dfd4c472fe10883d9101d9d315f3ca83d6c518a",
+   "bytes": 276497
+  },
+  {
+   "path": "snapshots/119/commodities-1795832773000.json.gz",
+   "house_id": 119,
+   "house_name": "Alliance Auction House",
+   "scope": "commodities",
+   "last_modified": 1795832773000,
+   "fetched_at": 1795833195367,
+   "sha256": "f806e157cc2d121249e8866ff57cdb09e8984dba93732443f579b20460db5010",
+   "bytes": 326518
+  },
+  {
+   "path": "snapshots/119/items-1795832773000.json.gz",
+   "house_id": 119,
+   "house_name": "Alliance Auction House",
+   "scope": "items",
+   "last_modified": 1795832773000,
+   "fetched_at": 1795833195367,
+   "sha256": "25e911b0dffff99450d34c0177bf5e0e7fb20058a68d85da4a5f2a69cbadf9a8",
+   "bytes": 400859
+  },
+  {
+   "path": "snapshots/123/commodities-1795832773000.json.gz",
+   "house_id": 123,
+   "house_name": "Alliance Auction House",
+   "scope": "commodities",
+   "last_modified": 1795832773000,
+   "fetched_at": 1795833195367,
+   "sha256": "42de7e633fac0c23a9ecdd65fbfd0487e600e90a5b4e67d88d15220e770bf6ad",
+   "bytes": 321765
+  },
+  {
+   "path": "snapshots/123/items-1795832773000.json.gz",
+   "house_id": 123,
+   "house_name": "Alliance Auction House",
+   "scope": "items",
+   "last_modified": 1795832773000,
+   "fetched_at": 1795833195367,
+   "sha256": "66be2645deddba59d0709c441bb5b4bba0453927aa750a031f7bfb9203dad674",
+   "bytes": 358805
+  },
+  {
+   "path": "snapshots/124/commodities-1795832774000.json.gz",
+   "house_id": 124,
+   "house_name": "Horde Auction House",
+   "scope": "commodities",
+   "last_modified": 1795832774000,
+   "fetched_at": 1795833195367,
+   "sha256": "cdc3a230e1955fb61a07ce9be7ba28464f9b1f39c4950ee9a32f8c4d16967b60",
+   "bytes": 354525
+  },
+  {
+   "path": "snapshots/124/items-1795832774000.json.gz",
+   "house_id": 124,
+   "house_name": "Horde Auction House",
+   "scope": "items",
+   "last_modified": 1795832774000,
+   "fetched_at": 1795833195367,
+   "sha256": "53bd4716a476af32c4b7b98ad337cbfbadb245bed0611c79a421850ad7c2380d",
+   "bytes": 419477
+  },
+  {
+   "path": "snapshots/110/commodities-1795832790000.json.gz",
+   "house_id": 110,
+   "house_name": "Alliance Auction House",
+   "scope": "commodities",
+   "last_modified": 1795832790000,
+   "fetched_at": 1795833195367,
+   "sha256": "658f592b45cd7492b06aaf774a089822c7fa4371a4e4c197e8108d5afa09fd78",
+   "bytes": 955322
+  },
+  {
+   "path": "snapshots/110/items-1795832790000.json.gz",
+   "house_id": 110,
+   "house_name": "Alliance Auction House",
+   "scope": "items",
+   "last_modified": 1795832790000,
+   "fetched_at": 1795833195367,
+   "sha256": "7d415c5830b90f1e3568dfa80534a5ac97944f769c263df2b0b32910d7e1892a",
+   "bytes": 1553808
+  },
+  {
+   "path": "snapshots/111/commodities-1795832793000.json.gz",
+   "house_id": 111,
+   "house_name": "Alliance Auction House",
+   "scope": "commodities",
+   "last_modified": 1795832793000,
+   "fetched_at": 1795833195367,
+   "sha256": "37f792a1fcec3334fab8c9676c7b978e6036b4c93c62cd89f3b7d6730b3a41da",
+   "bytes": 1031946
+  },
+  {
+   "path": "snapshots/111/items-1795832793000.json.gz",
+   "house_id": 111,
+   "house_name": "Alliance Auction House",
+   "scope": "items",
+   "last_modified": 1795832793000,
+   "fetched_at": 1795833195367,
+   "sha256": "e854d76e0be8cf7309ecb6433fb3200bba454ba14fd02c71e496fec76ec81e3f",
+   "bytes": 1720628
+  },
+  {
+   "path": "snapshots/113/commodities-1795832794000.json.gz",
+   "house_id": 113,
+   "house_name": "Horde Auction House",
+   "scope": "commodities",
+   "last_modified": 1795832794000,
+   "fetched_at": 1795833195367,
+   "sha256": "586d095a0e5ba198329a0e558db540a807645869798cde6a096a202f7650435d",
+   "bytes": 1017571
+  },
+  {
+   "path": "snapshots/113/items-1795832794000.json.gz",
+   "house_id": 113,
+   "house_name": "Horde Auction House",
+   "scope": "items",
+   "last_modified": 1795832794000,
+   "fetched_at": 1795833195367,
+   "sha256": "00a36bb59ba904e77789726bd4d1c866ad5d3d27ef28ffbd2c4696c3787bfe9f",
+   "bytes": 1826394
+  },
+  {
+   "path": "snapshots/114/commodities-1795832795000.json.gz",
+   "house_id": 114,
+   "house_name": "Horde Auction House",
+   "scope": "commodities",
+   "last_modified": 1795832795000,
+   "fetched_at": 1795833195367,
+   "sha256": "5efa894ef3920466ec90d5d67982fb7b2c4d52fbbe668486c6c5803ed9f5dc05",
+   "bytes": 1095904
+  },
+  {
+   "path": "snapshots/114/items-1795832795000.json.gz",
+   "house_id": 114,
+   "house_name": "Horde Auction House",
+   "scope": "items",
+   "last_modified": 1795832795000,
+   "fetched_at": 1795833195367,
+   "sha256": "c9701620a43c90491c1931f5892afe38d87da429ea5a0292e381446e2cde821b",
+   "bytes": 1803069
+  },
+  {
+   "path": "snapshots/112/commodities-1795836364000.json.gz",
+   "house_id": 112,
+   "house_name": "Alliance Auction House",
+   "scope": "commodities",
+   "last_modified": 1795836364000,
+   "fetched_at": 1795836795494,
+   "sha256": "2a4bad77c01a7c963df6592596209e63a0480244e6f0f90ecdc9366c2365d654",
+   "bytes": 129
+  },
+  {
+   "path": "snapshots/112/items-1795836364000.json.gz",
+   "house_id": 112,
+   "house_name": "Alliance Auction House",
+   "scope": "items",
+   "last_modified": 1795836364000,
+   "fetched_at": 1795836795494,
+   "sha256": "a96f3035eae9ec9799385a64794aa36391916de5a79ca3da9aed415daea5a1b3",
+   "bytes": 179
+  },
+  {
+   "path": "snapshots/115/commodities-1795836364000.json.gz",
+   "house_id": 115,
+   "house_name": "Horde Auction House",
+   "scope": "commodities",
+   "last_modified": 1795836364000,
+   "fetched_at": 1795836795494,
+   "sha256": "db3f6d72d5832ab1edf2d9be5df57f613581224a3f6a2232287b59639c0e3d6e",
+   "bytes": 130
+  },
+  {
+   "path": "snapshots/115/items-1795836364000.json.gz",
+   "house_id": 115,
+   "house_name": "Horde Auction House",
+   "scope": "items",
+   "last_modified": 1795836364000,
+   "fetched_at": 1795836795494,
+   "sha256": "b0375af040e77c860cc8ce46762811b715e04642b54a14ea51083f379893e0b7",
+   "bytes": 178
+  },
+  {
+   "path": "snapshots/118/commodities-1795836364000.json.gz",
+   "house_id": 118,
+   "house_name": "Blackwater Auction House",
+   "scope": "commodities",
+   "last_modified": 1795836364000,
+   "fetched_at": 1795836795494,
+   "sha256": "351c82cab1940c8507152d26ceaa569efc2c8252c2fcb2910ce31ace3061cb42",
+   "bytes": 130
+  },
+  {
+   "path": "snapshots/118/items-1795836364000.json.gz",
+   "house_id": 118,
+   "house_name": "Blackwater Auction House",
+   "scope": "items",
+   "last_modified": 1795836364000,
+   "fetched_at": 1795836795494,
+   "sha256": "d57d5a40ccb5c0b45eb48fba380451db7ee35ce49a999cca36876911ab4cd704",
+   "bytes": 181
+  },
+  {
+   "path": "snapshots/121/commodities-1795836364000.json.gz",
+   "house_id": 121,
+   "house_name": "Blackwater Auction House",
+   "scope": "commodities",
+   "last_modified": 1795836364000,
+   "fetched_at": 1795836795494,
+   "sha256": "75657e4849f4afe70bb58cc03dfcd4782b71b23e5965f9f2e845d79e89bab8c2",
+   "bytes": 28748
+  },
+  {
+   "path": "snapshots/121/items-1795836364000.json.gz",
+   "house_id": 121,
+   "house_name": "Blackwater Auction House",
+   "scope": "items",
+   "last_modified": 1795836364000,
+   "fetched_at": 1795836795494,
+   "sha256": "11d531235a072b992fb1f7e28a5f0423d957fdb90fb02bb2f6c33c810cb71d19",
+   "bytes": 10352
+  },
+  {
+   "path": "snapshots/125/commodities-1795836364000.json.gz",
+   "house_id": 125,
+   "house_name": "Blackwater Auction House",
+   "scope": "commodities",
+   "last_modified": 1795836364000,
+   "fetched_at": 1795836795494,
+   "sha256": "f3df6d100241b19a3a15fc275886b4e8ba52fb8306a1bb22f6089c1fec9bb48e",
+   "bytes": 33094
+  },
+  {
+   "path": "snapshots/125/items-1795836365000.json.gz",
+   "house_id": 125,
+   "house_name": "Blackwater Auction House",
+   "scope": "items",
+   "last_modified": 1795836365000,
+   "fetched_at": 1795836795494,
+   "sha256": "4d2d26a82d203bdf20cb510d5687ddc6f894da327856e96df1a2711c8042e030",
+   "bytes": 18004
+  },
+  {
+   "path": "snapshots/116/commodities-1795836372000.json.gz",
+   "house_id": 116,
+   "house_name": "Blackwater Auction House",
+   "scope": "commodities",
+   "last_modified": 1795836372000,
+   "fetched_at": 1795836795494,
+   "sha256": "bc18ab0e9b512f6f25351cc902921fe7c594365cb44702911ec63382fcdaa814",
+   "bytes": 247384
+  },
+  {
+   "path": "snapshots/116/items-1795836372000.json.gz",
+   "house_id": 116,
+   "house_name": "Blackwater Auction House",
+   "scope": "items",
+   "last_modified": 1795836372000,
+   "fetched_at": 1795836795494,
+   "sha256": "169a61dc1281d965bdfb79431e4929bc624544dcda70c424145fb17f4d913efe",
+   "bytes": 166385
+  },
+  {
+   "path": "snapshots/117/commodities-1795836374000.json.gz",
+   "house_id": 117,
+   "house_name": "Blackwater Auction House",
+   "scope": "commodities",
+   "last_modified": 1795836374000,
+   "fetched_at": 1795836795494,
+   "sha256": "af8554697f8e52adeb443ce6ed7c47f6f150af1080d41f9624c2f37ac342127d",
+   "bytes": 282016
+  },
+  {
+   "path": "snapshots/117/items-1795836374000.json.gz",
+   "house_id": 117,
+   "house_name": "Blackwater Auction House",
+   "scope": "items",
+   "last_modified": 1795836374000,
+   "fetched_at": 1795836795494,
+   "sha256": "6aae0e83e69e85170fa56001cca9e5b58cda548872145775e1a614da3c68d4a7",
+   "bytes": 225956
+  },
+  {
+   "path": "snapshots/120/commodities-1795836374000.json.gz",
+   "house_id": 120,
+   "house_name": "Horde Auction House",
+   "scope": "commodities",
+   "last_modified": 1795836374000,
+   "fetched_at": 1795836795494,
+   "sha256": "478ccbba33669658df46497b181ddef35aac1f2eab0111d94e0a55b5aa903bbc",
+   "bytes": 266531
+  },
+  {
+   "path": "snapshots/120/items-1795836374000.json.gz",
+   "house_id": 120,
+   "house_name": "Horde Auction House",
+   "scope": "items",
+   "last_modified": 1795836374000,
+   "fetched_at": 1795836795494,
+   "sha256": "2a4f5f1b5dfabd46c5eb24d663897cfecb3017eb455739d1030be82c19230d2b",
+   "bytes": 283813
+  },
+  {
+   "path": "snapshots/123/commodities-1795836377000.json.gz",
+   "house_id": 123,
+   "house_name": "Alliance Auction House",
+   "scope": "commodities",
+   "last_modified": 1795836377000,
+   "fetched_at": 1795836795494,
+   "sha256": "2274ac676600186ddad1e938d33fcc2e659b55a2b0c21c1b2d3d5ea61c30dc80",
+   "bytes": 328030
+  },
+  {
+   "path": "snapshots/123/items-1795836377000.json.gz",
+   "house_id": 123,
+   "house_name": "Alliance Auction House",
+   "scope": "items",
+   "last_modified": 1795836377000,
+   "fetched_at": 1795836795494,
+   "sha256": "9874dd5af15a8862e490f71f7c336762b21ce9eeca6a9fb71f276530e5de4390",
+   "bytes": 361906
+  },
+  {
+   "path": "snapshots/119/commodities-1795836378000.json.gz",
+   "house_id": 119,
+   "house_name": "Alliance Auction House",
+   "scope": "commodities",
+   "last_modified": 1795836378000,
+   "fetched_at": 1795836795494,
+   "sha256": "6f5648d46ddf523b2ac82c9df81fcfc5aa5014f3a2ffc213fd8d8c03bd03c10c",
+   "bytes": 337538
+  },
+  {
+   "path": "snapshots/119/items-1795836378000.json.gz",
+   "house_id": 119,
+   "house_name": "Alliance Auction House",
+   "scope": "items",
+   "last_modified": 1795836378000,
+   "fetched_at": 1795836795494,
+   "sha256": "f0399cda9c9d6e6c12c37606be66e9f5df86ada5477ef21b17c5e077e6ee370f",
+   "bytes": 403022
+  },
+  {
+   "path": "snapshots/124/commodities-1795836378000.json.gz",
+   "house_id": 124,
+   "house_name": "Horde Auction House",
+   "scope": "commodities",
+   "last_modified": 1795836378000,
+   "fetched_at": 1795836795494,
+   "sha256": "69c9126617442b12e55c24c587e7aae72b09dea0c422ab98cd28a1045d896922",
+   "bytes": 362034
+  },
+  {
+   "path": "snapshots/124/items-1795836378000.json.gz",
+   "house_id": 124,
+   "house_name": "Horde Auction House",
+   "scope": "items",
+   "last_modified": 1795836378000,
+   "fetched_at": 1795836795494,
+   "sha256": "eac3e321bd704ccc6d82d9520c241ebaaa1ded6d98e12e220d9c6a8300120647",
+   "bytes": 421636
+  },
+  {
+   "path": "snapshots/110/commodities-1795836403000.json.gz",
+   "house_id": 110,
+   "house_name": "Alliance Auction House",
+   "scope": "commodities",
+   "last_modified": 1795836403000,
+   "fetched_at": 1795836795494,
+   "sha256": "6cbe55cc3afdcbef8c5ccacd2e24a6eea65cf5d04bd5f12c1f6fae9b3900c296",
+   "bytes": 978897
+  },
+  {
+   "path": "snapshots/110/items-1795836403000.json.gz",
+   "house_id": 110,
+   "house_name": "Alliance Auction House",
+   "scope": "items",
+   "last_modified": 1795836403000,
+   "fetched_at": 1795836795494,
+   "sha256": "eb02754ff67ec510b148ed4e86e758a8c7eca63e7fe35cd8cd377fc8072b7b98",
+   "bytes": 1608541
+  },
+  {
+   "path": "snapshots/111/commodities-1795836407000.json.gz",
+   "house_id": 111,
+   "house_name": "Alliance Auction House",
+   "scope": "commodities",
+   "last_modified": 1795836407000,
+   "fetched_at": 1795836795494,
+   "sha256": "7d561b7d246157d6718638e8f21f4869c84166865fb4e61aff58d1b498286a62",
+   "bytes": 1059472
+  },
+  {
+   "path": "snapshots/111/items-1795836407000.json.gz",
+   "house_id": 111,
+   "house_name": "Alliance Auction House",
+   "scope": "items",
+   "last_modified": 1795836407000,
+   "fetched_at": 1795836795494,
+   "sha256": "930cf2067410031085bba7e99b042441db4e7a8aed9ac16be22a7012d8068959",
+   "bytes": 1766418
+  },
+  {
+   "path": "snapshots/113/commodities-1795836407000.json.gz",
+   "house_id": 113,
+   "house_name": "Horde Auction House",
+   "scope": "commodities",
+   "last_modified": 1795836407000,
+   "fetched_at": 1795836795494,
+   "sha256": "926808c44063641297006de2b35ddca422d8ce9420433925e936b93ba4078a76",
+   "bytes": 1045960
+  },
+  {
+   "path": "snapshots/113/items-1795836408000.json.gz",
+   "house_id": 113,
+   "house_name": "Horde Auction House",
+   "scope": "items",
+   "last_modified": 1795836408000,
+   "fetched_at": 1795836795494,
+   "sha256": "0362e0f0a180ccf80496e1ff289def36d54d647e320d93c5adb18fd68a2d95b8",
+   "bytes": 1870472
+  },
+  {
+   "path": "snapshots/114/commodities-1795836408000.json.gz",
+   "house_id": 114,
+   "house_name": "Horde Auction House",
+   "scope": "commodities",
+   "last_modified": 1795836408000,
+   "fetched_at": 1795836795494,
+   "sha256": "2827ff5f18dc8156ebdec65d4d236822fea6363f17444f4b791940527002ab03",
+   "bytes": 1130233
+  },
+  {
+   "path": "snapshots/114/items-1795836408000.json.gz",
+   "house_id": 114,
+   "house_name": "Horde Auction House",
+   "scope": "items",
+   "last_modified": 1795836408000,
+   "fetched_at": 1795836795494,
+   "sha256": "b702ed7ae3021ad2b5a4766bd4d09a764bcdbf2ce24fd28a01c3dc61a45485b2",
+   "bytes": 1839355
+  },
+  {
+   "path": "snapshots/112/commodities-1795839964000.json.gz",
+   "house_id": 112,
+   "house_name": "Alliance Auction House",
+   "scope": "commodities",
+   "last_modified": 1795839964000,
+   "fetched_at": 1795840395468,
+   "sha256": "2a4bad77c01a7c963df6592596209e63a0480244e6f0f90ecdc9366c2365d654",
+   "bytes": 129
+  },
+  {
+   "path": "snapshots/112/items-1795839964000.json.gz",
+   "house_id": 112,
+   "house_name": "Alliance Auction House",
+   "scope": "items",
+   "last_modified": 1795839964000,
+   "fetched_at": 1795840395468,
+   "sha256": "a96f3035eae9ec9799385a64794aa36391916de5a79ca3da9aed415daea5a1b3",
+   "bytes": 179
+  },
+  {
+   "path": "snapshots/115/commodities-1795839964000.json.gz",
+   "house_id": 115,
+   "house_name": "Horde Auction House",
+   "scope": "commodities",
+   "last_modified": 1795839964000,
+   "fetched_at": 1795840395468,
+   "sha256": "db3f6d72d5832ab1edf2d9be5df57f613581224a3f6a2232287b59639c0e3d6e",
+   "bytes": 130
+  },
+  {
+   "path": "snapshots/115/items-1795839964000.json.gz",
+   "house_id": 115,
+   "house_name": "Horde Auction House",
+   "scope": "items",
+   "last_modified": 1795839964000,
+   "fetched_at": 1795840395468,
+   "sha256": "b0375af040e77c860cc8ce46762811b715e04642b54a14ea51083f379893e0b7",
+   "bytes": 178
+  },
+  {
+   "path": "snapshots/118/commodities-1795839964000.json.gz",
+   "house_id": 118,
+   "house_name": "Blackwater Auction House",
+   "scope": "commodities",
+   "last_modified": 1795839964000,
+   "fetched_at": 1795840395468,
+   "sha256": "351c82cab1940c8507152d26ceaa569efc2c8252c2fcb2910ce31ace3061cb42",
+   "bytes": 130
+  },
+  {
+   "path": "snapshots/118/items-1795839964000.json.gz",
+   "house_id": 118,
+   "house_name": "Blackwater Auction House",
+   "scope": "items",
+   "last_modified": 1795839964000,
+   "fetched_at": 1795840395468,
+   "sha256": "d57d5a40ccb5c0b45eb48fba380451db7ee35ce49a999cca36876911ab4cd704",
+   "bytes": 181
+  },
+  {
+   "path": "snapshots/121/commodities-1795839964000.json.gz",
+   "house_id": 121,
+   "house_name": "Blackwater Auction House",
+   "scope": "commodities",
+   "last_modified": 1795839964000,
+   "fetched_at": 1795840395468,
+   "sha256": "194d08489a82ab2211b6daf86094334328ff583bc118362201a6272c74e8d2d3",
+   "bytes": 31027
+  },
+  {
+   "path": "snapshots/121/items-1795839964000.json.gz",
+   "house_id": 121,
+   "house_name": "Blackwater Auction House",
+   "scope": "items",
+   "last_modified": 1795839964000,
+   "fetched_at": 1795840395468,
+   "sha256": "0640c9b18847fdb9408e754416eab31065a6813734bd3cf67b4de4dd04f8adac",
+   "bytes": 11569
+  },
+  {
+   "path": "snapshots/125/commodities-1795839964000.json.gz",
+   "house_id": 125,
+   "house_name": "Blackwater Auction House",
+   "scope": "commodities",
+   "last_modified": 1795839964000,
+   "fetched_at": 1795840395468,
+   "sha256": "947b3a31c7b49aa64c71a6117146fd4c73f6d8d01eb62b815de071bf15b1b23a",
+   "bytes": 32945
+  },
+  {
+   "path": "snapshots/125/items-1795839964000.json.gz",
+   "house_id": 125,
+   "house_name": "Blackwater Auction House",
+   "scope": "items",
+   "last_modified": 1795839964000,
+   "fetched_at": 1795840395468,
+   "sha256": "8f32946b651fc52b46e14db9788000b38dec1bfd082765205f343813d69716db",
+   "bytes": 17778
+  },
+  {
+   "path": "snapshots/116/commodities-1795839970000.json.gz",
+   "house_id": 116,
+   "house_name": "Blackwater Auction House",
+   "scope": "commodities",
+   "last_modified": 1795839970000,
+   "fetched_at": 1795840395468,
+   "sha256": "5e571de4d2ac79decae0dff830fec0a568efceaeec6ed02147c258bbcfc1b656",
+   "bytes": 255859
+  },
+  {
+   "path": "snapshots/116/items-1795839970000.json.gz",
+   "house_id": 116,
+   "house_name": "Blackwater Auction House",
+   "scope": "items",
+   "last_modified": 1795839970000,
+   "fetched_at": 1795840395468,
+   "sha256": "9f72bb165b7daa6c48f0ffdc8d1934d954aeaac175aa4a8f74fc8ae6eba17361",
+   "bytes": 173125
+  },
+  {
+   "path": "snapshots/117/commodities-1795839971000.json.gz",
+   "house_id": 117,
+   "house_name": "Blackwater Auction House",
+   "scope": "commodities",
+   "last_modified": 1795839971000,
+   "fetched_at": 1795840395468,
+   "sha256": "7db60258781effc5d5b5f18f4b363ad77a92bc2a7280657df4426bf64a90d07b",
+   "bytes": 299413
+  },
+  {
+   "path": "snapshots/117/items-1795839971000.json.gz",
+   "house_id": 117,
+   "house_name": "Blackwater Auction House",
+   "scope": "items",
+   "last_modified": 1795839971000,
+   "fetched_at": 1795840395468,
+   "sha256": "8396cad75219acfaa61e4124dff0fe83abba2418a255ba41cac4ee83dc78e44e",
+   "bytes": 231621
+  },
+  {
+   "path": "snapshots/120/commodities-1795839972000.json.gz",
+   "house_id": 120,
+   "house_name": "Horde Auction House",
+   "scope": "commodities",
+   "last_modified": 1795839972000,
+   "fetched_at": 1795840395468,
+   "sha256": "146726c96a5c449fa2dd222e166c04a35c9da2e8e5b37ff513eed50778fc3e29",
+   "bytes": 270954
+  },
+  {
+   "path": "snapshots/120/items-1795839972000.json.gz",
+   "house_id": 120,
+   "house_name": "Horde Auction House",
+   "scope": "items",
+   "last_modified": 1795839972000,
+   "fetched_at": 1795840395468,
+   "sha256": "667f86fec3dc946aa73db4a1db0ebd78e9f562cf212e1f94ce218f22f2c50b6a",
+   "bytes": 290736
+  },
+  {
+   "path": "snapshots/123/commodities-1795839973000.json.gz",
+   "house_id": 123,
+   "house_name": "Alliance Auction House",
+   "scope": "commodities",
+   "last_modified": 1795839973000,
+   "fetched_at": 1795840395468,
+   "sha256": "d37f7e9ab0a69dd8f872116dc5f7ebe6e06058ec490e79bf9d7077650059553b",
+   "bytes": 336397
+  },
+  {
+   "path": "snapshots/123/items-1795839973000.json.gz",
+   "house_id": 123,
+   "house_name": "Alliance Auction House",
+   "scope": "items",
+   "last_modified": 1795839973000,
+   "fetched_at": 1795840395468,
+   "sha256": "51b9e20d89e370a3e1f888f963264c9a26908224df055aa516f6d23cfa249c40",
+   "bytes": 370781
+  },
+  {
+   "path": "snapshots/119/commodities-1795839974000.json.gz",
+   "house_id": 119,
+   "house_name": "Alliance Auction House",
+   "scope": "commodities",
+   "last_modified": 1795839974000,
+   "fetched_at": 1795840395468,
+   "sha256": "be160a139981992641102b587e60e5691fc62d36bd3dc2526c224d73632a9454",
+   "bytes": 342467
+  },
+  {
+   "path": "snapshots/119/items-1795839974000.json.gz",
+   "house_id": 119,
+   "house_name": "Alliance Auction House",
+   "scope": "items",
+   "last_modified": 1795839974000,
+   "fetched_at": 1795840395468,
+   "sha256": "b3aabc6e0579b2ea91ca804d89dc85506b3b4d7972ddf46173cfc7e7b2e22e1c",
+   "bytes": 414391
+  },
+  {
+   "path": "snapshots/124/commodities-1795839974000.json.gz",
+   "house_id": 124,
+   "house_name": "Horde Auction House",
+   "scope": "commodities",
+   "last_modified": 1795839974000,
+   "fetched_at": 1795840395468,
+   "sha256": "36c67956ad6fdc3c00570ce5252a4694d5eba34ece923d39d8a66c3b9775252c",
+   "bytes": 375170
+  },
+  {
+   "path": "snapshots/124/items-1795839974000.json.gz",
+   "house_id": 124,
+   "house_name": "Horde Auction House",
+   "scope": "items",
+   "last_modified": 1795839974000,
+   "fetched_at": 1795840395468,
+   "sha256": "fe6b6cc2eb497da4a399099473f7a87ad521dae6fbfd1c532332a0f9594428b8",
+   "bytes": 426756
+  },
+  {
+   "path": "snapshots/110/commodities-1795839995000.json.gz",
+   "house_id": 110,
+   "house_name": "Alliance Auction House",
+   "scope": "commodities",
+   "last_modified": 1795839995000,
+   "fetched_at": 1795840395468,
+   "sha256": "977d3377492d8024412c3e59b30d51dd44753d753b89c6186a338443d5e70199",
+   "bytes": 980724
+  },
+  {
+   "path": "snapshots/110/items-1795839995000.json.gz",
+   "house_id": 110,
+   "house_name": "Alliance Auction House",
+   "scope": "items",
+   "last_modified": 1795839995000,
+   "fetched_at": 1795840395468,
+   "sha256": "ebe6e5ea0dfeb60601f68692be25bc279eb07f9de45e33a605b75a481dfa4694",
+   "bytes": 1675119
+  },
+  {
+   "path": "snapshots/111/commodities-1795839998000.json.gz",
+   "house_id": 111,
+   "house_name": "Alliance Auction House",
+   "scope": "commodities",
+   "last_modified": 1795839998000,
+   "fetched_at": 1795840395468,
+   "sha256": "d1cda050afdd156ae4b1421e807503be507ba224c7891c717bf138ca6b6c0969",
+   "bytes": 1078538
+  },
+  {
+   "path": "snapshots/111/items-1795839998000.json.gz",
+   "house_id": 111,
+   "house_name": "Alliance Auction House",
+   "scope": "items",
+   "last_modified": 1795839998000,
+   "fetched_at": 1795840395468,
+   "sha256": "625c66f66630b773db0c79c4d75a12443baac0b2b0742986ee8ec42b1ecdc622",
+   "bytes": 1821884
+  },
+  {
+   "path": "snapshots/113/commodities-1795839999000.json.gz",
+   "house_id": 113,
+   "house_name": "Horde Auction House",
+   "scope": "commodities",
+   "last_modified": 1795839999000,
+   "fetched_at": 1795840395468,
+   "sha256": "cd795ae0992aeb9e8cee7cda161798d325a082ba11671cff863ff9792933db0d",
+   "bytes": 1088502
+  },
+  {
+   "path": "snapshots/113/items-1795839999000.json.gz",
+   "house_id": 113,
+   "house_name": "Horde Auction House",
+   "scope": "items",
+   "last_modified": 1795839999000,
+   "fetched_at": 1795840395468,
+   "sha256": "e2e23614231cf7101b1b739f81373ccc1d11693f0fead88e120c16e645e04b72",
+   "bytes": 1916579
+  },
+  {
+   "path": "snapshots/114/commodities-1795839999000.json.gz",
+   "house_id": 114,
+   "house_name": "Horde Auction House",
+   "scope": "commodities",
+   "last_modified": 1795839999000,
+   "fetched_at": 1795840395468,
+   "sha256": "570eb14909f0dd50e2b2ec8ab4892b4a3ad8afd1bae4a20fdd38e3939b630518",
+   "bytes": 1149074
+  },
+  {
+   "path": "snapshots/114/items-1795839999000.json.gz",
+   "house_id": 114,
+   "house_name": "Horde Auction House",
+   "scope": "items",
+   "last_modified": 1795839999000,
+   "fetched_at": 1795840395468,
+   "sha256": "2aaf6bb0b24db8aa76ed50a6fab4ea9ee773dd64ec21de3ee36015e614272c23",
+   "bytes": 1884739
+  },
+  {
+   "path": "snapshots/112/commodities-1795850764000.json.gz",
+   "house_id": 112,
+   "house_name": "Alliance Auction House",
+   "scope": "commodities",
+   "last_modified": 1795850764000,
+   "fetched_at": 1795853017972,
+   "sha256": "2a4bad77c01a7c963df6592596209e63a0480244e6f0f90ecdc9366c2365d654",
+   "bytes": 129
+  },
+  {
+   "path": "snapshots/112/items-1795850764000.json.gz",
+   "house_id": 112,
+   "house_name": "Alliance Auction House",
+   "scope": "items",
+   "last_modified": 1795850764000,
+   "fetched_at": 1795853017972,
+   "sha256": "a96f3035eae9ec9799385a64794aa36391916de5a79ca3da9aed415daea5a1b3",
+   "bytes": 179
+  },
+  {
+   "path": "snapshots/115/commodities-1795850764000.json.gz",
+   "house_id": 115,
+   "house_name": "Horde Auction House",
+   "scope": "commodities",
+   "last_modified": 1795850764000,
+   "fetched_at": 1795853017972,
+   "sha256": "db3f6d72d5832ab1edf2d9be5df57f613581224a3f6a2232287b59639c0e3d6e",
+   "bytes": 130
+  },
+  {
+   "path": "snapshots/115/items-1795850764000.json.gz",
+   "house_id": 115,
+   "house_name": "Horde Auction House",
+   "scope": "items",
+   "last_modified": 1795850764000,
+   "fetched_at": 1795853017972,
+   "sha256": "b0375af040e77c860cc8ce46762811b715e04642b54a14ea51083f379893e0b7",
+   "bytes": 178
+  },
+  {
+   "path": "snapshots/118/commodities-1795850764000.json.gz",
+   "house_id": 118,
+   "house_name": "Blackwater Auction House",
+   "scope": "commodities",
+   "last_modified": 1795850764000,
+   "fetched_at": 1795853017972,
+   "sha256": "351c82cab1940c8507152d26ceaa569efc2c8252c2fcb2910ce31ace3061cb42",
+   "bytes": 130
+  },
+  {
+   "path": "snapshots/118/items-1795850764000.json.gz",
+   "house_id": 118,
+   "house_name": "Blackwater Auction House",
+   "scope": "items",
+   "last_modified": 1795850764000,
+   "fetched_at": 1795853017972,
+   "sha256": "d57d5a40ccb5c0b45eb48fba380451db7ee35ce49a999cca36876911ab4cd704",
+   "bytes": 181
+  },
+  {
+   "path": "snapshots/121/commodities-1795850764000.json.gz",
+   "house_id": 121,
+   "house_name": "Blackwater Auction House",
+   "scope": "commodities",
+   "last_modified": 1795850764000,
+   "fetched_at": 1795853017972,
+   "sha256": "78ff26ace4fb1795700a41153ede4693ab0c6c66206f5acf1a45a31a815eedc1",
+   "bytes": 30858
+  },
+  {
+   "path": "snapshots/121/items-1795850764000.json.gz",
+   "house_id": 121,
+   "house_name": "Blackwater Auction House",
+   "scope": "items",
+   "last_modified": 1795850764000,
+   "fetched_at": 1795853017972,
+   "sha256": "fab0f81c2f9d7ed8541f41faeaf6157a7b2389cd498d0b787819634ca63a8dc6",
+   "bytes": 11631
+  },
+  {
+   "path": "snapshots/125/commodities-1795850764000.json.gz",
+   "house_id": 125,
+   "house_name": "Blackwater Auction House",
+   "scope": "commodities",
+   "last_modified": 1795850764000,
+   "fetched_at": 1795853017972,
+   "sha256": "d9c73ec0893542696bd4723fe2df98390549d4fa4835781ee5371dc42007eb70",
+   "bytes": 34857
+  },
+  {
+   "path": "snapshots/125/items-1795850764000.json.gz",
+   "house_id": 125,
+   "house_name": "Blackwater Auction House",
+   "scope": "items",
+   "last_modified": 1795850764000,
+   "fetched_at": 1795853017972,
+   "sha256": "dc75969f9ee26dfd506bd7ab33eb269b5f6ad02cc9bcb1ff6dc5dc06515a91a1",
+   "bytes": 19873
+  },
+  {
+   "path": "snapshots/116/items-1795850767000.json.gz",
+   "house_id": 116,
+   "house_name": "Blackwater Auction House",
+   "scope": "items",
+   "last_modified": 1795850767000,
+   "fetched_at": 1795853017972,
+   "sha256": "36f4740aed3c478a370e94b42d4c14acdfcfcbc4063c3c01d1d5776d8fdc548e",
+   "bytes": 183700
+  },
+  {
+   "path": "snapshots/116/commodities-1795850768000.json.gz",
+   "house_id": 116,
+   "house_name": "Blackwater Auction House",
+   "scope": "commodities",
+   "last_modified": 1795850768000,
+   "fetched_at": 1795853017972,
+   "sha256": "d42e1683683b9bc9149eedb918f7978bdd21ea2facbf2c2870eccfde51372932",
+   "bytes": 252766
+  },
+  {
+   "path": "snapshots/117/commodities-1795850768000.json.gz",
+   "house_id": 117,
+   "house_name": "Blackwater Auction House",
+   "scope": "commodities",
+   "last_modified": 1795850768000,
+   "fetched_at": 1795853017972,
+   "sha256": "28ed0cfff16451bef4f922f2696c9e65de9f57e45f67aea709e1d0e5f7f59639",
+   "bytes": 284041
+  },
+  {
+   "path": "snapshots/117/items-1795850768000.json.gz",
+   "house_id": 117,
+   "house_name": "Blackwater Auction House",
+   "scope": "items",
+   "last_modified": 1795850768000,
+   "fetched_at": 1795853017972,
+   "sha256": "bb6759bdebad70f449b8b08fe5c2dab8b00c1d0cfe8d5ab507e15d21ec777fcb",
+   "bytes": 235188
+  },
+  {
+   "path": "snapshots/120/commodities-1795850768000.json.gz",
+   "house_id": 120,
+   "house_name": "Horde Auction House",
+   "scope": "commodities",
+   "last_modified": 1795850768000,
+   "fetched_at": 1795853017972,
+   "sha256": "89211994c40123ea7964feea925d0f9e477cd1a0caad2acd31c3db4860d09989",
+   "bytes": 259335
+  },
+  {
+   "path": "snapshots/120/items-1795850768000.json.gz",
+   "house_id": 120,
+   "house_name": "Horde Auction House",
+   "scope": "items",
+   "last_modified": 1795850768000,
+   "fetched_at": 1795853017972,
+   "sha256": "5c5f9801f20df9b2509e830deff2c640cd37a93e7158de921a79ddbd0049f347",
+   "bytes": 292899
+  },
+  {
+   "path": "snapshots/119/commodities-1795850770000.json.gz",
+   "house_id": 119,
+   "house_name": "Alliance Auction House",
+   "scope": "commodities",
+   "last_modified": 1795850770000,
+   "fetched_at": 1795853017972,
+   "sha256": "58845f8c627fdeceecd02a84238e4e816384448d6d4e993ebac3ee24a91102b9",
+   "bytes": 335240
+  },
+  {
+   "path": "snapshots/119/items-1795850770000.json.gz",
+   "house_id": 119,
+   "house_name": "Alliance Auction House",
+   "scope": "items",
+   "last_modified": 1795850770000,
+   "fetched_at": 1795853017972,
+   "sha256": "c85a0c0d58eebca874e68ad56767229d95553c0018301282ada073de07f82c7c",
+   "bytes": 410728
+  },
+  {
+   "path": "snapshots/123/commodities-1795850770000.json.gz",
+   "house_id": 123,
+   "house_name": "Alliance Auction House",
+   "scope": "commodities",
+   "last_modified": 1795850770000,
+   "fetched_at": 1795853017972,
+   "sha256": "632229e5454fdc1c2c09b6f3008fdcfa971536aed8982eee35c18eac8b967ad6",
+   "bytes": 340303
+  },
+  {
+   "path": "snapshots/123/items-1795850770000.json.gz",
+   "house_id": 123,
+   "house_name": "Alliance Auction House",
+   "scope": "items",
+   "last_modified": 1795850770000,
+   "fetched_at": 1795853017972,
+   "sha256": "e9e9b5b240818754e6eb7a0a28bfddf441042aef4a609833bf76212b40b4dbf6",
+   "bytes": 372912
+  },
+  {
+   "path": "snapshots/124/commodities-1795850770000.json.gz",
+   "house_id": 124,
+   "house_name": "Horde Auction House",
+   "scope": "commodities",
+   "last_modified": 1795850770000,
+   "fetched_at": 1795853017972,
+   "sha256": "84be81281aadbfece1d97f47405387a4ed2331f814a3e117ef139fe62a651a4e",
+   "bytes": 368633
+  },
+  {
+   "path": "snapshots/124/items-1795850770000.json.gz",
+   "house_id": 124,
+   "house_name": "Horde Auction House",
+   "scope": "items",
+   "last_modified": 1795850770000,
+   "fetched_at": 1795853017972,
+   "sha256": "d410ba790c36462e5d7ac541dda3cd8a70d9d10f1b2ec77f9d52acdc33539ce6",
+   "bytes": 444801
+  },
+  {
+   "path": "snapshots/110/commodities-1795850782000.json.gz",
+   "house_id": 110,
+   "house_name": "Alliance Auction House",
+   "scope": "commodities",
+   "last_modified": 1795850782000,
+   "fetched_at": 1795853017972,
+   "sha256": "88cff3f871a847850058aed6876922ae2f55fc65458ab26cceb80a6c7a5ca481",
+   "bytes": 936727
+  },
+  {
+   "path": "snapshots/110/items-1795850782000.json.gz",
+   "house_id": 110,
+   "house_name": "Alliance Auction House",
+   "scope": "items",
+   "last_modified": 1795850782000,
+   "fetched_at": 1795853017972,
+   "sha256": "a941fde4566cafa29593bc86d49ab9b9c1c436b65d5ae31a23fab9417d3de206",
+   "bytes": 1719212
+  },
+  {
+   "path": "snapshots/111/commodities-1795850784000.json.gz",
+   "house_id": 111,
+   "house_name": "Alliance Auction House",
+   "scope": "commodities",
+   "last_modified": 1795850784000,
+   "fetched_at": 1795853017972,
+   "sha256": "71008bbb5e73a86d69d60db7bbd1bf9f9dd2cb170757f91e5b5ea7caf5cb4d4d",
+   "bytes": 1009831
+  },
+  {
+   "path": "snapshots/111/items-1795850784000.json.gz",
+   "house_id": 111,
+   "house_name": "Alliance Auction House",
+   "scope": "items",
+   "last_modified": 1795850784000,
+   "fetched_at": 1795853017972,
+   "sha256": "40d29be28d6a744522ce5379eb3de53963324452226e1027ede817f42db51eec",
+   "bytes": 1856476
+  },
+  {
+   "path": "snapshots/113/commodities-1795850785000.json.gz",
+   "house_id": 113,
+   "house_name": "Horde Auction House",
+   "scope": "commodities",
+   "last_modified": 1795850785000,
+   "fetched_at": 1795853017972,
+   "sha256": "3f74d3f4cc7037cf6303ec7d07814e7f2e479b5e52472afdc7f8dc931d067c13",
+   "bytes": 1088612
+  },
+  {
+   "path": "snapshots/113/items-1795850785000.json.gz",
+   "house_id": 113,
+   "house_name": "Horde Auction House",
+   "scope": "items",
+   "last_modified": 1795850785000,
+   "fetched_at": 1795853017972,
+   "sha256": "336fe24a2bae9d25920a8539dab20206741ff174c4431275a07b8f4f4a500219",
+   "bytes": 1929961
+  },
+  {
+   "path": "snapshots/114/commodities-1795850785000.json.gz",
+   "house_id": 114,
+   "house_name": "Horde Auction House",
+   "scope": "commodities",
+   "last_modified": 1795850785000,
+   "fetched_at": 1795853017972,
+   "sha256": "b74f3e198876ca8aee8bd84d94167c0f1d502907b0d55e82e2202011e86f5117",
+   "bytes": 1127120
+  },
+  {
+   "path": "snapshots/114/items-1795850785000.json.gz",
+   "house_id": 114,
+   "house_name": "Horde Auction House",
+   "scope": "items",
+   "last_modified": 1795850785000,
+   "fetched_at": 1795853017972,
+   "sha256": "83672daacd677fd6226dbf13ad87132e6fb8b10e326604051a1a2036d536c9f4",
+   "bytes": 1893872
+  },
+  {
+   "path": "snapshots/112/commodities-1795854364000.json.gz",
+   "house_id": 112,
+   "house_name": "Alliance Auction House",
+   "scope": "commodities",
+   "last_modified": 1795854364000,
+   "fetched_at": 1795856617979,
+   "sha256": "2a4bad77c01a7c963df6592596209e63a0480244e6f0f90ecdc9366c2365d654",
+   "bytes": 129
+  },
+  {
+   "path": "snapshots/112/items-1795854364000.json.gz",
+   "house_id": 112,
+   "house_name": "Alliance Auction House",
+   "scope": "items",
+   "last_modified": 1795854364000,
+   "fetched_at": 1795856617979,
+   "sha256": "a96f3035eae9ec9799385a64794aa36391916de5a79ca3da9aed415daea5a1b3",
+   "bytes": 179
+  },
+  {
+   "path": "snapshots/115/commodities-1795854364000.json.gz",
+   "house_id": 115,
+   "house_name": "Horde Auction House",
+   "scope": "commodities",
+   "last_modified": 1795854364000,
+   "fetched_at": 1795856617979,
+   "sha256": "db3f6d72d5832ab1edf2d9be5df57f613581224a3f6a2232287b59639c0e3d6e",
+   "bytes": 130
+  },
+  {
+   "path": "snapshots/115/items-1795854364000.json.gz",
+   "house_id": 115,
+   "house_name": "Horde Auction House",
+   "scope": "items",
+   "last_modified": 1795854364000,
+   "fetched_at": 1795856617979,
+   "sha256": "b0375af040e77c860cc8ce46762811b715e04642b54a14ea51083f379893e0b7",
+   "bytes": 178
+  },
+  {
+   "path": "snapshots/118/commodities-1795854364000.json.gz",
+   "house_id": 118,
+   "house_name": "Blackwater Auction House",
+   "scope": "commodities",
+   "last_modified": 1795854364000,
+   "fetched_at": 1795856617979,
+   "sha256": "351c82cab1940c8507152d26ceaa569efc2c8252c2fcb2910ce31ace3061cb42",
+   "bytes": 130
+  },
+  {
+   "path": "snapshots/118/items-1795854364000.json.gz",
+   "house_id": 118,
+   "house_name": "Blackwater Auction House",
+   "scope": "items",
+   "last_modified": 1795854364000,
+   "fetched_at": 1795856617979,
+   "sha256": "d57d5a40ccb5c0b45eb48fba380451db7ee35ce49a999cca36876911ab4cd704",
+   "bytes": 181
+  },
+  {
+   "path": "snapshots/121/commodities-1795854364000.json.gz",
+   "house_id": 121,
+   "house_name": "Blackwater Auction House",
+   "scope": "commodities",
+   "last_modified": 1795854364000,
+   "fetched_at": 1795856617979,
+   "sha256": "981d0c4c10288aaf030e234c6f1b491978758b77fac751f6e1131ba571fdc7a0",
+   "bytes": 30156
+  },
+  {
+   "path": "snapshots/121/items-1795854364000.json.gz",
+   "house_id": 121,
+   "house_name": "Blackwater Auction House",
+   "scope": "items",
+   "last_modified": 1795854364000,
+   "fetched_at": 1795856617979,
+   "sha256": "1265d560971a41e569ba5bf64b7d97988f4d83dc4bc587d41e8dfd590fdae13c",
+   "bytes": 11547
+  },
+  {
+   "path": "snapshots/125/commodities-1795854364000.json.gz",
+   "house_id": 125,
+   "house_name": "Blackwater Auction House",
+   "scope": "commodities",
+   "last_modified": 1795854364000,
+   "fetched_at": 1795856617979,
+   "sha256": "af4b1cdebc64cf37c060bc763d828d85aa16c4321e1262147851086ed3114189",
+   "bytes": 33648
+  },
+  {
+   "path": "snapshots/125/items-1795854364000.json.gz",
+   "house_id": 125,
+   "house_name": "Blackwater Auction House",
+   "scope": "items",
+   "last_modified": 1795854364000,
+   "fetched_at": 1795856617979,
+   "sha256": "b7f7f1e18de29dfaff6a957b750b3a3953e9b1bd00c9cd8eab855905393c23b2",
+   "bytes": 19810
+  },
+  {
+   "path": "snapshots/116/commodities-1795854367000.json.gz",
+   "house_id": 116,
+   "house_name": "Blackwater Auction House",
+   "scope": "commodities",
+   "last_modified": 1795854367000,
+   "fetched_at": 1795856617979,
+   "sha256": "6da9867e4273cb1530f5a235a9119a0065f0432a10d5dee223719d91606bec70",
+   "bytes": 254660
+  },
+  {
+   "path": "snapshots/116/items-1795854367000.json.gz",
+   "house_id": 116,
+   "house_name": "Blackwater Auction House",
+   "scope": "items",
+   "last_modified": 1795854367000,
+   "fetched_at": 1795856617979,
+   "sha256": "8b2b3648eeb554b3195af7a8a8f9eab62b339801a287ce0d5f2b6169eb2501e9",
+   "bytes": 180570
+  },
+  {
+   "path": "snapshots/117/commodities-1795854368000.json.gz",
+   "house_id": 117,
+   "house_name": "Blackwater Auction House",
+   "scope": "commodities",
+   "last_modified": 1795854368000,
+   "fetched_at": 1795856617979,
+   "sha256": "6b7d0689462e8d473ef5effe74d36bf24dac515c048d6556efef00a2c7907e2e",
+   "bytes": 279188
+  },
+  {
+   "path": "snapshots/117/items-1795854368000.json.gz",
+   "house_id": 117,
+   "house_name": "Blackwater Auction House",
+   "scope": "items",
+   "last_modified": 1795854368000,
+   "fetched_at": 1795856617979,
+   "sha256": "23659e6d5924308eeef14103210ce6b78accc08320f5e113c3d26ff26aeacdba",
+   "bytes": 227408
+  },
+  {
+   "path": "snapshots/120/commodities-1795854368000.json.gz",
+   "house_id": 120,
+   "house_name": "Horde Auction House",
+   "scope": "commodities",
+   "last_modified": 1795854368000,
+   "fetched_at": 1795856617979,
+   "sha256": "7fcbe9d7df4352ea74a66e698a4ffe90f1f40244da3cc70e409fd21efacb367a",
+   "bytes": 251895
+  },
+  {
+   "path": "snapshots/120/items-1795854368000.json.gz",
+   "house_id": 120,
+   "house_name": "Horde Auction House",
+   "scope": "items",
+   "last_modified": 1795854368000,
+   "fetched_at": 1795856617979,
+   "sha256": "f874722a9d93abbaa2fe68a15ff1fbc35dfc9a47a7a3e18654293cc92c0bfb96",
+   "bytes": 284752
+  },
+  {
+   "path": "snapshots/119/commodities-1795854369000.json.gz",
+   "house_id": 119,
+   "house_name": "Alliance Auction House",
+   "scope": "commodities",
+   "last_modified": 1795854369000,
+   "fetched_at": 1795856617979,
+   "sha256": "cae09620021312d3ba47b4d61a50eca9e2bb32b9f1a1f47b80259710ef416c50",
+   "bytes": 314882
+  },
+  {
+   "path": "snapshots/119/items-1795854369000.json.gz",
+   "house_id": 119,
+   "house_name": "Alliance Auction House",
+   "scope": "items",
+   "last_modified": 1795854369000,
+   "fetched_at": 1795856617979,
+   "sha256": "0d2bc96facb9755de3d74dbe42c0719602a7fef667b8c5c26d685712c5321a6f",
+   "bytes": 397645
+  },
+  {
+   "path": "snapshots/123/commodities-1795854369000.json.gz",
+   "house_id": 123,
+   "house_name": "Alliance Auction House",
+   "scope": "commodities",
+   "last_modified": 1795854369000,
+   "fetched_at": 1795856617979,
+   "sha256": "b8bba5ff4b83815f80f3e38d6d17af6b7f5d0aa6825cce2ff754fb6c81e98845",
+   "bytes": 328889
+  },
+  {
+   "path": "snapshots/123/items-1795854369000.json.gz",
+   "house_id": 123,
+   "house_name": "Alliance Auction House",
+   "scope": "items",
+   "last_modified": 1795854369000,
+   "fetched_at": 1795856617979,
+   "sha256": "9ee82477de05f1bd3cf44c77d0f0c4e1873105d433d3945774a27cd821d932d1",
+   "bytes": 369479
+  },
+  {
+   "path": "snapshots/124/commodities-1795854369000.json.gz",
+   "house_id": 124,
+   "house_name": "Horde Auction House",
+   "scope": "commodities",
+   "last_modified": 1795854369000,
+   "fetched_at": 1795856617979,
+   "sha256": "a724e7d9e531941a7cf9c21292482e704769b52a47e4f8db34b6c8a630477f1f",
+   "bytes": 349875
+  },
+  {
+   "path": "snapshots/124/items-1795854369000.json.gz",
+   "house_id": 124,
+   "house_name": "Horde Auction House",
+   "scope": "items",
+   "last_modified": 1795854369000,
+   "fetched_at": 1795856617979,
+   "sha256": "ec28fff47dc2287108510677645338a9a5129b5f655c9ab22a9a957b83b3dfa3",
+   "bytes": 432491
+  },
+  {
+   "path": "snapshots/110/commodities-1795854378000.json.gz",
+   "house_id": 110,
+   "house_name": "Alliance Auction House",
+   "scope": "commodities",
+   "last_modified": 1795854378000,
+   "fetched_at": 1795856617979,
+   "sha256": "0f0f01d23d6e7441b98b6b2f40b6a08716f690dff356b26b3042a50e7d7e2fb5",
+   "bytes": 907727
+  },
+  {
+   "path": "snapshots/110/items-1795854378000.json.gz",
+   "house_id": 110,
+   "house_name": "Alliance Auction House",
+   "scope": "items",
+   "last_modified": 1795854378000,
+   "fetched_at": 1795856617979,
+   "sha256": "9c4013daf478258f2a279e584e1700f081f50e301fca6fe5adbfca3465420520",
+   "bytes": 1668075
+  },
+  {
+   "path": "snapshots/111/commodities-1795854379000.json.gz",
+   "house_id": 111,
+   "house_name": "Alliance Auction House",
+   "scope": "commodities",
+   "last_modified": 1795854379000,
+   "fetched_at": 1795856617979,
+   "sha256": "1d49aaf057b736ad81e04d6e02e1d74800d01eae7b7f52a7d1fe989dcb6be905",
+   "bytes": 975429
+  },
+  {
+   "path": "snapshots/111/items-1795854379000.json.gz",
+   "house_id": 111,
+   "house_name": "Alliance Auction House",
+   "scope": "items",
+   "last_modified": 1795854379000,
+   "fetched_at": 1795856617979,
+   "sha256": "e73d2eef010e50ca2719fab5ed011d85e7b63742dca984eb5763e8ac7b744c30",
+   "bytes": 1802691
+  },
+  {
+   "path": "snapshots/113/commodities-1795854380000.json.gz",
+   "house_id": 113,
+   "house_name": "Horde Auction House",
+   "scope": "commodities",
+   "last_modified": 1795854380000,
+   "fetched_at": 1795856617979,
+   "sha256": "469bae57b2d4869fbef765cd8c653f3eef1359a59d0788f3fa4a8a59535b7016",
+   "bytes": 1044256
+  },
+  {
+   "path": "snapshots/113/items-1795854380000.json.gz",
+   "house_id": 113,
+   "house_name": "Horde Auction House",
+   "scope": "items",
+   "last_modified": 1795854380000,
+   "fetched_at": 1795856617979,
+   "sha256": "f7cbfd8387c99a332b37d2d9a82596013d3efd200375d87b00f66aa81f7de3bf",
+   "bytes": 1876784
+  },
+  {
+   "path": "snapshots/114/commodities-1795854381000.json.gz",
+   "house_id": 114,
+   "house_name": "Horde Auction House",
+   "scope": "commodities",
+   "last_modified": 1795854381000,
+   "fetched_at": 1795856617979,
+   "sha256": "e89549f989983b6065dededa6c6a53edfb68bbacdf4fab953d4f231afe61b6a6",
+   "bytes": 1079084
+  },
+  {
+   "path": "snapshots/114/items-1795854381000.json.gz",
+   "house_id": 114,
+   "house_name": "Horde Auction House",
+   "scope": "items",
+   "last_modified": 1795854381000,
+   "fetched_at": 1795856617979,
+   "sha256": "2f4eaeffc7a8dd1e443a225963bad522a434eec2cd8101c090afbbb0683cb1b6",
+   "bytes": 1828240
+  },
+  {
+   "path": "snapshots/112/commodities-1795857964000.json.gz",
+   "house_id": 112,
+   "house_name": "Alliance Auction House",
+   "scope": "commodities",
+   "last_modified": 1795857964000,
+   "fetched_at": 1795860217264,
+   "sha256": "2a4bad77c01a7c963df6592596209e63a0480244e6f0f90ecdc9366c2365d654",
+   "bytes": 129
+  },
+  {
+   "path": "snapshots/112/items-1795857964000.json.gz",
+   "house_id": 112,
+   "house_name": "Alliance Auction House",
+   "scope": "items",
+   "last_modified": 1795857964000,
+   "fetched_at": 1795860217264,
+   "sha256": "a96f3035eae9ec9799385a64794aa36391916de5a79ca3da9aed415daea5a1b3",
+   "bytes": 179
+  },
+  {
+   "path": "snapshots/115/commodities-1795857964000.json.gz",
+   "house_id": 115,
+   "house_name": "Horde Auction House",
+   "scope": "commodities",
+   "last_modified": 1795857964000,
+   "fetched_at": 1795860217264,
+   "sha256": "db3f6d72d5832ab1edf2d9be5df57f613581224a3f6a2232287b59639c0e3d6e",
+   "bytes": 130
+  },
+  {
+   "path": "snapshots/115/items-1795857964000.json.gz",
+   "house_id": 115,
+   "house_name": "Horde Auction House",
+   "scope": "items",
+   "last_modified": 1795857964000,
+   "fetched_at": 1795860217264,
+   "sha256": "b0375af040e77c860cc8ce46762811b715e04642b54a14ea51083f379893e0b7",
+   "bytes": 178
+  },
+  {
+   "path": "snapshots/118/commodities-1795857964000.json.gz",
+   "house_id": 118,
+   "house_name": "Blackwater Auction House",
+   "scope": "commodities",
+   "last_modified": 1795857964000,
+   "fetched_at": 1795860217264,
+   "sha256": "351c82cab1940c8507152d26ceaa569efc2c8252c2fcb2910ce31ace3061cb42",
+   "bytes": 130
+  },
+  {
+   "path": "snapshots/118/items-1795857964000.json.gz",
+   "house_id": 118,
+   "house_name": "Blackwater Auction House",
+   "scope": "items",
+   "last_modified": 1795857964000,
+   "fetched_at": 1795860217264,
+   "sha256": "d57d5a40ccb5c0b45eb48fba380451db7ee35ce49a999cca36876911ab4cd704",
+   "bytes": 181
+  },
+  {
+   "path": "snapshots/121/commodities-1795857964000.json.gz",
+   "house_id": 121,
+   "house_name": "Blackwater Auction House",
+   "scope": "commodities",
+   "last_modified": 1795857964000,
+   "fetched_at": 1795860217264,
+   "sha256": "19460ddcd6ad0e853dd13d1778a209b5cf18924ce9ce20457c66e82e53879ee4",
+   "bytes": 29063
+  },
+  {
+   "path": "snapshots/121/items-1795857964000.json.gz",
+   "house_id": 121,
+   "house_name": "Blackwater Auction House",
+   "scope": "items",
+   "last_modified": 1795857964000,
+   "fetched_at": 1795860217264,
+   "sha256": "f5ae08f21587bb6fa341b77ab690a28703b4c43984d221c43460d832a65b2087",
+   "bytes": 11286
+  },
+  {
+   "path": "snapshots/125/commodities-1795857964000.json.gz",
+   "house_id": 125,
+   "house_name": "Blackwater Auction House",
+   "scope": "commodities",
+   "last_modified": 1795857964000,
+   "fetched_at": 1795860217264,
+   "sha256": "073839e7a2e7c42373c90809fbdb3f17e602c72fd89ea9c628644358929d5607",
+   "bytes": 32184
+  },
+  {
+   "path": "snapshots/125/items-1795857964000.json.gz",
+   "house_id": 125,
+   "house_name": "Blackwater Auction House",
+   "scope": "items",
+   "last_modified": 1795857964000,
+   "fetched_at": 1795860217264,
+   "sha256": "9502f38fdf5881eb2860e6a00d6c15068b1442cd71057cce69ddc919f2493d66",
+   "bytes": 19410
+  },
+  {
+   "path": "snapshots/116/commodities-1795857966000.json.gz",
+   "house_id": 116,
+   "house_name": "Blackwater Auction House",
+   "scope": "commodities",
+   "last_modified": 1795857966000,
+   "fetched_at": 1795860217264,
+   "sha256": "057bc98b585dbfc25ea7b9c2f08492588d41f46b3b4ecd89b77653ef13a32525",
+   "bytes": 238975
+  },
+  {
+   "path": "snapshots/116/items-1795857966000.json.gz",
+   "house_id": 116,
+   "house_name": "Blackwater Auction House",
+   "scope": "items",
+   "last_modified": 1795857966000,
+   "fetched_at": 1795860217264,
+   "sha256": "dd6d17f964e82de5a03035bcde1788f451cc8b024628cf951b84b4362559a120",
+   "bytes": 174015
+  },
+  {
+   "path": "snapshots/117/commodities-1795857967000.json.gz",
+   "house_id": 117,
+   "house_name": "Blackwater Auction House",
+   "scope": "commodities",
+   "last_modified": 1795857967000,
+   "fetched_at": 1795860217264,
+   "sha256": "c83830bf2c27c5b24c279b55562d4b0b269d2f40f451366de73fe07a78599f5f",
+   "bytes": 254577
+  },
+  {
+   "path": "snapshots/117/items-1795857967000.json.gz",
+   "house_id": 117,
+   "house_name": "Blackwater Auction House",
+   "scope": "items",
+   "last_modified": 1795857967000,
+   "fetched_at": 1795860217264,
+   "sha256": "b16ad7f41626aa39e4bfda82b6fc245e87e8e031f8cec8a59cf28704e230b6d2",
+   "bytes": 215153
+  },
+  {
+   "path": "snapshots/120/commodities-1795857967000.json.gz",
+   "house_id": 120,
+   "house_name": "Horde Auction House",
+   "scope": "commodities",
+   "last_modified": 1795857967000,
+   "fetched_at": 1795860217264,
+   "sha256": "0c4a03cc8380485f660cd78889052ace2518912b14c537d3d1d3af8c8c915d1e",
+   "bytes": 243460
+  },
+  {
+   "path": "snapshots/120/items-1795857967000.json.gz",
+   "house_id": 120,
+   "house_name": "Horde Auction House",
+   "scope": "items",
+   "last_modified": 1795857967000,
+   "fetched_at": 1795860217264,
+   "sha256": "5b45c2ce9f93041405bba8189e15e9655bfebf182e4e9c89e3c6b1c918b0e0a0",
+   "bytes": 274978
+  },
+  {
+   "path": "snapshots/119/commodities-1795857968000.json.gz",
+   "house_id": 119,
+   "house_name": "Alliance Auction House",
+   "scope": "commodities",
+   "last_modified": 1795857968000,
+   "fetched_at": 1795860217264,
+   "sha256": "8ad8e4922742abc446059f0c4414122ca33b8e2622db52e81089b25118df1a01",
+   "bytes": 290649
+  },
+  {
+   "path": "snapshots/119/items-1795857968000.json.gz",
+   "house_id": 119,
+   "house_name": "Alliance Auction House",
+   "scope": "items",
+   "last_modified": 1795857968000,
+   "fetched_at": 1795860217264,
+   "sha256": "592c8eb6675fcecb768d8f4317ee584c35dab163464e98cdcee23a6374ed69d6",
+   "bytes": 379700
+  },
+  {
+   "path": "snapshots/123/commodities-1795857968000.json.gz",
+   "house_id": 123,
+   "house_name": "Alliance Auction House",
+   "scope": "commodities",
+   "last_modified": 1795857968000,
+   "fetched_at": 1795860217264,
+   "sha256": "e8fda7ae81d9b422c99283eb15f1bc0fbb0fa51696e36298cebe683df38a1c3a",
+   "bytes": 307592
+  },
+  {
+   "path": "snapshots/123/items-1795857968000.json.gz",
+   "house_id": 123,
+   "house_name": "Alliance Auction House",
+   "scope": "items",
+   "last_modified": 1795857968000,
+   "fetched_at": 1795860217264,
+   "sha256": "a755df6e79409041b3dd4df6dedcad822cd3732706426141ef5491ccaa359e2e",
+   "bytes": 355671
+  },
+  {
+   "path": "snapshots/124/commodities-1795857968000.json.gz",
+   "house_id": 124,
+   "house_name": "Horde Auction House",
+   "scope": "commodities",
+   "last_modified": 1795857968000,
+   "fetched_at": 1795860217264,
+   "sha256": "10ba7d8d4e40b2fb3f860b43a608dab0ce9542bf3116aac5025979cb58721124",
+   "bytes": 331610
+  },
+  {
+   "path": "snapshots/124/items-1795857968000.json.gz",
+   "house_id": 124,
+   "house_name": "Horde Auction House",
+   "scope": "items",
+   "last_modified": 1795857968000,
+   "fetched_at": 1795860217264,
+   "sha256": "5dce03b7457cc1d63e5875b47caa6aaf82e0dcf8ca73dd72f76f3070663d6fdf",
+   "bytes": 414989
+  },
+  {
+   "path": "snapshots/110/commodities-1795857975000.json.gz",
+   "house_id": 110,
+   "house_name": "Alliance Auction House",
+   "scope": "commodities",
+   "last_modified": 1795857975000,
+   "fetched_at": 1795860217264,
+   "sha256": "c4cc3f3c54d2279ffaeb0ffaafefd841df66ae37a7374c9b51915ed71fbee4dc",
+   "bytes": 864419
+  },
+  {
+   "path": "snapshots/110/items-1795857975000.json.gz",
+   "house_id": 110,
+   "house_name": "Alliance Auction House",
+   "scope": "items",
+   "last_modified": 1795857975000,
+   "fetched_at": 1795860217264,
+   "sha256": "2a7b4101f69a7faefb7b02d33019e65978644b8f3e48c1b538afa5d7014b994c",
+   "bytes": 1591757
+  },
+  {
+   "path": "snapshots/111/commodities-1795857976000.json.gz",
+   "house_id": 111,
+   "house_name": "Alliance Auction House",
+   "scope": "commodities",
+   "last_modified": 1795857976000,
+   "fetched_at": 1795860217264,
+   "sha256": "6169c4c00047cd4a0bbdcde62a0e8c0fdaecf584a694a75226644654dcc51771",
+   "bytes": 914715
+  },
+  {
+   "path": "snapshots/111/items-1795857976000.json.gz",
+   "house_id": 111,
+   "house_name": "Alliance Auction House",
+   "scope": "items",
+   "last_modified": 1795857976000,
+   "fetched_at": 1795860217264,
+   "sha256": "314af3f22200ea6d7afc6d6eb25728f2280dbe3a4fd5d8e378ae561fe74ebacd",
+   "bytes": 1716135
+  },
+  {
+   "path": "snapshots/113/commodities-1795857976000.json.gz",
+   "house_id": 113,
+   "house_name": "Horde Auction House",
+   "scope": "commodities",
+   "last_modified": 1795857976000,
+   "fetched_at": 1795860217264,
+   "sha256": "84a4f569e893ed4c07b4f6df46e3bdb70833acaca163f1217f6b377879c4b3e6",
+   "bytes": 973253
+  },
+  {
+   "path": "snapshots/113/items-1795857976000.json.gz",
+   "house_id": 113,
+   "house_name": "Horde Auction House",
+   "scope": "items",
+   "last_modified": 1795857976000,
+   "fetched_at": 1795860217264,
+   "sha256": "51a6fceefbcc524558ccaf4daeb77cdd7ef93ab88866b5a1a946698855b952f4",
+   "bytes": 1792723
+  },
+  {
+   "path": "snapshots/114/commodities-1795857977000.json.gz",
+   "house_id": 114,
+   "house_name": "Horde Auction House",
+   "scope": "commodities",
+   "last_modified": 1795857977000,
+   "fetched_at": 1795860217264,
+   "sha256": "93e294e4cef14d43959aa8f50974ccc5ab97e821ef71beed6dcdcd218f19eb7f",
+   "bytes": 1018595
+  },
+  {
+   "path": "snapshots/114/items-1795857977000.json.gz",
+   "house_id": 114,
+   "house_name": "Horde Auction House",
+   "scope": "items",
+   "last_modified": 1795857977000,
+   "fetched_at": 1795860217264,
+   "sha256": "f46c2fca698ce105bf8fac3daf15fc9e9c43483f4578462d58ec240f451d9f6b",
+   "bytes": 1723810
+  },
+  {
+   "path": "snapshots/112/commodities-1795861564000.json.gz",
+   "house_id": 112,
+   "house_name": "Alliance Auction House",
+   "scope": "commodities",
+   "last_modified": 1795861564000,
+   "fetched_at": 1795863817718,
+   "sha256": "2a4bad77c01a7c963df6592596209e63a0480244e6f0f90ecdc9366c2365d654",
+   "bytes": 129
+  },
+  {
+   "path": "snapshots/112/items-1795861564000.json.gz",
+   "house_id": 112,
+   "house_name": "Alliance Auction House",
+   "scope": "items",
+   "last_modified": 1795861564000,
+   "fetched_at": 1795863817718,
+   "sha256": "a96f3035eae9ec9799385a64794aa36391916de5a79ca3da9aed415daea5a1b3",
+   "bytes": 179
+  },
+  {
+   "path": "snapshots/115/commodities-1795861564000.json.gz",
+   "house_id": 115,
+   "house_name": "Horde Auction House",
+   "scope": "commodities",
+   "last_modified": 1795861564000,
+   "fetched_at": 1795863817718,
+   "sha256": "db3f6d72d5832ab1edf2d9be5df57f613581224a3f6a2232287b59639c0e3d6e",
+   "bytes": 130
+  },
+  {
+   "path": "snapshots/115/items-1795861564000.json.gz",
+   "house_id": 115,
+   "house_name": "Horde Auction House",
+   "scope": "items",
+   "last_modified": 1795861564000,
+   "fetched_at": 1795863817718,
+   "sha256": "b0375af040e77c860cc8ce46762811b715e04642b54a14ea51083f379893e0b7",
+   "bytes": 178
+  },
+  {
+   "path": "snapshots/118/commodities-1795861564000.json.gz",
+   "house_id": 118,
+   "house_name": "Blackwater Auction House",
+   "scope": "commodities",
+   "last_modified": 1795861564000,
+   "fetched_at": 1795863817718,
+   "sha256": "351c82cab1940c8507152d26ceaa569efc2c8252c2fcb2910ce31ace3061cb42",
+   "bytes": 130
+  },
+  {
+   "path": "snapshots/118/items-1795861564000.json.gz",
+   "house_id": 118,
+   "house_name": "Blackwater Auction House",
+   "scope": "items",
+   "last_modified": 1795861564000,
+   "fetched_at": 1795863817718,
+   "sha256": "d57d5a40ccb5c0b45eb48fba380451db7ee35ce49a999cca36876911ab4cd704",
+   "bytes": 181
+  },
+  {
+   "path": "snapshots/121/commodities-1795861564000.json.gz",
+   "house_id": 121,
+   "house_name": "Blackwater Auction House",
+   "scope": "commodities",
+   "last_modified": 1795861564000,
+   "fetched_at": 1795863817718,
+   "sha256": "fb04a427368222da7d18074470e9f95b0f55d6b285d9706808ca886ce2429cc8",
+   "bytes": 27297
+  },
+  {
+   "path": "snapshots/121/items-1795861564000.json.gz",
+   "house_id": 121,
+   "house_name": "Blackwater Auction House",
+   "scope": "items",
+   "last_modified": 1795861564000,
+   "fetched_at": 1795863817718,
+   "sha256": "149767af96c04e069b05b9e02774449440509f9d2fce77342e7b1e6eef1b7e8d",
+   "bytes": 11391
+  },
+  {
+   "path": "snapshots/125/commodities-1795861564000.json.gz",
+   "house_id": 125,
+   "house_name": "Blackwater Auction House",
+   "scope": "commodities",
+   "last_modified": 1795861564000,
+   "fetched_at": 1795863817718,
+   "sha256": "9270095e3716ceb32aae12e0c4641e145975b2ae72d0bd5419531dd81111dd9f",
+   "bytes": 30569
+  },
+  {
+   "path": "snapshots/125/items-1795861564000.json.gz",
+   "house_id": 125,
+   "house_name": "Blackwater Auction House",
+   "scope": "items",
+   "last_modified": 1795861564000,
+   "fetched_at": 1795863817718,
+   "sha256": "2f7501f8768519aedae7b5c55bbb2d02e3d02a8c1313588a9628fd58579d9e78",
+   "bytes": 18341
+  },
+  {
+   "path": "snapshots/116/commodities-1795861566000.json.gz",
+   "house_id": 116,
+   "house_name": "Blackwater Auction House",
+   "scope": "commodities",
+   "last_modified": 1795861566000,
+   "fetched_at": 1795863817718,
+   "sha256": "15a2a51a70909614bc82be05e2fca1d573258e0974f18f56ff940048688641a6",
+   "bytes": 223507
+  },
+  {
+   "path": "snapshots/116/items-1795861566000.json.gz",
+   "house_id": 116,
+   "house_name": "Blackwater Auction House",
+   "scope": "items",
+   "last_modified": 1795861566000,
+   "fetched_at": 1795863817718,
+   "sha256": "be5ced8f0b0597593409f69a62cbe53d8bcf779a764cec41818849307a889e08",
+   "bytes": 164178
+  },
+  {
+   "path": "snapshots/117/commodities-1795861566000.json.gz",
+   "house_id": 117,
+   "house_name": "Blackwater Auction House",
+   "scope": "commodities",
+   "last_modified": 1795861566000,
+   "fetched_at": 1795863817718,
+   "sha256": "2d17692fd51b77c862d94dcfe415791e9ecf652118536bf129d6a0680d686a0a",
+   "bytes": 236596
+  },
+  {
+   "path": "snapshots/117/items-1795861566000.json.gz",
+   "house_id": 117,
+   "house_name": "Blackwater Auction House",
+   "scope": "items",
+   "last_modified": 1795861566000,
+   "fetched_at": 1795863817718,
+   "sha256": "f6764cefc57b7cfd9a43e10038b533d3e58e804762d4044c2e89ddd1162da498",
+   "bytes": 202422
+  },
+  {
+   "path": "snapshots/119/commodities-1795861567000.json.gz",
+   "house_id": 119,
+   "house_name": "Alliance Auction House",
+   "scope": "commodities",
+   "last_modified": 1795861567000,
+   "fetched_at": 1795863817718,
+   "sha256": "5ce7d27a8c8ad7661905a8833746204c33e7bffb4e53a33f12727d5fd72e6a9d",
+   "bytes": 270182
+  },
+  {
+   "path": "snapshots/119/items-1795861567000.json.gz",
+   "house_id": 119,
+   "house_name": "Alliance Auction House",
+   "scope": "items",
+   "last_modified": 1795861567000,
+   "fetched_at": 1795863817718,
+   "sha256": "2a4c185fe449372aa0b5d2d362c68a4a5989e56d655340d9297962718717c7d9",
+   "bytes": 361517
+  },
+  {
+   "path": "snapshots/120/commodities-1795861567000.json.gz",
+   "house_id": 120,
+   "house_name": "Horde Auction House",
+   "scope": "commodities",
+   "last_modified": 1795861567000,
+   "fetched_at": 1795863817718,
+   "sha256": "d64650ed9736bcc51a9cc1cd174caa5413ba2f7ab89dbfb2d6c83bae4faa04a7",
+   "bytes": 225159
+  },
+  {
+   "path": "snapshots/120/items-1795861567000.json.gz",
+   "house_id": 120,
+   "house_name": "Horde Auction House",
+   "scope": "items",
+   "last_modified": 1795861567000,
+   "fetched_at": 1795863817718,
+   "sha256": "5c4165f401ae12ce9dcbfaa13765d476de8872c09681f279b7dc1bbf3c49414e",
+   "bytes": 261918
+  },
+  {
+   "path": "snapshots/123/commodities-1795861567000.json.gz",
+   "house_id": 123,
+   "house_name": "Alliance Auction House",
+   "scope": "commodities",
+   "last_modified": 1795861567000,
+   "fetched_at": 1795863817718,
+   "sha256": "add7cf4cda02275a371f5762054bd29dd61cecd542a8582813fe5ece2c4224e7",
+   "bytes": 291064
+  },
+  {
+   "path": "snapshots/123/items-1795861567000.json.gz",
+   "house_id": 123,
+   "house_name": "Alliance Auction House",
+   "scope": "items",
+   "last_modified": 1795861567000,
+   "fetched_at": 1795863817718,
+   "sha256": "daa5bbc98cae8dfe8954e63fdaa2b20fcf62bc808e3ec0d7dadbe218105839c6",
+   "bytes": 343879
+  },
+  {
+   "path": "snapshots/124/commodities-1795861568000.json.gz",
+   "house_id": 124,
+   "house_name": "Horde Auction House",
+   "scope": "commodities",
+   "last_modified": 1795861568000,
+   "fetched_at": 1795863817718,
+   "sha256": "dbe02bf184fe6e36f76a6b45bed1036bfe02e78b2b3b5d3f534302c56d3a6da8",
+   "bytes": 311447
+  },
+  {
+   "path": "snapshots/124/items-1795861568000.json.gz",
+   "house_id": 124,
+   "house_name": "Horde Auction House",
+   "scope": "items",
+   "last_modified": 1795861568000,
+   "fetched_at": 1795863817718,
+   "sha256": "43dff9d47a3bb1d4c1e340d2c2508eb94ca2ba826cb573139d41fae7d073c145",
+   "bytes": 398109
+  },
+  {
+   "path": "snapshots/110/commodities-1795861573000.json.gz",
+   "house_id": 110,
+   "house_name": "Alliance Auction House",
+   "scope": "commodities",
+   "last_modified": 1795861573000,
+   "fetched_at": 1795863817718,
+   "sha256": "d04a157d9ccbfab46b7832d96ef357fc21605f631d6f1198d7e1bc2620fa1255",
+   "bytes": 819171
+  },
+  {
+   "path": "snapshots/110/items-1795861573000.json.gz",
+   "house_id": 110,
+   "house_name": "Alliance Auction House",
+   "scope": "items",
+   "last_modified": 1795861573000,
+   "fetched_at": 1795863817718,
+   "sha256": "cd210e3d9e66a0875b80c4c1fe762168a47d163cd81f19febc4b72c7488bced0",
+   "bytes": 1519416
+  },
+  {
+   "path": "snapshots/111/commodities-1795861574000.json.gz",
+   "house_id": 111,
+   "house_name": "Alliance Auction House",
+   "scope": "commodities",
+   "last_modified": 1795861574000,
+   "fetched_at": 1795863817718,
+   "sha256": "97dc1a358e87e740f56a24aca6e2eeda4f80778ce1835fd20032d14fcce758bd",
+   "bytes": 876044
+  },
+  {
+   "path": "snapshots/111/items-1795861574000.json.gz",
+   "house_id": 111,
+   "house_name": "Alliance Auction House",
+   "scope": "items",
+   "last_modified": 1795861574000,
+   "fetched_at": 1795863817718,
+   "sha256": "056e0547721cd7a117c7148cb5eab953b85fde8ddcaaf58fdc39bce0a167e503",
+   "bytes": 1619491
+  },
+  {
+   "path": "snapshots/113/commodities-1795861575000.json.gz",
+   "house_id": 113,
+   "house_name": "Horde Auction House",
+   "scope": "commodities",
+   "last_modified": 1795861575000,
+   "fetched_at": 1795863817718,
+   "sha256": "9ea8ecc2870b1ca9091c660d184b1aadc5e20790d996515c8c08e4306e1579f0",
+   "bytes": 906481
+  },
+  {
+   "path": "snapshots/113/items-1795861575000.json.gz",
+   "house_id": 113,
+   "house_name": "Horde Auction House",
+   "scope": "items",
+   "last_modified": 1795861575000,
+   "fetched_at": 1795863817718,
+   "sha256": "3202b84fa471ec8fdfe8782f142a2528c2ffa4a813f4d3fbdd8b720cbedd9c17",
+   "bytes": 1701588
+  },
+  {
+   "path": "snapshots/114/commodities-1795861576000.json.gz",
+   "house_id": 114,
+   "house_name": "Horde Auction House",
+   "scope": "commodities",
+   "last_modified": 1795861576000,
+   "fetched_at": 1795863817718,
+   "sha256": "097d75ab52bafbf5b2f52b2034cd306d8cf6554589935a672ff0f6474eb91336",
+   "bytes": 956210
+  },
+  {
+   "path": "snapshots/114/items-1795861576000.json.gz",
+   "house_id": 114,
+   "house_name": "Horde Auction House",
+   "scope": "items",
+   "last_modified": 1795861576000,
+   "fetched_at": 1795863817718,
+   "sha256": "469972d30d66ca6f596e15c6e892a09c3704c92e07c5fcc0792737000d8a8478",
+   "bytes": 1633631
+  },
+  {
+   "path": "snapshots/112/commodities-1795865164000.json.gz",
+   "house_id": 112,
+   "house_name": "Alliance Auction House",
+   "scope": "commodities",
+   "last_modified": 1795865164000,
+   "fetched_at": 1795867417397,
+   "sha256": "2a4bad77c01a7c963df6592596209e63a0480244e6f0f90ecdc9366c2365d654",
+   "bytes": 129
+  },
+  {
+   "path": "snapshots/112/items-1795865164000.json.gz",
+   "house_id": 112,
+   "house_name": "Alliance Auction House",
+   "scope": "items",
+   "last_modified": 1795865164000,
+   "fetched_at": 1795867417397,
+   "sha256": "a96f3035eae9ec9799385a64794aa36391916de5a79ca3da9aed415daea5a1b3",
+   "bytes": 179
+  },
+  {
+   "path": "snapshots/115/commodities-1795865164000.json.gz",
+   "house_id": 115,
+   "house_name": "Horde Auction House",
+   "scope": "commodities",
+   "last_modified": 1795865164000,
+   "fetched_at": 1795867417397,
+   "sha256": "db3f6d72d5832ab1edf2d9be5df57f613581224a3f6a2232287b59639c0e3d6e",
+   "bytes": 130
+  },
+  {
+   "path": "snapshots/115/items-1795865164000.json.gz",
+   "house_id": 115,
+   "house_name": "Horde Auction House",
+   "scope": "items",
+   "last_modified": 1795865164000,
+   "fetched_at": 1795867417397,
+   "sha256": "b0375af040e77c860cc8ce46762811b715e04642b54a14ea51083f379893e0b7",
+   "bytes": 178
+  },
+  {
+   "path": "snapshots/118/commodities-1795865164000.json.gz",
+   "house_id": 118,
+   "house_name": "Blackwater Auction House",
+   "scope": "commodities",
+   "last_modified": 1795865164000,
+   "fetched_at": 1795867417397,
+   "sha256": "351c82cab1940c8507152d26ceaa569efc2c8252c2fcb2910ce31ace3061cb42",
+   "bytes": 130
+  },
+  {
+   "path": "snapshots/118/items-1795865164000.json.gz",
+   "house_id": 118,
+   "house_name": "Blackwater Auction House",
+   "scope": "items",
+   "last_modified": 1795865164000,
+   "fetched_at": 1795867417397,
+   "sha256": "d57d5a40ccb5c0b45eb48fba380451db7ee35ce49a999cca36876911ab4cd704",
+   "bytes": 181
+  },
+  {
+   "path": "snapshots/121/commodities-1795865164000.json.gz",
+   "house_id": 121,
+   "house_name": "Blackwater Auction House",
+   "scope": "commodities",
+   "last_modified": 1795865164000,
+   "fetched_at": 1795867417397,
+   "sha256": "e0eb86a43b660c6ded9f946c5b3bf0458cc3e8410f20355e1d52272995864d9a",
+   "bytes": 26709
+  },
+  {
+   "path": "snapshots/121/items-1795865164000.json.gz",
+   "house_id": 121,
+   "house_name": "Blackwater Auction House",
+   "scope": "items",
+   "last_modified": 1795865164000,
+   "fetched_at": 1795867417397,
+   "sha256": "8c05d431c9c96c93fdc3a6451749be36a2b869c57210b3810b11ae6ec39dd6cd",
+   "bytes": 11086
+  },
+  {
+   "path": "snapshots/125/commodities-1795865164000.json.gz",
+   "house_id": 125,
+   "house_name": "Blackwater Auction House",
+   "scope": "commodities",
+   "last_modified": 1795865164000,
+   "fetched_at": 1795867417397,
+   "sha256": "55b6a40944a70f99ff125e4aee13444cc2226cbb3dfa1c2a513adcec4ea532a6",
+   "bytes": 29882
+  },
+  {
+   "path": "snapshots/125/items-1795865164000.json.gz",
+   "house_id": 125,
+   "house_name": "Blackwater Auction House",
+   "scope": "items",
+   "last_modified": 1795865164000,
+   "fetched_at": 1795867417397,
+   "sha256": "22bb40d958ec424c8b856aab99de8b121170384471d879219c77d72a0da20502",
+   "bytes": 17915
+  },
+  {
+   "path": "snapshots/116/commodities-1795865166000.json.gz",
+   "house_id": 116,
+   "house_name": "Blackwater Auction House",
+   "scope": "commodities",
+   "last_modified": 1795865166000,
+   "fetched_at": 1795867417397,
+   "sha256": "7a817d04d9509dd158a32e59f550c5645afd7470190a64fb7a14a4a8b21480c2",
+   "bytes": 213365
+  },
+  {
+   "path": "snapshots/116/items-1795865166000.json.gz",
+   "house_id": 116,
+   "house_name": "Blackwater Auction House",
+   "scope": "items",
+   "last_modified": 1795865166000,
+   "fetched_at": 1795867417397,
+   "sha256": "e8c3190faea73c03d6f849cdc10f0489b36f20ab6962eb9db501effec4be4824",
+   "bytes": 156443
+  },
+  {
+   "path": "snapshots/117/commodities-1795865166000.json.gz",
+   "house_id": 117,
+   "house_name": "Blackwater Auction House",
+   "scope": "commodities",
+   "last_modified": 1795865166000,
+   "fetched_at": 1795867417397,
+   "sha256": "05a2fb80840659f5f58c940793f059fd4f06c450f90220a3bd9d848c09fba08c",
+   "bytes": 217545
+  },
+  {
+   "path": "snapshots/117/items-1795865166000.json.gz",
+   "house_id": 117,
+   "house_name": "Blackwater Auction House",
+   "scope": "items",
+   "last_modified": 1795865166000,
+   "fetched_at": 1795867417397,
+   "sha256": "fc3d1c657df77acfe5ef3f013f80360e33428735d8a8ae7b109800c8966c01a6",
+   "bytes": 187503
+  },
+  {
+   "path": "snapshots/120/commodities-1795865166000.json.gz",
+   "house_id": 120,
+   "house_name": "Horde Auction House",
+   "scope": "commodities",
+   "last_modified": 1795865166000,
+   "fetched_at": 1795867417397,
+   "sha256": "a8fb04ef82dad02f639c288a7dd5547c2952fb1230f433039ec755c7a2c9953f",
+   "bytes": 210833
+  },
+  {
+   "path": "snapshots/120/items-1795865166000.json.gz",
+   "house_id": 120,
+   "house_name": "Horde Auction House",
+   "scope": "items",
+   "last_modified": 1795865166000,
+   "fetched_at": 1795867417397,
+   "sha256": "047e80d348fe5c5ebfef7716dab48f59e5fd16a3db213357a4014941d9db4da3",
+   "bytes": 249126
+  },
+  {
+   "path": "snapshots/119/commodities-1795865167000.json.gz",
+   "house_id": 119,
+   "house_name": "Alliance Auction House",
+   "scope": "commodities",
+   "last_modified": 1795865167000,
+   "fetched_at": 1795867417397,
+   "sha256": "2f44c08cc0c9fee36b5754570702f8c4f44b2329d9679ed9f0131fccf651fa50",
+   "bytes": 256941
+  },
+  {
+   "path": "snapshots/119/items-1795865167000.json.gz",
+   "house_id": 119,
+   "house_name": "Alliance Auction House",
+   "scope": "items",
+   "last_modified": 1795865167000,
+   "fetched_at": 1795867417397,
+   "sha256": "14c5742790a85461f9d889a5b6f035e11bb450dd25c145733554498dedc8f9ae",
+   "bytes": 344458
+  },
+  {
+   "path": "snapshots/123/commodities-1795865167000.json.gz",
+   "house_id": 123,
+   "house_name": "Alliance Auction House",
+   "scope": "commodities",
+   "last_modified": 1795865167000,
+   "fetched_at": 1795867417397,
+   "sha256": "a288a10ff17d60d32f6f0506c3e10643b7bcb9d921d5c802d4dea147ed599d19",
+   "bytes": 275859
+  },
+  {
+   "path": "snapshots/123/items-1795865167000.json.gz",
+   "house_id": 123,
+   "house_name": "Alliance Auction House",
+   "scope": "items",
+   "last_modified": 1795865167000,
+   "fetched_at": 1795867417397,
+   "sha256": "9b5182fc0a098eec6694e8d861c3db9ea5dbb36043afca89d6c805112280dd7d",
+   "bytes": 328272
+  },
+  {
+   "path": "snapshots/124/commodities-1795865167000.json.gz",
+   "house_id": 124,
+   "house_name": "Horde Auction House",
+   "scope": "commodities",
+   "last_modified": 1795865167000,
+   "fetched_at": 1795867417397,
+   "sha256": "a7a62a397f7a4131f46c1a34a72a06ea4c551ec2bb021f0986ad7518d3bf9d09",
+   "bytes": 285639
+  },
+  {
+   "path": "snapshots/124/items-1795865167000.json.gz",
+   "house_id": 124,
+   "house_name": "Horde Auction House",
+   "scope": "items",
+   "last_modified": 1795865167000,
+   "fetched_at": 1795867417397,
+   "sha256": "8631e79673e5db00ff35bda6e50c94f8d9ed1b34390580e91b396878234d7ce4",
+   "bytes": 375591
+  },
+  {
+   "path": "snapshots/110/commodities-1795865172000.json.gz",
+   "house_id": 110,
+   "house_name": "Alliance Auction House",
+   "scope": "commodities",
+   "last_modified": 1795865172000,
+   "fetched_at": 1795867417397,
+   "sha256": "45edcd551c3ea872d7c8cd0bbf57c9997565bff13ec5b1408fbb8f0b8cc3b221",
+   "bytes": 770132
+  },
+  {
+   "path": "snapshots/110/items-1795865172000.json.gz",
+   "house_id": 110,
+   "house_name": "Alliance Auction House",
+   "scope": "items",
+   "last_modified": 1795865172000,
+   "fetched_at": 1795867417397,
+   "sha256": "dea35542859d7ae5683ab26a863aabb15c53dc977700ef421a520e644d365de9",
+   "bytes": 1435966
+  },
+  {
+   "path": "snapshots/111/commodities-1795865173000.json.gz",
+   "house_id": 111,
+   "house_name": "Alliance Auction House",
+   "scope": "commodities",
+   "last_modified": 1795865173000,
+   "fetched_at": 1795867417397,
+   "sha256": "95f86c9934c6ac640b3ecca411ed8dd2a61b4bc446a9c0becc7be6ea23d1db08",
+   "bytes": 828849
+  },
+  {
+   "path": "snapshots/111/items-1795865173000.json.gz",
+   "house_id": 111,
+   "house_name": "Alliance Auction House",
+   "scope": "items",
+   "last_modified": 1795865173000,
+   "fetched_at": 1795867417397,
+   "sha256": "582da60f4cd2cfe4c0e33c06f5062475ab3555c72d41f5e9876f7601bf103434",
+   "bytes": 1527883
+  },
+  {
+   "path": "snapshots/113/commodities-1795865174000.json.gz",
+   "house_id": 113,
+   "house_name": "Horde Auction House",
+   "scope": "commodities",
+   "last_modified": 1795865174000,
+   "fetched_at": 1795867417397,
+   "sha256": "180d40718b23572c0bb3c6adb4cb3884b082d7a606f5463be3abad7542cf8846",
+   "bytes": 821533
+  },
+  {
+   "path": "snapshots/113/items-1795865174000.json.gz",
+   "house_id": 113,
+   "house_name": "Horde Auction House",
+   "scope": "items",
+   "last_modified": 1795865174000,
+   "fetched_at": 1795867417397,
+   "sha256": "67c12e60c40deda006024ebed3a8acaaa300c94bbd7f1b507cdbc46874b16d5b",
+   "bytes": 1610514
+  },
+  {
+   "path": "snapshots/114/commodities-1795865174000.json.gz",
+   "house_id": 114,
+   "house_name": "Horde Auction House",
+   "scope": "commodities",
+   "last_modified": 1795865174000,
+   "fetched_at": 1795867417397,
+   "sha256": "a22d92e198faeb2d3baa1c9240afdcc914a98274990fa5532508a69e1fb1d7ca",
+   "bytes": 898309
+  },
+  {
+   "path": "snapshots/114/items-1795865174000.json.gz",
+   "house_id": 114,
+   "house_name": "Horde Auction House",
+   "scope": "items",
+   "last_modified": 1795865174000,
+   "fetched_at": 1795867417397,
+   "sha256": "69534606d3148bbdee3514cb76ebc24f025cae3097188a8a781ed27536c296ce",
+   "bytes": 1549605
+  },
+  {
+   "path": "snapshots/112/commodities-1795868764000.json.gz",
+   "house_id": 112,
+   "house_name": "Alliance Auction House",
+   "scope": "commodities",
+   "last_modified": 1795868764000,
+   "fetched_at": 1795871017858,
+   "sha256": "2a4bad77c01a7c963df6592596209e63a0480244e6f0f90ecdc9366c2365d654",
+   "bytes": 129
+  },
+  {
+   "path": "snapshots/112/items-1795868764000.json.gz",
+   "house_id": 112,
+   "house_name": "Alliance Auction House",
+   "scope": "items",
+   "last_modified": 1795868764000,
+   "fetched_at": 1795871017858,
+   "sha256": "a96f3035eae9ec9799385a64794aa36391916de5a79ca3da9aed415daea5a1b3",
+   "bytes": 179
+  },
+  {
+   "path": "snapshots/115/commodities-1795868764000.json.gz",
+   "house_id": 115,
+   "house_name": "Horde Auction House",
+   "scope": "commodities",
+   "last_modified": 1795868764000,
+   "fetched_at": 1795871017858,
+   "sha256": "db3f6d72d5832ab1edf2d9be5df57f613581224a3f6a2232287b59639c0e3d6e",
+   "bytes": 130
+  },
+  {
+   "path": "snapshots/115/items-1795868764000.json.gz",
+   "house_id": 115,
+   "house_name": "Horde Auction House",
+   "scope": "items",
+   "last_modified": 1795868764000,
+   "fetched_at": 1795871017858,
+   "sha256": "b0375af040e77c860cc8ce46762811b715e04642b54a14ea51083f379893e0b7",
+   "bytes": 178
+  },
+  {
+   "path": "snapshots/118/commodities-1795868764000.json.gz",
+   "house_id": 118,
+   "house_name": "Blackwater Auction House",
+   "scope": "commodities",
+   "last_modified": 1795868764000,
+   "fetched_at": 1795871017858,
+   "sha256": "351c82cab1940c8507152d26ceaa569efc2c8252c2fcb2910ce31ace3061cb42",
+   "bytes": 130
+  },
+  {
+   "path": "snapshots/118/items-1795868764000.json.gz",
+   "house_id": 118,
+   "house_name": "Blackwater Auction House",
+   "scope": "items",
+   "last_modified": 1795868764000,
+   "fetched_at": 1795871017858,
+   "sha256": "d57d5a40ccb5c0b45eb48fba380451db7ee35ce49a999cca36876911ab4cd704",
+   "bytes": 181
+  },
+  {
+   "path": "snapshots/121/commodities-1795868764000.json.gz",
+   "house_id": 121,
+   "house_name": "Blackwater Auction House",
+   "scope": "commodities",
+   "last_modified": 1795868764000,
+   "fetched_at": 1795871017858,
+   "sha256": "456656e47a1c4c36b748eed0f406fde548b1465d78a30cabe6fe16c1302428dd",
+   "bytes": 25070
+  },
+  {
+   "path": "snapshots/121/items-1795868764000.json.gz",
+   "house_id": 121,
+   "house_name": "Blackwater Auction House",
+   "scope": "items",
+   "last_modified": 1795868764000,
+   "fetched_at": 1795871017858,
+   "sha256": "467d0adbbca61191528c64209fe985c8ad46e5020728ba45141c702aa9b0c47c",
+   "bytes": 10393
+  },
+  {
+   "path": "snapshots/125/commodities-1795868764000.json.gz",
+   "house_id": 125,
+   "house_name": "Blackwater Auction House",
+   "scope": "commodities",
+   "last_modified": 1795868764000,
+   "fetched_at": 1795871017858,
+   "sha256": "32307af1e6e5521ec08b3b0291c502ae5084d26be105654dcaa7a220a7ae0452",
+   "bytes": 28460
+  },
+  {
+   "path": "snapshots/125/items-1795868764000.json.gz",
+   "house_id": 125,
+   "house_name": "Blackwater Auction House",
+   "scope": "items",
+   "last_modified": 1795868764000,
+   "fetched_at": 1795871017858,
+   "sha256": "c464cee269f6f3fd5a161da8d79ce1b3b842d62301155f283b943ee47b31cd1d",
+   "bytes": 17056
+  },
+  {
+   "path": "snapshots/116/commodities-1795868766000.json.gz",
+   "house_id": 116,
+   "house_name": "Blackwater Auction House",
+   "scope": "commodities",
+   "last_modified": 1795868766000,
+   "fetched_at": 1795871017858,
+   "sha256": "aeb6e404eac7b266ccf678fd5d97df05f5460986994eef448a3e2f1a768f1fb6",
+   "bytes": 196645
+  },
+  {
+   "path": "snapshots/116/items-1795868766000.json.gz",
+   "house_id": 116,
+   "house_name": "Blackwater Auction House",
+   "scope": "items",
+   "last_modified": 1795868766000,
+   "fetched_at": 1795871017858,
+   "sha256": "ed770f9f959c1bdb4191bd2edb5c1277d3cf0636adc1d6c45e2a7df4f38a5270",
+   "bytes": 148284
+  },
+  {
+   "path": "snapshots/117/commodities-1795868766000.json.gz",
+   "house_id": 117,
+   "house_name": "Blackwater Auction House",
+   "scope": "commodities",
+   "last_modified": 1795868766000,
+   "fetched_at": 1795871017858,
+   "sha256": "3b6470dfa1317e8368e34ed9f6bef5ffafc4184da1b36768ece04d7cd8af8f7f",
+   "bytes": 204922
+  },
+  {
+   "path": "snapshots/117/items-1795868766000.json.gz",
+   "house_id": 117,
+   "house_name": "Blackwater Auction House",
+   "scope": "items",
+   "last_modified": 1795868766000,
+   "fetched_at": 1795871017858,
+   "sha256": "2fcff20d47a3407713d7caff4ac5de92c128cc056a7d6623b8f86e69a4602ac5",
+   "bytes": 177193
+  },
+  {
+   "path": "snapshots/120/commodities-1795868766000.json.gz",
+   "house_id": 120,
+   "house_name": "Horde Auction House",
+   "scope": "commodities",
+   "last_modified": 1795868766000,
+   "fetched_at": 1795871017858,
+   "sha256": "767c569f1506e2643d880ffe7a3225eee1f70b538c2b49bbf7c5b5fb6ef207a9",
+   "bytes": 199704
+  },
+  {
+   "path": "snapshots/120/items-1795868766000.json.gz",
+   "house_id": 120,
+   "house_name": "Horde Auction House",
+   "scope": "items",
+   "last_modified": 1795868766000,
+   "fetched_at": 1795871017858,
+   "sha256": "c451f9870c24cb0d7b3cfc8625282978521a385ebdad80e760a9bae2c9c50b2d",
+   "bytes": 236200
+  },
+  {
+   "path": "snapshots/119/commodities-1795868767000.json.gz",
+   "house_id": 119,
+   "house_name": "Alliance Auction House",
+   "scope": "commodities",
+   "last_modified": 1795868767000,
+   "fetched_at": 1795871017858,
+   "sha256": "acb88afb21973148fa80c731c5a3e768d23b7b35524b548b94544bfdb3477f62",
+   "bytes": 241890
+  },
+  {
+   "path": "snapshots/119/items-1795868767000.json.gz",
+   "house_id": 119,
+   "house_name": "Alliance Auction House",
+   "scope": "items",
+   "last_modified": 1795868767000,
+   "fetched_at": 1795871017858,
+   "sha256": "a24fd884196a93eeab383f9ceb8dc931c75148da66e9dd582d1256355add9c3c",
+   "bytes": 319739
+  },
+  {
+   "path": "snapshots/123/commodities-1795868767000.json.gz",
+   "house_id": 123,
+   "house_name": "Alliance Auction House",
+   "scope": "commodities",
+   "last_modified": 1795868767000,
+   "fetched_at": 1795871017858,
+   "sha256": "e5a42a809122bf964c365b93c744a6b96ecac092e5938c4d189e3c5dae4b60ab",
+   "bytes": 254174
+  },
+  {
+   "path": "snapshots/123/items-1795868767000.json.gz",
+   "house_id": 123,
+   "house_name": "Alliance Auction House",
+   "scope": "items",
+   "last_modified": 1795868767000,
+   "fetched_at": 1795871017858,
+   "sha256": "636caf147a8da3041d1a5ba328a1e316aa9e3cf6075e88fcd410e6c249fdda2c",
+   "bytes": 306871
+  },
+  {
+   "path": "snapshots/124/commodities-1795868767000.json.gz",
+   "house_id": 124,
+   "house_name": "Horde Auction House",
+   "scope": "commodities",
+   "last_modified": 1795868767000,
+   "fetched_at": 1795871017858,
+   "sha256": "1fbcc0c62fede3e1cedacc396d4c1961be85cbef73c2bb162fdaee74a6301110",
+   "bytes": 264384
+  },
+  {
+   "path": "snapshots/124/items-1795868767000.json.gz",
+   "house_id": 124,
+   "house_name": "Horde Auction House",
+   "scope": "items",
+   "last_modified": 1795868767000,
+   "fetched_at": 1795871017858,
+   "sha256": "3bff7a110abc927f66912fc816d82915ed9b6f486fa05b3c4c69af757251ba80",
+   "bytes": 355523
+  },
+  {
+   "path": "snapshots/110/commodities-1795868772000.json.gz",
+   "house_id": 110,
+   "house_name": "Alliance Auction House",
+   "scope": "commodities",
+   "last_modified": 1795868772000,
+   "fetched_at": 1795871017858,
+   "sha256": "951e0be96367823573a9223e63915d9b8d6196e826ff7132ef5a247870451152",
+   "bytes": 736815
+  },
+  {
+   "path": "snapshots/110/items-1795868772000.json.gz",
+   "house_id": 110,
+   "house_name": "Alliance Auction House",
+   "scope": "items",
+   "last_modified": 1795868772000,
+   "fetched_at": 1795871017858,
+   "sha256": "fe9dd897c5b3814c8b56f9f09cb11b8114cc76b6c47767f5eebe9aeffa173d6e",
+   "bytes": 1349096
+  },
+  {
+   "path": "snapshots/111/commodities-1795868773000.json.gz",
+   "house_id": 111,
+   "house_name": "Alliance Auction House",
+   "scope": "commodities",
+   "last_modified": 1795868773000,
+   "fetched_at": 1795871017858,
+   "sha256": "5e4b74229af0d40bbac39d39bf9de8db28f3d817eb24000865d6ad4027e0ac10",
+   "bytes": 781054
+  },
+  {
+   "path": "snapshots/111/items-1795868773000.json.gz",
+   "house_id": 111,
+   "house_name": "Alliance Auction House",
+   "scope": "items",
+   "last_modified": 1795868773000,
+   "fetched_at": 1795871017858,
+   "sha256": "de392ed617f39bfe752fac16890cfe1aadcbcb8112ea4288057e8963d57fedd8",
+   "bytes": 1423553
+  },
+  {
+   "path": "snapshots/113/commodities-1795868773000.json.gz",
+   "house_id": 113,
+   "house_name": "Horde Auction House",
+   "scope": "commodities",
+   "last_modified": 1795868773000,
+   "fetched_at": 1795871017858,
+   "sha256": "06dde242494c841f1424237b9f0f005f5a36504895c86d300e5f68c6768bef17",
+   "bytes": 760728
+  },
+  {
+   "path": "snapshots/113/items-1795868773000.json.gz",
+   "house_id": 113,
+   "house_name": "Horde Auction House",
+   "scope": "items",
+   "last_modified": 1795868773000,
+   "fetched_at": 1795871017858,
+   "sha256": "4514a29a463d7e966bca9f8c4a86181688e3a3603c46d16abb25708c923d2b1e",
+   "bytes": 1502666
+  },
+  {
+   "path": "snapshots/114/commodities-1795868774000.json.gz",
+   "house_id": 114,
+   "house_name": "Horde Auction House",
+   "scope": "commodities",
+   "last_modified": 1795868774000,
+   "fetched_at": 1795871017858,
+   "sha256": "7eb95a09248d6aab77770f2a2c06a64865a12a8bf0c0b33f5c496e777226caf1",
+   "bytes": 833091
+  },
+  {
+   "path": "snapshots/114/items-1795868774000.json.gz",
+   "house_id": 114,
+   "house_name": "Horde Auction House",
+   "scope": "items",
+   "last_modified": 1795868774000,
+   "fetched_at": 1795871017858,
+   "sha256": "8aa40958d64efab7926b024925c5c9cf7b8c92fb72f1699e404dacdbdb83c99e",
+   "bytes": 1421967
+  },
+  {
+   "path": "snapshots/112/commodities-1795875964000.json.gz",
+   "house_id": 112,
+   "house_name": "Alliance Auction House",
+   "scope": "commodities",
+   "last_modified": 1795875964000,
+   "fetched_at": 1795876734800,
+   "sha256": "2a4bad77c01a7c963df6592596209e63a0480244e6f0f90ecdc9366c2365d654",
+   "bytes": 129
+  },
+  {
+   "path": "snapshots/112/items-1795875964000.json.gz",
+   "house_id": 112,
+   "house_name": "Alliance Auction House",
+   "scope": "items",
+   "last_modified": 1795875964000,
+   "fetched_at": 1795876734800,
+   "sha256": "a96f3035eae9ec9799385a64794aa36391916de5a79ca3da9aed415daea5a1b3",
+   "bytes": 179
+  },
+  {
+   "path": "snapshots/115/commodities-1795875964000.json.gz",
+   "house_id": 115,
+   "house_name": "Horde Auction House",
+   "scope": "commodities",
+   "last_modified": 1795875964000,
+   "fetched_at": 1795876734800,
+   "sha256": "db3f6d72d5832ab1edf2d9be5df57f613581224a3f6a2232287b59639c0e3d6e",
+   "bytes": 130
+  },
+  {
+   "path": "snapshots/115/items-1795875964000.json.gz",
+   "house_id": 115,
+   "house_name": "Horde Auction House",
+   "scope": "items",
+   "last_modified": 1795875964000,
+   "fetched_at": 1795876734800,
+   "sha256": "b0375af040e77c860cc8ce46762811b715e04642b54a14ea51083f379893e0b7",
+   "bytes": 178
+  },
+  {
+   "path": "snapshots/118/commodities-1795875964000.json.gz",
+   "house_id": 118,
+   "house_name": "Blackwater Auction House",
+   "scope": "commodities",
+   "last_modified": 1795875964000,
+   "fetched_at": 1795876734800,
+   "sha256": "351c82cab1940c8507152d26ceaa569efc2c8252c2fcb2910ce31ace3061cb42",
+   "bytes": 130
+  },
+  {
+   "path": "snapshots/118/items-1795875964000.json.gz",
+   "house_id": 118,
+   "house_name": "Blackwater Auction House",
+   "scope": "items",
+   "last_modified": 1795875964000,
+   "fetched_at": 1795876734800,
+   "sha256": "d57d5a40ccb5c0b45eb48fba380451db7ee35ce49a999cca36876911ab4cd704",
+   "bytes": 181
+  },
+  {
+   "path": "snapshots/121/commodities-1795875964000.json.gz",
+   "house_id": 121,
+   "house_name": "Blackwater Auction House",
+   "scope": "commodities",
+   "last_modified": 1795875964000,
+   "fetched_at": 1795876734800,
+   "sha256": "95243ea8c447d92366d29f41e7e1e931b1d874c65e45e9eb854a871c56d0d53f",
+   "bytes": 23321
+  },
+  {
+   "path": "snapshots/121/items-1795875964000.json.gz",
+   "house_id": 121,
+   "house_name": "Blackwater Auction House",
+   "scope": "items",
+   "last_modified": 1795875964000,
+   "fetched_at": 1795876734800,
+   "sha256": "280fd92438f1d30058a800f9b0922f0fd8f88841c69665333548ef862dbf84c2",
+   "bytes": 10054
+  },
+  {
+   "path": "snapshots/125/commodities-1795875964000.json.gz",
+   "house_id": 125,
+   "house_name": "Blackwater Auction House",
+   "scope": "commodities",
+   "last_modified": 1795875964000,
+   "fetched_at": 1795876734800,
+   "sha256": "343423f0c222bdd484c3819ac7022a2c2703c81c0d07de8dc1049ba8e11c561a",
+   "bytes": 27262
+  },
+  {
+   "path": "snapshots/125/items-1795875964000.json.gz",
+   "house_id": 125,
+   "house_name": "Blackwater Auction House",
+   "scope": "items",
+   "last_modified": 1795875964000,
+   "fetched_at": 1795876734800,
+   "sha256": "f01d031d8463b4742bf9639af012b55728a65798bf5281e7b03638bcdd277c8b",
+   "bytes": 15638
+  },
+  {
+   "path": "snapshots/116/commodities-1795875966000.json.gz",
+   "house_id": 116,
+   "house_name": "Blackwater Auction House",
+   "scope": "commodities",
+   "last_modified": 1795875966000,
+   "fetched_at": 1795876734800,
+   "sha256": "8c65f9f5c23e6dbcced47d79724661f812611af5c7d733d6c3c3c009f66ad805",
+   "bytes": 175379
+  },
+  {
+   "path": "snapshots/116/items-1795875966000.json.gz",
+   "house_id": 116,
+   "house_name": "Blackwater Auction House",
+   "scope": "items",
+   "last_modified": 1795875966000,
+   "fetched_at": 1795876734800,
+   "sha256": "34d9d0e2f0f72dbd94c55474d06ab8316f210aa6e98fa60ec7a13ca8cd395d23",
+   "bytes": 134214
+  },
+  {
+   "path": "snapshots/117/commodities-1795875966000.json.gz",
+   "house_id": 117,
+   "house_name": "Blackwater Auction House",
+   "scope": "commodities",
+   "last_modified": 1795875966000,
+   "fetched_at": 1795876734800,
+   "sha256": "6232e864e2ff82dab9da76a3f67f9fad5705065b2227845b76456c3b6c5dc742",
+   "bytes": 189801
+  },
+  {
+   "path": "snapshots/117/items-1795875966000.json.gz",
+   "house_id": 117,
+   "house_name": "Blackwater Auction House",
+   "scope": "items",
+   "last_modified": 1795875966000,
+   "fetched_at": 1795876734800,
+   "sha256": "8fc437672fb10704bdc13648ee79f69c8f9cc1a86d96de9c0cd8ef7c40593d3f",
+   "bytes": 160198
+  },
+  {
+   "path": "snapshots/120/commodities-1795875966000.json.gz",
+   "house_id": 120,
+   "house_name": "Horde Auction House",
+   "scope": "commodities",
+   "last_modified": 1795875966000,
+   "fetched_at": 1795876734800,
+   "sha256": "d437ffdd81ef6f4462322546f30606ca47477198b2ab3739a7503f4a9c9f12ae",
+   "bytes": 189549
+  },
+  {
+   "path": "snapshots/120/items-1795875966000.json.gz",
+   "house_id": 120,
+   "house_name": "Horde Auction House",
+   "scope": "items",
+   "last_modified": 1795875966000,
+   "fetched_at": 1795876734800,
+   "sha256": "c115b966db279c4e5b83a3952e22562bc30137cf1d1c2939eff817404132b21d",
+   "bytes": 224513
+  },
+  {
+   "path": "snapshots/119/commodities-1795875967000.json.gz",
+   "house_id": 119,
+   "house_name": "Alliance Auction House",
+   "scope": "commodities",
+   "last_modified": 1795875967000,
+   "fetched_at": 1795876734800,
+   "sha256": "05a8ec6eeeca4b27bb5995e1e00c62b784ee39f45ce55528bcf5c6740f58c3de",
+   "bytes": 228836
+  },
+  {
+   "path": "snapshots/119/items-1795875967000.json.gz",
+   "house_id": 119,
+   "house_name": "Alliance Auction House",
+   "scope": "items",
+   "last_modified": 1795875967000,
+   "fetched_at": 1795876734800,
+   "sha256": "1bdf8fa77ad872db844dcd3fabf3d29614e7b7e1cd6b5781f38f77b6aebdfb1c",
+   "bytes": 299934
+  },
+  {
+   "path": "snapshots/123/commodities-1795875967000.json.gz",
+   "house_id": 123,
+   "house_name": "Alliance Auction House",
+   "scope": "commodities",
+   "last_modified": 1795875967000,
+   "fetched_at": 1795876734800,
+   "sha256": "cae958809ce3cfad968a31c2d24f3da856f824956d51e8d61760dd2e6ef7b373",
+   "bytes": 234873
+  },
+  {
+   "path": "snapshots/123/items-1795875967000.json.gz",
+   "house_id": 123,
+   "house_name": "Alliance Auction House",
+   "scope": "items",
+   "last_modified": 1795875967000,
+   "fetched_at": 1795876734800,
+   "sha256": "21a7fa08ce6cdc82061e5825418c3d41fa583035171c2fd3047577319866b1af",
+   "bytes": 281748
+  },
+  {
+   "path": "snapshots/124/commodities-1795875967000.json.gz",
+   "house_id": 124,
+   "house_name": "Horde Auction House",
+   "scope": "commodities",
+   "last_modified": 1795875967000,
+   "fetched_at": 1795876734800,
+   "sha256": "51677a574336f93f4f38f2b04f7e9bf053c3c2b6621eb97318d6edd38fc3f236",
+   "bytes": 248228
+  },
+  {
+   "path": "snapshots/124/items-1795875967000.json.gz",
+   "house_id": 124,
+   "house_name": "Horde Auction House",
+   "scope": "items",
+   "last_modified": 1795875967000,
+   "fetched_at": 1795876734800,
+   "sha256": "4591010f9ec23b96d7d98c2979fb0a053e5ffd8769168407c0a4213f112ef111",
+   "bytes": 325783
+  },
+  {
+   "path": "snapshots/110/commodities-1795875974000.json.gz",
+   "house_id": 110,
+   "house_name": "Alliance Auction House",
+   "scope": "commodities",
+   "last_modified": 1795875974000,
+   "fetched_at": 1795876734800,
+   "sha256": "e374aa2c889d3cd366303fe4f759edb4be957d87ae75f2441dd810293a961230",
+   "bytes": 689670
+  },
+  {
+   "path": "snapshots/110/items-1795875974000.json.gz",
+   "house_id": 110,
+   "house_name": "Alliance Auction House",
+   "scope": "items",
+   "last_modified": 1795875974000,
+   "fetched_at": 1795876734800,
+   "sha256": "d52583f28c345497d410360a03f8a05934d20fb3d97f55385f44213e95a4405f",
+   "bytes": 1217062
+  },
+  {
+   "path": "snapshots/111/commodities-1795875975000.json.gz",
+   "house_id": 111,
+   "house_name": "Alliance Auction House",
+   "scope": "commodities",
+   "last_modified": 1795875975000,
+   "fetched_at": 1795876734800,
+   "sha256": "690af315257c7a7d9fc1915c08d6711b6177c79b5f75c1c04392d83e35c9b7f9",
+   "bytes": 755131
+  },
+  {
+   "path": "snapshots/111/items-1795875975000.json.gz",
+   "house_id": 111,
+   "house_name": "Alliance Auction House",
+   "scope": "items",
+   "last_modified": 1795875975000,
+   "fetched_at": 1795876734800,
+   "sha256": "114007eba42934c6fb5792076f046d7f650f138d3b3975e991e6429590d48111",
+   "bytes": 1299808
+  },
+  {
+   "path": "snapshots/113/commodities-1795875975000.json.gz",
+   "house_id": 113,
+   "house_name": "Horde Auction House",
+   "scope": "commodities",
+   "last_modified": 1795875975000,
+   "fetched_at": 1795876734800,
+   "sha256": "1f24404df654a189f548f66137861f4855ba3ef7e8c39cf7b7dc8a8317825d4d",
+   "bytes": 724251
+  },
+  {
+   "path": "snapshots/113/items-1795875975000.json.gz",
+   "house_id": 113,
+   "house_name": "Horde Auction House",
+   "scope": "items",
+   "last_modified": 1795875975000,
+   "fetched_at": 1795876734800,
+   "sha256": "250136b89402b9b4cd96ac0111349a96c0b4a37a7ff0641bf6d06aa0fe0b582f",
+   "bytes": 1352876
+  },
+  {
+   "path": "snapshots/114/commodities-1795875975000.json.gz",
+   "house_id": 114,
+   "house_name": "Horde Auction House",
+   "scope": "commodities",
+   "last_modified": 1795875975000,
+   "fetched_at": 1795876734800,
+   "sha256": "a4b50269032f29d3535f90354cb99f30dbd5daf562c68a279faa31d83fe21394",
+   "bytes": 787043
+  },
+  {
+   "path": "snapshots/114/items-1795875975000.json.gz",
+   "house_id": 114,
+   "house_name": "Horde Auction House",
+   "scope": "items",
+   "last_modified": 1795875975000,
+   "fetched_at": 1795876734800,
+   "sha256": "409856d21b80ebfd9bfd3b0714cc0e8310097d15639834ab5c64bdddee445409",
+   "bytes": 1295479
+  },
+  {
+   "path": "snapshots/112/commodities-1795886764000.json.gz",
+   "house_id": 112,
+   "house_name": "Alliance Auction House",
+   "scope": "commodities",
+   "last_modified": 1795886764000,
+   "fetched_at": 1795887542593,
+   "sha256": "2a4bad77c01a7c963df6592596209e63a0480244e6f0f90ecdc9366c2365d654",
+   "bytes": 129
+  },
+  {
+   "path": "snapshots/112/items-1795886764000.json.gz",
+   "house_id": 112,
+   "house_name": "Alliance Auction House",
+   "scope": "items",
+   "last_modified": 1795886764000,
+   "fetched_at": 1795887542593,
+   "sha256": "a96f3035eae9ec9799385a64794aa36391916de5a79ca3da9aed415daea5a1b3",
+   "bytes": 179
+  },
+  {
+   "path": "snapshots/115/commodities-1795886764000.json.gz",
+   "house_id": 115,
+   "house_name": "Horde Auction House",
+   "scope": "commodities",
+   "last_modified": 1795886764000,
+   "fetched_at": 1795887542593,
+   "sha256": "db3f6d72d5832ab1edf2d9be5df57f613581224a3f6a2232287b59639c0e3d6e",
+   "bytes": 130
+  },
+  {
+   "path": "snapshots/115/items-1795886764000.json.gz",
+   "house_id": 115,
+   "house_name": "Horde Auction House",
+   "scope": "items",
+   "last_modified": 1795886764000,
+   "fetched_at": 1795887542593,
+   "sha256": "b0375af040e77c860cc8ce46762811b715e04642b54a14ea51083f379893e0b7",
+   "bytes": 178
+  },
+  {
+   "path": "snapshots/118/commodities-1795886764000.json.gz",
+   "house_id": 118,
+   "house_name": "Blackwater Auction House",
+   "scope": "commodities",
+   "last_modified": 1795886764000,
+   "fetched_at": 1795887542593,
+   "sha256": "351c82cab1940c8507152d26ceaa569efc2c8252c2fcb2910ce31ace3061cb42",
+   "bytes": 130
+  },
+  {
+   "path": "snapshots/118/items-1795886764000.json.gz",
+   "house_id": 118,
+   "house_name": "Blackwater Auction House",
+   "scope": "items",
+   "last_modified": 1795886764000,
+   "fetched_at": 1795887542593,
+   "sha256": "d57d5a40ccb5c0b45eb48fba380451db7ee35ce49a999cca36876911ab4cd704",
+   "bytes": 181
+  },
+  {
+   "path": "snapshots/121/commodities-1795886764000.json.gz",
+   "house_id": 121,
+   "house_name": "Blackwater Auction House",
+   "scope": "commodities",
+   "last_modified": 1795886764000,
+   "fetched_at": 1795887542593,
+   "sha256": "434dccf2417d300296c5fae0a1f78094e0f6c6ab3af4625ff56804bb20a3b205",
+   "bytes": 23250
+  },
+  {
+   "path": "snapshots/121/items-1795886764000.json.gz",
+   "house_id": 121,
+   "house_name": "Blackwater Auction House",
+   "scope": "items",
+   "last_modified": 1795886764000,
+   "fetched_at": 1795887542593,
+   "sha256": "ed6bfe46542a3471857841af50ee593dad7b9c8474dfc3f6b67e4a077b6474ea",
+   "bytes": 10691
+  },
+  {
+   "path": "snapshots/125/commodities-1795886764000.json.gz",
+   "house_id": 125,
+   "house_name": "Blackwater Auction House",
+   "scope": "commodities",
+   "last_modified": 1795886764000,
+   "fetched_at": 1795887542593,
+   "sha256": "b54779a7f1ebebb21af3232dae1b4e93115b8ff669ec59a0b214beeca978b9f0",
+   "bytes": 25895
+  },
+  {
+   "path": "snapshots/125/items-1795886764000.json.gz",
+   "house_id": 125,
+   "house_name": "Blackwater Auction House",
+   "scope": "items",
+   "last_modified": 1795886764000,
+   "fetched_at": 1795887542593,
+   "sha256": "f07044ff8e141e4a02173965ae9cdabd4d63f07aa348cd3a329b81a6ef5cfd32",
+   "bytes": 16411
+  },
+  {
+   "path": "snapshots/116/commodities-1795886767000.json.gz",
+   "house_id": 116,
+   "house_name": "Blackwater Auction House",
+   "scope": "commodities",
+   "last_modified": 1795886767000,
+   "fetched_at": 1795887542593,
+   "sha256": "162f6d00311f893eda4050b622dca99c864d62f65a0f05764c73ba45c800decd",
+   "bytes": 175415
+  },
+  {
+   "path": "snapshots/116/items-1795886767000.json.gz",
+   "house_id": 116,
+   "house_name": "Blackwater Auction House",
+   "scope": "items",
+   "last_modified": 1795886767000,
+   "fetched_at": 1795887542593,
+   "sha256": "b299ab3dbf17995a9df52d7fa6f3d13ede5bbbd0eee409cad3915985caaaa313",
+   "bytes": 132191
+  },
+  {
+   "path": "snapshots/117/commodities-1795886768000.json.gz",
+   "house_id": 117,
+   "house_name": "Blackwater Auction House",
+   "scope": "commodities",
+   "last_modified": 1795886768000,
+   "fetched_at": 1795887542593,
+   "sha256": "e09d60eecf06f81200a7bd9f34fdc678ddc004b7526bca69646535229cbb1b3f",
+   "bytes": 208475
+  },
+  {
+   "path": "snapshots/117/items-1795886768000.json.gz",
+   "house_id": 117,
+   "house_name": "Blackwater Auction House",
+   "scope": "items",
+   "last_modified": 1795886768000,
+   "fetched_at": 1795887542593,
+   "sha256": "3b91cc7e3b8a7d3228949d6fea165b2fbe4ee0980f24d78ac3600c263da79d68",
+   "bytes": 168016
+  },
+  {
+   "path": "snapshots/120/commodities-1795886769000.json.gz",
+   "house_id": 120,
+   "house_name": "Horde Auction House",
+   "scope": "commodities",
+   "last_modified": 1795886769000,
+   "fetched_at": 1795887542593,
+   "sha256": "53e013e6e5f64ee590540d83d03f5f1c91a21cdc9fa39342c7ef5dddd80c8157",
+   "bytes": 205749
+  },
+  {
+   "path": "snapshots/120/items-1795886769000.json.gz",
+   "house_id": 120,
+   "house_name": "Horde Auction House",
+   "scope": "items",
+   "last_modified": 1795886769000,
+   "fetched_at": 1795887542593,
+   "sha256": "b00db5385753b70cfe10c401ece95f66ed13329967162819686249594f7507f0",
+   "bytes": 242876
+  },
+  {
+   "path": "snapshots/123/commodities-1795886770000.json.gz",
+   "house_id": 123,
+   "house_name": "Alliance Auction House",
+   "scope": "commodities",
+   "last_modified": 1795886770000,
+   "fetched_at": 1795887542593,
+   "sha256": "607b24c62702cc89a709e8c3a16470cb8b441f2fcaf9e71046639cac12da3484",
+   "bytes": 253933
+  },
+  {
+   "path": "snapshots/123/items-1795886770000.json.gz",
+   "house_id": 123,
+   "house_name": "Alliance Auction House",
+   "scope": "items",
+   "last_modified": 1795886770000,
+   "fetched_at": 1795887542593,
+   "sha256": "715018fc9f8c078e613eeed3410ab1c653bbd73cb2e36fbebd1a274c13d3f08d",
+   "bytes": 295327
+  },
+  {
+   "path": "snapshots/119/commodities-1795886771000.json.gz",
+   "house_id": 119,
+   "house_name": "Alliance Auction House",
+   "scope": "commodities",
+   "last_modified": 1795886771000,
+   "fetched_at": 1795887542593,
+   "sha256": "3f3992ad5e55800bd2bb01e02d8f4c5b538b4c5756e2000b650d03976bb56eda",
+   "bytes": 263424
+  },
+  {
+   "path": "snapshots/119/items-1795886771000.json.gz",
+   "house_id": 119,
+   "house_name": "Alliance Auction House",
+   "scope": "items",
+   "last_modified": 1795886771000,
+   "fetched_at": 1795887542593,
+   "sha256": "aec4e5a81a8d6f8e80a1c7046a487c683fa46afa5771e838bd51dfafc9a1e68e",
+   "bytes": 329381
+  },
+  {
+   "path": "snapshots/124/commodities-1795886771000.json.gz",
+   "house_id": 124,
+   "house_name": "Horde Auction House",
+   "scope": "commodities",
+   "last_modified": 1795886771000,
+   "fetched_at": 1795887542593,
+   "sha256": "4ab398cd1eb7bb1f49a42675eaed4aa1b8d591eed56af9ab1e48e145ebbb01fe",
+   "bytes": 261913
+  },
+  {
+   "path": "snapshots/124/items-1795886771000.json.gz",
+   "house_id": 124,
+   "house_name": "Horde Auction House",
+   "scope": "items",
+   "last_modified": 1795886771000,
+   "fetched_at": 1795887542593,
+   "sha256": "5cbffa51eeff453ff5f5ffadc4eb43c68e62436bce036ca5639b90d4012e214a",
+   "bytes": 344509
+  },
+  {
+   "path": "snapshots/110/commodities-1795886781000.json.gz",
+   "house_id": 110,
+   "house_name": "Alliance Auction House",
+   "scope": "commodities",
+   "last_modified": 1795886781000,
+   "fetched_at": 1795887542593,
+   "sha256": "6538dbef88b6551002e32cadb41d51838078534682d8f148c425ba44e091fe62",
+   "bytes": 713089
+  },
+  {
+   "path": "snapshots/110/items-1795886781000.json.gz",
+   "house_id": 110,
+   "house_name": "Alliance Auction House",
+   "scope": "items",
+   "last_modified": 1795886781000,
+   "fetched_at": 1795887542593,
+   "sha256": "bd6bb353974e6a56d6e4f350e62e0a2bb6337f097f581d235dc2c59b3fb03ce7",
+   "bytes": 1289954
+  },
+  {
+   "path": "snapshots/113/commodities-1795886782000.json.gz",
+   "house_id": 113,
+   "house_name": "Horde Auction House",
+   "scope": "commodities",
+   "last_modified": 1795886782000,
+   "fetched_at": 1795887542593,
+   "sha256": "22f210e94c4ff1feff6294c03be887407e6cee2be926eebcfb285aa051fd77cb",
+   "bytes": 773454
+  },
+  {
+   "path": "snapshots/113/items-1795886782000.json.gz",
+   "house_id": 113,
+   "house_name": "Horde Auction House",
+   "scope": "items",
+   "last_modified": 1795886782000,
+   "fetched_at": 1795887542593,
+   "sha256": "9cfb06dc0bbb549480de346d75fa44ee08b45456d8aae110c530b9b7df14518f",
+   "bytes": 1403245
+  },
+  {
+   "path": "snapshots/111/commodities-1795886783000.json.gz",
+   "house_id": 111,
+   "house_name": "Alliance Auction House",
+   "scope": "commodities",
+   "last_modified": 1795886783000,
+   "fetched_at": 1795887542593,
+   "sha256": "4e9b362fbc9743e8af4b8c39d95cabc469ff08b14e71c91c658019d7dd2d7aa1",
+   "bytes": 810830
+  },
+  {
+   "path": "snapshots/111/items-1795886783000.json.gz",
+   "house_id": 111,
+   "house_name": "Alliance Auction House",
+   "scope": "items",
+   "last_modified": 1795886783000,
+   "fetched_at": 1795887542593,
+   "sha256": "118db539e21573d86b9859c7432720f7fba80178ee593f44fb76cc981c6d9adb",
+   "bytes": 1371384
+  },
+  {
+   "path": "snapshots/114/commodities-1795886783000.json.gz",
+   "house_id": 114,
+   "house_name": "Horde Auction House",
+   "scope": "commodities",
+   "last_modified": 1795886783000,
+   "fetched_at": 1795887542593,
+   "sha256": "44ef44527d940ec7423a4c60970ffffbbda68ec5da3e7ff5a6ac2d1705678680",
+   "bytes": 811132
+  },
+  {
+   "path": "snapshots/114/items-1795886783000.json.gz",
+   "house_id": 114,
+   "house_name": "Horde Auction House",
+   "scope": "items",
+   "last_modified": 1795886783000,
+   "fetched_at": 1795887542593,
+   "sha256": "27c97cfd655cdd053e00ac704289508b17e0a41de912be86c18aa1813f7f0c51",
+   "bytes": 1447959
+  },
+  {
+   "path": "snapshots/112/commodities-1795890364000.json.gz",
+   "house_id": 112,
+   "house_name": "Alliance Auction House",
+   "scope": "commodities",
+   "last_modified": 1795890364000,
+   "fetched_at": 1795891142718,
+   "sha256": "2a4bad77c01a7c963df6592596209e63a0480244e6f0f90ecdc9366c2365d654",
+   "bytes": 129
+  },
+  {
+   "path": "snapshots/112/items-1795890364000.json.gz",
+   "house_id": 112,
+   "house_name": "Alliance Auction House",
+   "scope": "items",
+   "last_modified": 1795890364000,
+   "fetched_at": 1795891142718,
+   "sha256": "a96f3035eae9ec9799385a64794aa36391916de5a79ca3da9aed415daea5a1b3",
+   "bytes": 179
+  },
+  {
+   "path": "snapshots/115/commodities-1795890364000.json.gz",
+   "house_id": 115,
+   "house_name": "Horde Auction House",
+   "scope": "commodities",
+   "last_modified": 1795890364000,
+   "fetched_at": 1795891142718,
+   "sha256": "db3f6d72d5832ab1edf2d9be5df57f613581224a3f6a2232287b59639c0e3d6e",
+   "bytes": 130
+  },
+  {
+   "path": "snapshots/115/items-1795890364000.json.gz",
+   "house_id": 115,
+   "house_name": "Horde Auction House",
+   "scope": "items",
+   "last_modified": 1795890364000,
+   "fetched_at": 1795891142718,
+   "sha256": "b0375af040e77c860cc8ce46762811b715e04642b54a14ea51083f379893e0b7",
+   "bytes": 178
+  },
+  {
+   "path": "snapshots/118/commodities-1795890364000.json.gz",
+   "house_id": 118,
+   "house_name": "Blackwater Auction House",
+   "scope": "commodities",
+   "last_modified": 1795890364000,
+   "fetched_at": 1795891142718,
+   "sha256": "351c82cab1940c8507152d26ceaa569efc2c8252c2fcb2910ce31ace3061cb42",
+   "bytes": 130
+  },
+  {
+   "path": "snapshots/118/items-1795890364000.json.gz",
+   "house_id": 118,
+   "house_name": "Blackwater Auction House",
+   "scope": "items",
+   "last_modified": 1795890364000,
+   "fetched_at": 1795891142718,
+   "sha256": "d57d5a40ccb5c0b45eb48fba380451db7ee35ce49a999cca36876911ab4cd704",
+   "bytes": 181
+  },
+  {
+   "path": "snapshots/121/commodities-1795890364000.json.gz",
+   "house_id": 121,
+   "house_name": "Blackwater Auction House",
+   "scope": "commodities",
+   "last_modified": 1795890364000,
+   "fetched_at": 1795891142718,
+   "sha256": "77e2fe34b7ccda29b2132b83d99d0b787cebf936b852813dec8de217cf5fbdcf",
+   "bytes": 23598
+  },
+  {
+   "path": "snapshots/121/items-1795890364000.json.gz",
+   "house_id": 121,
+   "house_name": "Blackwater Auction House",
+   "scope": "items",
+   "last_modified": 1795890364000,
+   "fetched_at": 1795891142718,
+   "sha256": "ab3148111bcfc671eb03255a9d82701d60dd9fa52b05bfe4aa7c35df7fd772e9",
+   "bytes": 11269
+  },
+  {
+   "path": "snapshots/125/commodities-1795890364000.json.gz",
+   "house_id": 125,
+   "house_name": "Blackwater Auction House",
+   "scope": "commodities",
+   "last_modified": 1795890364000,
+   "fetched_at": 1795891142718,
+   "sha256": "9787fdd1333f2315926cb253d8dcdd253120ca114724eefd8671fbdf8aac03c4",
+   "bytes": 26455
+  },
+  {
+   "path": "snapshots/125/items-1795890364000.json.gz",
+   "house_id": 125,
+   "house_name": "Blackwater Auction House",
+   "scope": "items",
+   "last_modified": 1795890364000,
+   "fetched_at": 1795891142718,
+   "sha256": "47408222182f00fbdc44c8ff3099fa2afc89c11f9323c0b0f37b5734cb7981fe",
+   "bytes": 16806
+  },
+  {
+   "path": "snapshots/116/commodities-1795890367000.json.gz",
+   "house_id": 116,
+   "house_name": "Blackwater Auction House",
+   "scope": "commodities",
+   "last_modified": 1795890367000,
+   "fetched_at": 1795891142718,
+   "sha256": "aa30ae4f7107e15c1c2b80776902eaec4b2af8d62db3866d923eb0478f519d33",
+   "bytes": 188546
+  },
+  {
+   "path": "snapshots/116/items-1795890367000.json.gz",
+   "house_id": 116,
+   "house_name": "Blackwater Auction House",
+   "scope": "items",
+   "last_modified": 1795890367000,
+   "fetched_at": 1795891142718,
+   "sha256": "f703fd2e195bae87f23c9cce1fb78f09febcc17daf05eef4aae12262f4549356",
+   "bytes": 137720
+  },
+  {
+   "path": "snapshots/117/commodities-1795890368000.json.gz",
+   "house_id": 117,
+   "house_name": "Blackwater Auction House",
+   "scope": "commodities",
+   "last_modified": 1795890368000,
+   "fetched_at": 1795891142718,
+   "sha256": "395aac03d857810e415a40120697ee85dac777799cc6e9c3fe54e43589bfdfee",
+   "bytes": 209753
+  },
+  {
+   "path": "snapshots/117/items-1795890368000.json.gz",
+   "house_id": 117,
+   "house_name": "Blackwater Auction House",
+   "scope": "items",
+   "last_modified": 1795890368000,
+   "fetched_at": 1795891142718,
+   "sha256": "930a1dbed0e77c1b593b3996e37d378df514a100319995c211a9efc3263ba886",
+   "bytes": 173906
+  },
+  {
+   "path": "snapshots/120/commodities-1795890369000.json.gz",
+   "house_id": 120,
+   "house_name": "Horde Auction House",
+   "scope": "commodities",
+   "last_modified": 1795890369000,
+   "fetched_at": 1795891142718,
+   "sha256": "41d2d8e2a7705bb86739bb54cfc8bfe77468044dd9fdeec7644f46e80faa50da",
+   "bytes": 216005
+  },
+  {
+   "path": "snapshots/120/items-1795890369000.json.gz",
+   "house_id": 120,
+   "house_name": "Horde Auction House",
+   "scope": "items",
+   "last_modified": 1795890369000,
+   "fetched_at": 1795891142718,
+   "sha256": "4581d51a7c31a40e6b6040347c1057506b84ad94aace9dc47534de2b392e20c8",
+   "bytes": 255366
+  },
+  {
+   "path": "snapshots/123/commodities-1795890370000.json.gz",
+   "house_id": 123,
+   "house_name": "Alliance Auction House",
+   "scope": "commodities",
+   "last_modified": 1795890370000,
+   "fetched_at": 1795891142718,
+   "sha256": "5f7dbcb00feae8b81c44013ebe7070568f84604375d5e5bb7a85f93f52452338",
+   "bytes": 266948
+  },
+  {
+   "path": "snapshots/119/commodities-1795890371000.json.gz",
+   "house_id": 119,
+   "house_name": "Alliance Auction House",
+   "scope": "commodities",
+   "last_modified": 1795890371000,
+   "fetched_at": 1795891142718,
+   "sha256": "9406e858006a4827780b58f5a04f10596687ed1389ec5354e135fe39bbc8f1bc",
+   "bytes": 270441
+  },
+  {
+   "path": "snapshots/119/items-1795890371000.json.gz",
+   "house_id": 119,
+   "house_name": "Alliance Auction House",
+   "scope": "items",
+   "last_modified": 1795890371000,
+   "fetched_at": 1795891142718,
+   "sha256": "c1c8196463871f8e1c5c1af9fa8a6c34f358dc46f762d87f8870f58419403fb9",
+   "bytes": 346564
+  },
+  {
+   "path": "snapshots/123/items-1795890371000.json.gz",
+   "house_id": 123,
+   "house_name": "Alliance Auction House",
+   "scope": "items",
+   "last_modified": 1795890371000,
+   "fetched_at": 1795891142718,
+   "sha256": "414e4bf55c62ec94759951e742f25709a02eb4d450e84d8828a2e7aa0aff000b",
+   "bytes": 311672
+  },
+  {
+   "path": "snapshots/124/commodities-1795890371000.json.gz",
+   "house_id": 124,
+   "house_name": "Horde Auction House",
+   "scope": "commodities",
+   "last_modified": 1795890371000,
+   "fetched_at": 1795891142718,
+   "sha256": "e7488b23083dad157b76e84c9be5b125238f6824a372c85cc47439264fc72ad2",
+   "bytes": 265056
+  },
+  {
+   "path": "snapshots/124/items-1795890371000.json.gz",
+   "house_id": 124,
+   "house_name": "Horde Auction House",
+   "scope": "items",
+   "last_modified": 1795890371000,
+   "fetched_at": 1795891142718,
+   "sha256": "454d6694a6c1d7b25f711ff69e52b0938f976c65a5871e8350507311b92a4ee1",
+   "bytes": 359490
+  },
+  {
+   "path": "snapshots/110/commodities-1795890382000.json.gz",
+   "house_id": 110,
+   "house_name": "Alliance Auction House",
+   "scope": "commodities",
+   "last_modified": 1795890382000,
+   "fetched_at": 1795891142718,
+   "sha256": "0e3a32e4b53cb3e1cc581a9ba587449aba4f88de89fb1085a0f6e71f9b5712ec",
+   "bytes": 731001
+  },
+  {
+   "path": "snapshots/110/items-1795890383000.json.gz",
+   "house_id": 110,
+   "house_name": "Alliance Auction House",
+   "scope": "items",
+   "last_modified": 1795890383000,
+   "fetched_at": 1795891142718,
+   "sha256": "132c9a67d436f7c031871fdd849d815faaf54d41711e81148e2821cb7675260e",
+   "bytes": 1322155
+  },
+  {
+   "path": "snapshots/111/commodities-1795890384000.json.gz",
+   "house_id": 111,
+   "house_name": "Alliance Auction House",
+   "scope": "commodities",
+   "last_modified": 1795890384000,
+   "fetched_at": 1795891142718,
+   "sha256": "847e6945444d9d24478c77d551818a7650bc3faf935488d142110f4bb3472764",
+   "bytes": 823714
+  },
+  {
+   "path": "snapshots/111/items-1795890384000.json.gz",
+   "house_id": 111,
+   "house_name": "Alliance Auction House",
+   "scope": "items",
+   "last_modified": 1795890384000,
+   "fetched_at": 1795891142718,
+   "sha256": "a402a4bfcd60962d2529ad99878768a24de1cd403c2bb2070e9ba9737a14da51",
+   "bytes": 1426081
+  },
+  {
+   "path": "snapshots/113/commodities-1795890384000.json.gz",
+   "house_id": 113,
+   "house_name": "Horde Auction House",
+   "scope": "commodities",
+   "last_modified": 1795890384000,
+   "fetched_at": 1795891142718,
+   "sha256": "019316bd1c326835ca66fcab0656047a4aefcd378edabd436c105b4ac621d931",
+   "bytes": 830095
+  },
+  {
+   "path": "snapshots/113/items-1795890384000.json.gz",
+   "house_id": 113,
+   "house_name": "Horde Auction House",
+   "scope": "items",
+   "last_modified": 1795890384000,
+   "fetched_at": 1795891142718,
+   "sha256": "88064e8bcee61849cab8d062a9efa5bd79b8e100f7dfd8c751af85023a1032aa",
+   "bytes": 1446721
+  },
+  {
+   "path": "snapshots/114/commodities-1795890385000.json.gz",
+   "house_id": 114,
+   "house_name": "Horde Auction House",
+   "scope": "commodities",
+   "last_modified": 1795890385000,
+   "fetched_at": 1795891142718,
+   "sha256": "bd05cb7fdfba5fb7d2e2c395ec9041935ff0fd1302073f61d3e82f4b8e2f536d",
+   "bytes": 852780
+  },
+  {
+   "path": "snapshots/114/items-1795890385000.json.gz",
+   "house_id": 114,
+   "house_name": "Horde Auction House",
+   "scope": "items",
+   "last_modified": 1795890385000,
+   "fetched_at": 1795891142718,
+   "sha256": "c6773a889ce513ceb6404ad42ce8dce8059e5d1b9d05da814381d71622c82421",
+   "bytes": 1542911
+  },
+  {
+   "path": "snapshots/112/commodities-1795893964000.json.gz",
+   "house_id": 112,
+   "house_name": "Alliance Auction House",
+   "scope": "commodities",
+   "last_modified": 1795893964000,
+   "fetched_at": 1795894742284,
+   "sha256": "2a4bad77c01a7c963df6592596209e63a0480244e6f0f90ecdc9366c2365d654",
+   "bytes": 129
+  },
+  {
+   "path": "snapshots/112/items-1795893964000.json.gz",
+   "house_id": 112,
+   "house_name": "Alliance Auction House",
+   "scope": "items",
+   "last_modified": 1795893964000,
+   "fetched_at": 1795894742284,
+   "sha256": "a96f3035eae9ec9799385a64794aa36391916de5a79ca3da9aed415daea5a1b3",
+   "bytes": 179
+  },
+  {
+   "path": "snapshots/115/commodities-1795893964000.json.gz",
+   "house_id": 115,
+   "house_name": "Horde Auction House",
+   "scope": "commodities",
+   "last_modified": 1795893964000,
+   "fetched_at": 1795894742284,
+   "sha256": "db3f6d72d5832ab1edf2d9be5df57f613581224a3f6a2232287b59639c0e3d6e",
+   "bytes": 130
+  },
+  {
+   "path": "snapshots/115/items-1795893964000.json.gz",
+   "house_id": 115,
+   "house_name": "Horde Auction House",
+   "scope": "items",
+   "last_modified": 1795893964000,
+   "fetched_at": 1795894742284,
+   "sha256": "b0375af040e77c860cc8ce46762811b715e04642b54a14ea51083f379893e0b7",
+   "bytes": 178
+  },
+  {
+   "path": "snapshots/118/commodities-1795893964000.json.gz",
+   "house_id": 118,
+   "house_name": "Blackwater Auction House",
+   "scope": "commodities",
+   "last_modified": 1795893964000,
+   "fetched_at": 1795894742284,
+   "sha256": "351c82cab1940c8507152d26ceaa569efc2c8252c2fcb2910ce31ace3061cb42",
+   "bytes": 130
+  },
+  {
+   "path": "snapshots/118/items-1795893964000.json.gz",
+   "house_id": 118,
+   "house_name": "Blackwater Auction House",
+   "scope": "items",
+   "last_modified": 1795893964000,
+   "fetched_at": 1795894742284,
+   "sha256": "d57d5a40ccb5c0b45eb48fba380451db7ee35ce49a999cca36876911ab4cd704",
+   "bytes": 181
+  },
+  {
+   "path": "snapshots/121/commodities-1795893964000.json.gz",
+   "house_id": 121,
+   "house_name": "Blackwater Auction House",
+   "scope": "commodities",
+   "last_modified": 1795893964000,
+   "fetched_at": 1795894742284,
+   "sha256": "8d978371f8e7495f8c2bac7f46428146ad3e77107bf4e0b449d01785eb32d94d",
+   "bytes": 24081
+  },
+  {
+   "path": "snapshots/121/items-1795893964000.json.gz",
+   "house_id": 121,
+   "house_name": "Blackwater Auction House",
+   "scope": "items",
+   "last_modified": 1795893964000,
+   "fetched_at": 1795894742284,
+   "sha256": "5378c0f848223140cafdb21be1a9241ae3f7ee5780fca8a2cbcb00eb6093ce17",
+   "bytes": 11357
+  },
+  {
+   "path": "snapshots/125/commodities-1795893964000.json.gz",
+   "house_id": 125,
+   "house_name": "Blackwater Auction House",
+   "scope": "commodities",
+   "last_modified": 1795893964000,
+   "fetched_at": 1795894742284,
+   "sha256": "c3fd229284de5eccb44bb4355ac6f351e448e31cb1a9e926b88ede028733259b",
+   "bytes": 26806
+  },
+  {
+   "path": "snapshots/125/items-1795893964000.json.gz",
+   "house_id": 125,
+   "house_name": "Blackwater Auction House",
+   "scope": "items",
+   "last_modified": 1795893964000,
+   "fetched_at": 1795894742284,
+   "sha256": "6823a90a9867ffeadbd94647d90146857ebf6cb79621c1855c36728511d61976",
+   "bytes": 16220
+  },
+  {
+   "path": "snapshots/116/commodities-1795893967000.json.gz",
+   "house_id": 116,
+   "house_name": "Blackwater Auction House",
+   "scope": "commodities",
+   "last_modified": 1795893967000,
+   "fetched_at": 1795894742284,
+   "sha256": "a94bfc8f0a72d200b304d2507c537485a512c4688d3d23073a8a4a9032b5f0fb",
+   "bytes": 194099
+  },
+  {
+   "path": "snapshots/116/items-1795893967000.json.gz",
+   "house_id": 116,
+   "house_name": "Blackwater Auction House",
+   "scope": "items",
+   "last_modified": 1795893967000,
+   "fetched_at": 1795894742284,
+   "sha256": "8c6a507059543ee120a3d07a7819e35fd40d919467b40c075414e9ff40930765",
+   "bytes": 143920
+  },
+  {
+   "path": "snapshots/117/commodities-1795893968000.json.gz",
+   "house_id": 117,
+   "house_name": "Blackwater Auction House",
+   "scope": "commodities",
+   "last_modified": 1795893968000,
+   "fetched_at": 1795894742284,
+   "sha256": "6940ca21bade11777ae1605d26dba49eae73458c0e015aa9617fc213c269d842",
+   "bytes": 224012
+  },
+  {
+   "path": "snapshots/117/items-1795893968000.json.gz",
+   "house_id": 117,
+   "house_name": "Blackwater Auction House",
+   "scope": "items",
+   "last_modified": 1795893968000,
+   "fetched_at": 1795894742284,
+   "sha256": "aabf163bf7f8f60dea47d37a4be6dca99d3c590e52cdeab499e27f75f1c43684",
+   "bytes": 179911
+  },
+  {
+   "path": "snapshots/120/commodities-1795893969000.json.gz",
+   "house_id": 120,
+   "house_name": "Horde Auction House",
+   "scope": "commodities",
+   "last_modified": 1795893969000,
+   "fetched_at": 1795894742284,
+   "sha256": "35e9074d77be3c8be668010f01b048bf457a76f285f468ac187dcc208f5769ef",
+   "bytes": 226821
+  },
+  {
+   "path": "snapshots/120/items-1795893969000.json.gz",
+   "house_id": 120,
+   "house_name": "Horde Auction House",
+   "scope": "items",
+   "last_modified": 1795893969000,
+   "fetched_at": 1795894742284,
+   "sha256": "833f09ed4efb89426e41d7a5aa8a70ed21b1f9526c5cf8fa1f904af87f030ef7",
+   "bytes": 269791
+  },
+  {
+   "path": "snapshots/119/commodities-1795893970000.json.gz",
+   "house_id": 119,
+   "house_name": "Alliance Auction House",
+   "scope": "commodities",
+   "last_modified": 1795893970000,
+   "fetched_at": 1795894742284,
+   "sha256": "ecbd8a819a7fb76a120c657ba3bc7f50418a88eacd607db3f356afd71b32935c",
+   "bytes": 275279
+  },
+  {
+   "path": "snapshots/119/items-1795893970000.json.gz",
+   "house_id": 119,
+   "house_name": "Alliance Auction House",
+   "scope": "items",
+   "last_modified": 1795893970000,
+   "fetched_at": 1795894742284,
+   "sha256": "a4c53d188a8b59612a3fa911e8f06021b865c10a4b91f587e647235f72c090de",
+   "bytes": 358154
+  },
+  {
+   "path": "snapshots/123/commodities-1795893970000.json.gz",
+   "house_id": 123,
+   "house_name": "Alliance Auction House",
+   "scope": "commodities",
+   "last_modified": 1795893970000,
+   "fetched_at": 1795894742284,
+   "sha256": "a66bf178232fd6094c7c9c5c175c415fb4368d97a45ee28db7c0881782059f5a",
+   "bytes": 280166
+  },
+  {
+   "path": "snapshots/123/items-1795893970000.json.gz",
+   "house_id": 123,
+   "house_name": "Alliance Auction House",
+   "scope": "items",
+   "last_modified": 1795893970000,
+   "fetched_at": 1795894742284,
+   "sha256": "ea0ff55690ec4d3d3c364496da3218acdbcc6ee282c201fc6f834643a32ad058",
+   "bytes": 321909
+  },
+  {
+   "path": "snapshots/124/commodities-1795893971000.json.gz",
+   "house_id": 124,
+   "house_name": "Horde Auction House",
+   "scope": "commodities",
+   "last_modified": 1795893971000,
+   "fetched_at": 1795894742284,
+   "sha256": "885b655a210ecfea79ba6c26c140067e9be800029cc2c5ad2d64414d3c88cfc6",
+   "bytes": 282266
+  },
+  {
+   "path": "snapshots/124/items-1795893971000.json.gz",
+   "house_id": 124,
+   "house_name": "Horde Auction House",
+   "scope": "items",
+   "last_modified": 1795893971000,
+   "fetched_at": 1795894742284,
+   "sha256": "7047325adedb750fa7d4cc48f1c48296f03f0c40e1039c4087efd53634bd7168",
+   "bytes": 372811
+  },
+  {
+   "path": "snapshots/110/commodities-1795893983000.json.gz",
+   "house_id": 110,
+   "house_name": "Alliance Auction House",
+   "scope": "commodities",
+   "last_modified": 1795893983000,
+   "fetched_at": 1795894742284,
+   "sha256": "c6140d5d71fd57bad9384afd2cd8495c33da5d27671e931251f9fbbda9575788",
+   "bytes": 764849
+  },
+  {
+   "path": "snapshots/110/items-1795893983000.json.gz",
+   "house_id": 110,
+   "house_name": "Alliance Auction House",
+   "scope": "items",
+   "last_modified": 1795893983000,
+   "fetched_at": 1795894742284,
+   "sha256": "ce911af2df468a5206e80833a39a9d8938b01873389bbe90c37a5be42a2e97f1",
+   "bytes": 1370523
+  },
+  {
+   "path": "snapshots/111/commodities-1795893985000.json.gz",
+   "house_id": 111,
+   "house_name": "Alliance Auction House",
+   "scope": "commodities",
+   "last_modified": 1795893985000,
+   "fetched_at": 1795894742284,
+   "sha256": "14f68051fc29d9b81630610e763dd0ffb82543c4b5361b3bdadfbb963871dc1d",
+   "bytes": 881185
+  },
+  {
+   "path": "snapshots/111/items-1795893985000.json.gz",
+   "house_id": 111,
+   "house_name": "Alliance Auction House",
+   "scope": "items",
+   "last_modified": 1795893985000,
+   "fetched_at": 1795894742284,
+   "sha256": "7a3356781cdc1b3a57bdff8f8f041e785b697e6683476bc86ab66dc2987f696b",
+   "bytes": 1496953
+  },
+  {
+   "path": "snapshots/113/commodities-1795893985000.json.gz",
+   "house_id": 113,
+   "house_name": "Horde Auction House",
+   "scope": "commodities",
+   "last_modified": 1795893985000,
+   "fetched_at": 1795894742284,
+   "sha256": "09de40b67789cd44b9c160a8752db5746373baf2ab56bb819117c62249154565",
+   "bytes": 871394
+  },
+  {
+   "path": "snapshots/113/items-1795893985000.json.gz",
+   "house_id": 113,
+   "house_name": "Horde Auction House",
+   "scope": "items",
+   "last_modified": 1795893985000,
+   "fetched_at": 1795894742284,
+   "sha256": "7ae9db6457fc7a8126d0a9cf1c2f9c6cb4a0075ae9b7a791b6e47a2c435f9c82",
+   "bytes": 1511334
+  },
+  {
+   "path": "snapshots/114/commodities-1795893986000.json.gz",
+   "house_id": 114,
+   "house_name": "Horde Auction House",
+   "scope": "commodities",
+   "last_modified": 1795893986000,
+   "fetched_at": 1795894742284,
+   "sha256": "67818a806ea5d0dd5be2a142ee84b320f51b08b86d100b7c287287889031485a",
+   "bytes": 889941
+  },
+  {
+   "path": "snapshots/114/items-1795893986000.json.gz",
+   "house_id": 114,
+   "house_name": "Horde Auction House",
+   "scope": "items",
+   "last_modified": 1795893986000,
+   "fetched_at": 1795894742284,
+   "sha256": "6ae97bb1c732d001315a389129309b46922f0a158f4cf346f68fd16becc2c5e9",
+   "bytes": 1588935
+  }
+ ],
+ "history_days": 30,
+ "history": [
+  {
+   "path": "history/110/20782.json.gz",
+   "house_id": 110,
+   "house_name": "Alliance Auction House",
+   "day": 20782,
+   "snapshots": 4,
+   "items": 48212,
+   "sha256": "ed718d3f1cc093e1a7cae1b9f908a9292b0d2155ad2f0f3d3de4e32a759ba473",
+   "bytes": 709121
+  },
+  {
+   "path": "history/111/20782.json.gz",
+   "house_id": 111,
+   "house_name": "Alliance Auction House",
+   "day": 20782,
+   "snapshots": 4,
+   "items": 48437,
+   "sha256": "f43954bad345c15fe914c6772faa4fd154fe8a99e9cca3cfa4f386e212df9012",
+   "bytes": 717449
+  },
+  {
+   "path": "history/112/20782.json.gz",
+   "house_id": 112,
+   "house_name": "Alliance Auction House",
+   "day": 20782,
+   "snapshots": 4,
+   "items": 0,
+   "sha256": "bd9252901e74e56ffe638c9f98f1d26be61988a547b6300aa1078a58ec435c4f",
+   "bytes": 186
+  },
+  {
+   "path": "history/113/20782.json.gz",
+   "house_id": 113,
+   "house_name": "Horde Auction House",
+   "day": 20782,
+   "snapshots": 4,
+   "items": 56209,
+   "sha256": "080080bf29ff78816b2b25a5c06cd32fd30e44c1e6157a6fb8861c767b9902bd",
+   "bytes": 826696
+  },
+  {
+   "path": "history/114/20782.json.gz",
+   "house_id": 114,
+   "house_name": "Horde Auction House",
+   "day": 20782,
+   "snapshots": 4,
+   "items": 49889,
+   "sha256": "eb1d36f4e38764114e8d7007d2b1cbc4505f8466140ab74b8688602475b45e4f",
+   "bytes": 722474
+  },
+  {
+   "path": "history/115/20782.json.gz",
+   "house_id": 115,
+   "house_name": "Horde Auction House",
+   "day": 20782,
+   "snapshots": 4,
+   "items": 0,
+   "sha256": "9cdc1ce2827de517a9c8e1f6afcf09a1d04d877aa8a33f0ace28ad95bdf83ca9",
+   "bytes": 184
+  },
+  {
+   "path": "history/116/20782.json.gz",
+   "house_id": 116,
+   "house_name": "Blackwater Auction House",
+   "day": 20782,
+   "snapshots": 4,
+   "items": 8607,
+   "sha256": "444be67dab40c0fc297634cdee13c286cc3089d9722f187ff7145873c7ca77a5",
+   "bytes": 119472
+  },
+  {
+   "path": "history/117/20782.json.gz",
+   "house_id": 117,
+   "house_name": "Blackwater Auction House",
+   "day": 20782,
+   "snapshots": 4,
+   "items": 9430,
+   "sha256": "2ba9af48f0fd7aec335cd7e288bad8d5125c9fc7f77c479e959aef5e9e75410a",
+   "bytes": 128814
+  },
+  {
+   "path": "history/118/20782.json.gz",
+   "house_id": 118,
+   "house_name": "Blackwater Auction House",
+   "day": 20782,
+   "snapshots": 4,
+   "items": 0,
+   "sha256": "23042e610497ac1e0f9ad8fe5c88f39c5f8fae2afbfef43d079ce733ffc6b0d0",
+   "bytes": 188
+  },
+  {
+   "path": "history/119/20782.json.gz",
+   "house_id": 119,
+   "house_name": "Alliance Auction House",
+   "day": 20782,
+   "snapshots": 4,
+   "items": 14774,
+   "sha256": "a4e5731677197810587c2006cd308830bcf6baf8f14337f9d794064f5026fd58",
+   "bytes": 204496
+  },
+  {
+   "path": "history/120/20782.json.gz",
+   "house_id": 120,
+   "house_name": "Horde Auction House",
+   "day": 20782,
+   "snapshots": 4,
+   "items": 11328,
+   "sha256": "2d59bbc27fc930ebcf17ce2174a587bd7704c6c0839be4a399cabe5462619fcd",
+   "bytes": 154373
+  },
+  {
+   "path": "history/121/20782.json.gz",
+   "house_id": 121,
+   "house_name": "Blackwater Auction House",
+   "day": 20782,
+   "snapshots": 4,
+   "items": 1135,
+   "sha256": "49564d5a4108ef3406252d3911c6afbedc22548ffa9fec6cd916e5a9ac174b70",
+   "bytes": 16493
+  },
+  {
+   "path": "history/123/20782.json.gz",
+   "house_id": 123,
+   "house_name": "Alliance Auction House",
+   "day": 20782,
+   "snapshots": 4,
+   "items": 14561,
+   "sha256": "12cc99088fe1dd439efb52afcca8f4adc7570e08b06f4a847d238f5f2d39fa76",
+   "bytes": 203756
+  },
+  {
+   "path": "history/124/20782.json.gz",
+   "house_id": 124,
+   "house_name": "Horde Auction House",
+   "day": 20782,
+   "snapshots": 4,
+   "items": 16679,
+   "sha256": "c85e6a44548928a5f724ca2a251aa8c6955960d0791612c3d4391f9824d46223",
+   "bytes": 223708
+  },
+  {
+   "path": "history/125/20782.json.gz",
+   "house_id": 125,
+   "house_name": "Blackwater Auction House",
+   "day": 20782,
+   "snapshots": 4,
+   "items": 1356,
+   "sha256": "a3b0d9d041203ff3c10c3be475556547c97a59f02292c6b45d6b3f7a33dfa4b9",
+   "bytes": 20576
+  },
+  {
+   "path": "history/110/20783.json.gz",
+   "house_id": 110,
+   "house_name": "Alliance Auction House",
+   "day": 20783,
+   "snapshots": 6,
+   "items": 59675,
+   "sha256": "720c4b5c64b4240537a795e4e5a0df49c486559959157b29e5b3ed9920c4912f",
+   "bytes": 935591
+  },
+  {
+   "path": "history/111/20783.json.gz",
+   "house_id": 111,
+   "house_name": "Alliance Auction House",
+   "day": 20783,
+   "snapshots": 6,
+   "items": 60538,
+   "sha256": "a6dfc03251dbb67a09cf5a59e5214c64ce96e6e58838cc149307d9b709e6fd52",
+   "bytes": 951709
+  },
+  {
+   "path": "history/112/20783.json.gz",
+   "house_id": 112,
+   "house_name": "Alliance Auction House",
+   "day": 20783,
+   "snapshots": 6,
+   "items": 0,
+   "sha256": "5e5bc037672fac758161dbec8cc8c1bd5e8341255453656dbddaec416bff7e40",
+   "bytes": 187
+  },
+  {
+   "path": "history/113/20783.json.gz",
+   "house_id": 113,
+   "house_name": "Horde Auction House",
+   "day": 20783,
+   "snapshots": 6,
+   "items": 68249,
+   "sha256": "26cfece277119d678a97967f2c32e436b2ada6dc67a1e7ef729f84fb76491c3b",
+   "bytes": 1066613
+  },
+  {
+   "path": "history/114/20783.json.gz",
+   "house_id": 114,
+   "house_name": "Horde Auction House",
+   "day": 20783,
+   "snapshots": 6,
+   "items": 62270,
+   "sha256": "876ba828c532b0bd931e76edb1f289d98f58c2a613cc5d85c773b9e20151ad1d",
+   "bytes": 963986
+  },
+  {
+   "path": "history/115/20783.json.gz",
+   "house_id": 115,
+   "house_name": "Horde Auction House",
+   "day": 20783,
+   "snapshots": 6,
+   "items": 0,
+   "sha256": "1df8f4ee54714b53b4a32dd4cf12da28990dcfbc1fdc84ebfeeb2be197cf82d9",
+   "bytes": 186
+  },
+  {
+   "path": "history/116/20783.json.gz",
+   "house_id": 116,
+   "house_name": "Blackwater Auction House",
+   "day": 20783,
+   "snapshots": 6,
+   "items": 11794,
+   "sha256": "60f4aa3328302838933743843a1f30a00a8a21922363adb0b7244bf5ba900ee9",
+   "bytes": 170443
+  },
+  {
+   "path": "history/117/20783.json.gz",
+   "house_id": 117,
+   "house_name": "Blackwater Auction House",
+   "day": 20783,
+   "snapshots": 6,
+   "items": 13456,
+   "sha256": "50cc3cf618697ba9f9d86ba4b579592bf3ca49e1cb44e10ba742bd60bee7f36d",
+   "bytes": 192448
+  },
+  {
+   "path": "history/118/20783.json.gz",
+   "house_id": 118,
+   "house_name": "Blackwater Auction House",
+   "day": 20783,
+   "snapshots": 6,
+   "items": 0,
+   "sha256": "b0424a6d5b44ec70c2d7bea01b6aa396b64798d102501998d7cf8b1313ad0987",
+   "bytes": 188
+  },
+  {
+   "path": "history/119/20783.json.gz",
+   "house_id": 119,
+   "house_name": "Alliance Auction House",
+   "day": 20783,
+   "snapshots": 6,
+   "items": 19181,
+   "sha256": "73e7b013835e7c65813bca01ef5fcc5a9d545e24fbb1ced481ba9820358fa9d2",
+   "bytes": 280181
+  },
+  {
+   "path": "history/120/20783.json.gz",
+   "house_id": 120,
+   "house_name": "Horde Auction House",
+   "day": 20783,
+   "snapshots": 6,
+   "items": 14804,
+   "sha256": "1e34030d2e98f8913944b5f1fca7f67aaa3ff33d140bdd67fc5ce6e91e91abd7",
+   "bytes": 212019
+  },
+  {
+   "path": "history/121/20783.json.gz",
+   "house_id": 121,
+   "house_name": "Blackwater Auction House",
+   "day": 20783,
+   "snapshots": 6,
+   "items": 1578,
+   "sha256": "3bbe173f4e3b1499fce0c0d1ef9ce219dcf7284ec308daf56108e40a3e04147a",
+   "bytes": 23879
+  },
+  {
+   "path": "history/123/20783.json.gz",
+   "house_id": 123,
+   "house_name": "Alliance Auction House",
+   "day": 20783,
+   "snapshots": 6,
+   "items": 18531,
+   "sha256": "fceba3f52fa5ef1d1e3a2eb8aba9148e6931b21dd6f3c191b1f4a1973fb919af",
+   "bytes": 272392
+  },
+  {
+   "path": "history/124/20783.json.gz",
+   "house_id": 124,
+   "house_name": "Horde Auction House",
+   "day": 20783,
+   "snapshots": 6,
+   "items": 21158,
+   "sha256": "8136d498bb7a60825565a549e3ef7b988412f3feb9f5aa46a5697adff911cdb1",
+   "bytes": 299404
+  },
+  {
+   "path": "history/125/20783.json.gz",
+   "house_id": 125,
+   "house_name": "Blackwater Auction House",
+   "day": 20783,
+   "snapshots": 6,
+   "items": 1875,
+   "sha256": "ea49a5f577d196d82e0da7f4ccd374b573c56f2942c37a9453df300234fdec27",
+   "bytes": 29401
+  },
+  {
+   "path": "history/110/20784.json.gz",
+   "house_id": 110,
+   "house_name": "Alliance Auction House",
+   "day": 20784,
+   "snapshots": 8,
+   "items": 65813,
+   "sha256": "dff6c444666783003eea48409daf4f9127f364f4a81fd7a7c896b553fac50aee",
+   "bytes": 975977
+  },
+  {
+   "path": "history/111/20784.json.gz",
+   "house_id": 111,
+   "house_name": "Alliance Auction House",
+   "day": 20784,
+   "snapshots": 8,
+   "items": 64807,
+   "sha256": "5f2f6d8c5c31b4d4cc1e1a609157f7416239f5b196f98fe0c965d9d5f139dc69",
+   "bytes": 973678
+  },
+  {
+   "path": "history/112/20784.json.gz",
+   "house_id": 112,
+   "house_name": "Alliance Auction House",
+   "day": 20784,
+   "snapshots": 8,
+   "items": 0,
+   "sha256": "479c4d8e20247d8d62dc09775ebe64f395cbdc59a8e3be391f190720c2a58178",
+   "bytes": 269
+  },
+  {
+   "path": "history/113/20784.json.gz",
+   "house_id": 113,
+   "house_name": "Horde Auction House",
+   "day": 20784,
+   "snapshots": 8,
+   "items": 73396,
+   "sha256": "548a7d83ae44994a66a20f64a5e263ed1194e03b7da5eb16cbba4cf3aec014b7",
+   "bytes": 1102558
+  },
+  {
+   "path": "history/114/20784.json.gz",
+   "house_id": 114,
+   "house_name": "Horde Auction House",
+   "day": 20784,
+   "snapshots": 8,
+   "items": 67148,
+   "sha256": "70143a06a64115532ad18332cecaff09719f4960335247514f7ff1dd8c9c8738",
+   "bytes": 995512
+  },
+  {
+   "path": "history/115/20784.json.gz",
+   "house_id": 115,
+   "house_name": "Horde Auction House",
+   "day": 20784,
+   "snapshots": 8,
+   "items": 0,
+   "sha256": "8161520be4f8d3ae47c13d4fa3b7ee2a2a5a6d3c16f4f14d1a06f3957699e546",
+   "bytes": 269
+  },
+  {
+   "path": "history/116/20784.json.gz",
+   "house_id": 116,
+   "house_name": "Blackwater Auction House",
+   "day": 20784,
+   "snapshots": 8,
+   "items": 12614,
+   "sha256": "5605f2ede6ad428f144abd5ba26b67bda9d842fe3262c107459e5e5240f73e67",
+   "bytes": 170713
+  },
+  {
+   "path": "history/117/20784.json.gz",
+   "house_id": 117,
+   "house_name": "Blackwater Auction House",
+   "day": 20784,
+   "snapshots": 8,
+   "items": 14217,
+   "sha256": "48843be9cc4a45de8b575e4febff63ea7d43c4e1dc833e05439521480c7dc67d",
+   "bytes": 191169
+  },
+  {
+   "path": "history/118/20784.json.gz",
+   "house_id": 118,
+   "house_name": "Blackwater Auction House",
+   "day": 20784,
+   "snapshots": 9,
+   "items": 0,
+   "sha256": "2f8da7f7da32a148e8fdc910b201f59d80d48d058eebb2904ac45339a8669b58",
+   "bytes": 273
+  },
+  {
+   "path": "history/119/20784.json.gz",
+   "house_id": 119,
+   "house_name": "Alliance Auction House",
+   "day": 20784,
+   "snapshots": 8,
+   "items": 21043,
+   "sha256": "0068198ac6ecac827e5d4bc684d71538061d53faf015cad4a84a5111d304cc00",
+   "bytes": 294676
+  },
+  {
+   "path": "history/120/20784.json.gz",
+   "house_id": 120,
+   "house_name": "Horde Auction House",
+   "day": 20784,
+   "snapshots": 8,
+   "items": 15986,
+   "sha256": "78ade40d1e5a5eed1837b25b1349d4856ce6df03f93413c2fb8f5b3a20d48619",
+   "bytes": 219035
+  },
+  {
+   "path": "history/121/20784.json.gz",
+   "house_id": 121,
+   "house_name": "Blackwater Auction House",
+   "day": 20784,
+   "snapshots": 10,
+   "items": 1715,
+   "sha256": "5ff937734b7b5a9c242c8d1299163875378ebf9afe15f54cd3aa51a2805641ff",
+   "bytes": 24497
+  },
+  {
+   "path": "history/123/20784.json.gz",
+   "house_id": 123,
+   "house_name": "Alliance Auction House",
+   "day": 20784,
+   "snapshots": 8,
+   "items": 19630,
+   "sha256": "46486801fea33d1445be53c53b9fd1d2c65e0ba10a83413a55d2ec7ab439563d",
+   "bytes": 275696
+  },
+  {
+   "path": "history/124/20784.json.gz",
+   "house_id": 124,
+   "house_name": "Horde Auction House",
+   "day": 20784,
+   "snapshots": 9,
+   "items": 22799,
+   "sha256": "702e1278219253105b8850366d0c81fb887962de9e038ee064fa58515f103f16",
+   "bytes": 313873
+  },
+  {
+   "path": "history/125/20784.json.gz",
+   "house_id": 125,
+   "house_name": "Blackwater Auction House",
+   "day": 20784,
+   "snapshots": 10,
+   "items": 2019,
+   "sha256": "c2695fee99a49eda6c797e35ca188a3fc06071e9c53fae541865f80a3aec86c3",
+   "bytes": 30353
+  }
+ ],
+ "items": {
+  "path": "items.json.gz",
+  "count": 7740,
+  "sha256": "7e372e9910c2bde007f10f9036b8deca5e309fe34a71fdc41b11cd835042ea13",
+  "pending": 0
+ },
+ "errors": [],
+ "recipes": {
+  "path": "recipes.json.gz",
+  "build": "1.60.1.71139",
+  "items_scope": "all",
+  "cooldowns": true,
+  "item_class": true,
+  "gear": 4,
+  "items": 19403,
+  "generated_at": 1795877229243,
+  "count": 2510,
+  "sha256": "71c2888f898143af76af4ae05a52aff4690bfcb1f0e5ebaf9b17ba20c450b398"
+ }
+}
