@@ -187,6 +187,7 @@ def build_recipes(t: dict[str, list[dict]]) -> dict:
         item_info[str(i)] = {k: v for k, v in e.items() if v is not None}
     try:                                   # never let the gear export cost the recipe database
         gear, gear_fields = build_gear(t, sparse, item_cls)
+        print("recipes: gear fields:", gear_fields, "| probes:", {i: gear.get(i) for i in (8193, 4249, 2139, 897)})
     except Exception as e:  # noqa: BLE001
         print(f"gear export failed, skipped: {type(e).__name__}: {e}")
         gear, gear_fields = {}, {"error": f"{type(e).__name__}: {e}"}
@@ -233,7 +234,7 @@ def _aura_stat(aura: int, misc: int) -> str | None:
             49: "dodge", 47: "parry", 51: "block", 158: "blockval", 115: "heal"}.get(aura)
 
 
-GEAR_VERSION = 2              # bump to rebuild the gear fields on the next run
+GEAR_VERSION = 3              # bump to rebuild the gear fields on the next run
 DAMAGE_TABLES = ("ItemDamageOneHand", "ItemDamageOneHandCaster", "ItemDamageTwoHand", "ItemDamageTwoHandCaster",
                  "ItemDamageRanged", "ItemDamageThrown", "ItemDamageWand")
 CASTER_WEAPON_FLAG = 0x200                   # ItemSparse Flags_1
@@ -251,16 +252,42 @@ def _damage_table(inv: int, sub: int, caster: bool) -> str:
     return "ItemDamageOneHandCaster" if caster else "ItemDamageOneHand"
 
 
+_BUDGET_SLOT = {**{v: 0 for v in (1, 5, 7, 17, 20)}, **{v: 1 for v in (3, 6, 8, 10, 12)},
+                **{v: 2 for v in (2, 9, 11, 14, 16, 23)}, **{v: 3 for v in (13, 21, 22)}, **{v: 4 for v in (15, 25, 26)}}
+_BUDGET_QUALITY = {2: "Good", 3: "Superior", 4: "Epic", 5: "Epic"}
+
+
+def _budget(rpp: dict, ilvl: int, quality: int, inv: int) -> float | None:
+    row, q, slot = rpp.get(ilvl), _BUDGET_QUALITY.get(quality), _BUDGET_SLOT.get(inv)
+    if row is None or q is None or slot is None:
+        return None
+    v = row.get(f"{q}F_{slot}")
+    if v in (None, ""):
+        v = row.get(f"{q}_{slot}")
+    try:
+        return float(v) if v not in (None, "") else None
+    except ValueError:
+        return None
+
+
 def build_gear(t: dict[str, list[dict]], sparse: dict[int, dict], item_cls: dict) -> tuple[dict, dict]:
     """item id -> gear fields (short keys), plus which client columns were present."""
     cols = set(next(iter(sparse.values())).keys()) if sparse else set()
     # The run's log names the client's real ItemSparse columns, so the stat mapping can be checked
     # against Forever's build rather than assumed.
     print("recipes: ItemSparse columns:", ",".join(sorted(cols)))
-    for probe in (8193, 4249, 2139):
+    for probe in (8193, 4249, 2139, 897):
         if probe in sparse:
             print(f"recipes: ItemSparse {probe}:", {k: v for k, v in sparse[probe].items() if v not in ("", "0", 0, None)})
+    rpp = {_i(r.get("ID")): r for r in t.get("RandPropPoints") or []}
+    if t.get("RandPropPoints"):
+        print("recipes: RandPropPoints columns:", ",".join(sorted(t["RandPropPoints"][0].keys())))
+        print("recipes: RandPropPoints 25/46:", {k: v for k, v in (rpp.get(25) or {}).items()}, {k: v for k, v in (rpp.get(46) or {}).items()})
+    for n in BUDGET_TABLES[1:]:
+        if t.get(n):
+            print(f"recipes: {n} columns:", ",".join(sorted(t[n][0].keys())), "| first row:", t[n][0])
     has = {"stats": "StatModifier_bonusStat_0" in cols and "StatModifier_bonusAmount_0" in cols,
+           "stats_budget": "StatModifier_bonusStat_0" in cols and "StatPercentEditor_0" in cols and bool(rpp),
            "armor": "Resistances_0" in cols, "damage_columns": "MinDamage_0" in cols and "MaxDamage_0" in cols,
            "speed": "ItemDelay" in cols, "random": bool({"RandomSelect", "ItemRandomSuffixGroupID"} & cols),
            "damage_tables": [n for n in DAMAGE_TABLES if t.get(n)], "equip_effects": bool(t.get("ItemEffect"))}
@@ -303,6 +330,22 @@ def build_gear(t: dict[str, list[dict]], sparse: dict[int, dict], item_cls: dict
                 elif typ >= 0 and amt:
                     st[f"mod{typ}"] = st.get(f"mod{typ}", 0) + amt       # an unknown stat: kept, not scored
             g["st"] = st
+        elif has["stats_budget"]:
+            budget = _budget(rpp, _i(s.get("ItemLevel")), _i(s.get("OverallQualityID")), inv)
+            st = {}
+            for k in range(10):
+                typ, pct = _i(s.get(f"StatModifier_bonusStat_{k}"), -1), _i(s.get(f"StatPercentEditor_{k}"))
+                if typ < 0 or not pct:
+                    continue
+                if budget is None:
+                    st = None                     # a stat we can't size: unknown, not 0
+                    break
+                amt = int(budget * pct / 10000 + 0.5)
+                key = ITEM_MOD.get(typ, f"mod{typ}")
+                st[key] = st.get(key, 0) + amt
+            if st is not None:
+                g["st"] = st
+                g["st_src"] = "budget"
         fx: dict[str, int] = {}
         for sp in equip_spells.get(i, []):
             for key, v in fx_of_spell.get(sp, []):
@@ -336,7 +379,11 @@ def build_gear(t: dict[str, list[dict]], sparse: dict[int, dict], item_cls: dict
 
 TABLES = {"Item": None, "SpellCooldowns": None, "SkillLine": None, "SpellName": None, "SpellEffect": None, "SkillLineAbility": None, "SpellReagents": None,
           "ItemSparse": None, "ItemEffect": None, "ItemXItemEffect": None}
-OPTIONAL_TABLES = DAMAGE_TABLES
+# Forever's ItemSparse holds each stat's type and share of a budget (StatPercentEditor, 1/10000), not
+# the amount: amount = RandPropPoints[item level][quality][slot group] x share. Armour likewise comes
+# from per-level tables (ItemArmorTotal x ArmorLocation x ItemArmorQuality; shields ItemArmorShield).
+BUDGET_TABLES = ("RandPropPoints", "ItemArmorTotal", "ArmorLocation", "ItemArmorQuality", "ItemArmorShield")
+OPTIONAL_TABLES = DAMAGE_TABLES + BUDGET_TABLES
 
 
 def run(out: Path, cache: Path | None = None, force: bool = False, now: int | None = None) -> dict | None:
