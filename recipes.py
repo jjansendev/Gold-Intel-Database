@@ -234,7 +234,7 @@ def _aura_stat(aura: int, misc: int) -> str | None:
             49: "dodge", 47: "parry", 51: "block", 158: "blockval", 115: "heal"}.get(aura)
 
 
-GEAR_VERSION = 3              # bump to rebuild the gear fields on the next run
+GEAR_VERSION = 4              # bump to rebuild the gear fields on the next run
 DAMAGE_TABLES = ("ItemDamageOneHand", "ItemDamageOneHandCaster", "ItemDamageTwoHand", "ItemDamageTwoHandCaster",
                  "ItemDamageRanged", "ItemDamageThrown", "ItemDamageWand")
 CASTER_WEAPON_FLAG = 0x200                   # ItemSparse Flags_1
@@ -270,6 +270,36 @@ def _budget(rpp: dict, ilvl: int, quality: int, inv: int) -> float | None:
         return None
 
 
+_ARMOR_MAT = {1: ("Cloth", "Clothmodifier"), 2: ("Leather", "Leathermodifier"), 3: ("Mail", "Chainmodifier"),
+              4: ("Plate", "Platemodifier")}
+
+
+def _f(v) -> float | None:
+    try:
+        return float(v) if v not in (None, "") else None
+    except ValueError:
+        return None
+
+
+def _armor(t_total: dict, t_loc: dict, t_qual: dict, t_shield: dict, ilvl: int, quality: int, inv: int,
+           sub: int | None) -> int | None:
+    """Armour from the client's per-level tables; None when a table or row is missing (unknown, not 0)."""
+    if sub == 6:                                                  # shield
+        row = t_shield.get(ilvl)
+        v = _f(row.get(f"Quality_{quality}")) if row else None
+        return int(v + 0.5) if v is not None else None
+    if inv == 16:                                                 # cloaks are cloth whatever their subclass
+        sub = 1
+    mat = _ARMOR_MAT.get(sub or 0)
+    tot, loc, qual = t_total.get(ilvl), t_loc.get(inv), t_qual.get(ilvl)
+    if not mat or not tot or not loc or not qual:
+        return None
+    a, b, c = _f(tot.get(mat[0])), _f(loc.get(mat[1])), _f(qual.get(f"Qualitymod_{quality}"))
+    if a is None or b is None or c is None:
+        return None
+    return int(a * b * c + 0.5)
+
+
 def build_gear(t: dict[str, list[dict]], sparse: dict[int, dict], item_cls: dict) -> tuple[dict, dict]:
     """item id -> gear fields (short keys), plus which client columns were present."""
     cols = set(next(iter(sparse.values())).keys()) if sparse else set()
@@ -286,7 +316,12 @@ def build_gear(t: dict[str, list[dict]], sparse: dict[int, dict], item_cls: dict
     for n in BUDGET_TABLES[1:]:
         if t.get(n):
             print(f"recipes: {n} columns:", ",".join(sorted(t[n][0].keys())), "| first row:", t[n][0])
+    t_total = {_i(r.get("ItemLevel")): r for r in t.get("ItemArmorTotal") or []}
+    t_loc = {_i(r.get("ID")): r for r in t.get("ArmorLocation") or []}
+    t_qual = {_i(r.get("ID")): r for r in t.get("ItemArmorQuality") or []}
+    t_shield = {_i(r.get("ItemLevel")): r for r in t.get("ItemArmorShield") or []}
     has = {"stats": "StatModifier_bonusStat_0" in cols and "StatModifier_bonusAmount_0" in cols,
+           "armor_tables": bool(t_total and t_loc and t_qual),
            "stats_budget": "StatModifier_bonusStat_0" in cols and "StatPercentEditor_0" in cols and bool(rpp),
            "armor": "Resistances_0" in cols, "damage_columns": "MinDamage_0" in cols and "MaxDamage_0" in cols,
            "speed": "ItemDelay" in cols, "random": bool({"RandomSelect", "ItemRandomSuffixGroupID"} & cols),
@@ -354,6 +389,11 @@ def build_gear(t: dict[str, list[dict]], sparse: dict[int, dict], item_cls: dict
             g["fx"] = fx
         if has["armor"]:
             g["armor"] = _i(s.get("Resistances_0"))
+        elif has["armor_tables"] and cls == 4:
+            arm = _armor(t_total, t_loc, t_qual, t_shield, _i(s.get("ItemLevel")), _i(s.get("OverallQualityID")), inv,
+                         (item_cls.get(i) or (None, None))[1])
+            if arm is not None:
+                g["armor"], g["armor_src"] = arm, "tables"
         if cls == 2:
             delay = _i(s.get("ItemDelay")) if has["speed"] else 0
             if delay > 0:
