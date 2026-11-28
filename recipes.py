@@ -185,16 +185,151 @@ def build_recipes(t: dict[str, list[dict]]) -> dict:
              "req": _i(s.get("RequiredLevel"), None) or None,
              "cls": (item_cls.get(i) or (None, None))[0], "sub": (item_cls.get(i) or (None, None))[1]}
         item_info[str(i)] = {k: v for k, v in e.items() if v is not None}
+    try:                                   # never let the gear export cost the recipe database
+        gear, gear_fields = build_gear(t, sparse, item_cls)
+    except Exception as e:  # noqa: BLE001
+        print(f"gear export failed, skipped: {type(e).__name__}: {e}")
+        gear, gear_fields = {}, {"error": f"{type(e).__name__}: {e}"}
+    for i, g in gear.items():
+        if str(i) in item_info:
+            item_info[str(i)].update(g)
     by_prof = defaultdict(int)
     for r in recipes:
         by_prof[r["profession"]] += 1
     return {"format": 1, "items_scope": "all", "build": BUILD, "professions": {str(k): v for k, v in PROFESSIONS.items()},
             "recipes": recipes, "items": item_info, "counts": dict(by_prof), "skipped": dict(skipped),
+            "gear_fields": gear_fields,
             "source": f"WoW: Forever client tables (build {BUILD}) via wago.tools; Blizzard Entertainment's game data"}
+
+
+# ── gear stats (for Gold Intel's "Upgrades for you") ─────────────────────────────────────────────
+# Per weapon/armour item: inventory type, allowed classes, required level, armour, stats, weapon damage
+# and speed, and whether its stats come from a random suffix. Written against the DB2 column names of
+# the Classic-era client tables (ItemSparse StatModifier_bonusStat_N / StatModifier_bonusAmount_N,
+# Resistances_0 = armour, MinDamage_0 / MaxDamage_0, ItemDelay, RandomSelect / ItemRandomSuffixGroupID);
+# a column the client doesn't have is left out (unknown), never filled with a guess. gear_fields in the
+# payload says which were found.
+GEAR_CLASSES = (2, 4)                       # weapon, armour
+ITEM_MOD = {3: "agi", 4: "str", 5: "int", 6: "spi", 7: "sta", 0: "mana", 1: "health",
+            12: "def_rating", 13: "dodge_rating", 14: "parry_rating", 15: "block_rating",
+            16: "hit_rating", 17: "hit_rating", 18: "spellhit_rating", 19: "crit_rating", 20: "crit_rating",
+            21: "spellcrit_rating", 31: "hit_rating", 32: "crit_rating", 35: "resilience", 36: "haste_rating",
+            38: "ap", 39: "rap", 41: "heal", 42: "sp", 43: "mp5", 45: "sp", 46: "hp5", 48: "blockval"}
+APPLY_AURA, TRIGGER_ON_EQUIP = 6, 1
+SCHOOLS = {2: "holy", 4: "fire", 8: "nature", 16: "frost", 32: "shadow", 64: "arcane"}
+
+
+def _aura_stat(aura: int, misc: int) -> str | None:
+    """Equip-spell aura -> stat key (Classic aura ids). Unknown auras -> None (not counted)."""
+    if aura == 13:                           # MOD_DAMAGE_DONE: school mask
+        if misc & 126 == 126:
+            return "sp"
+        return f"sp_{SCHOOLS[misc]}" if misc in SCHOOLS else None
+    if aura == 30:                           # MOD_SKILL
+        return "def" if misc == 95 else None
+    if aura == 85:                           # MOD_POWER_REGEN
+        return "mp5" if misc == 0 else None
+    return {99: "ap", 124: "rap", 135: "heal", 52: "crit", 54: "hit", 57: "spellcrit", 55: "spellhit",
+            49: "dodge", 47: "parry", 51: "block", 158: "blockval", 115: "heal"}.get(aura)
+
+
+DAMAGE_TABLES = ("ItemDamageOneHand", "ItemDamageOneHandCaster", "ItemDamageTwoHand", "ItemDamageTwoHandCaster",
+                 "ItemDamageRanged", "ItemDamageThrown", "ItemDamageWand")
+CASTER_WEAPON_FLAG = 0x200                   # ItemSparse Flags_1
+
+
+def _damage_table(inv: int, sub: int, caster: bool) -> str:
+    if sub == 19:
+        return "ItemDamageWand"
+    if inv == 25:
+        return "ItemDamageThrown"
+    if inv in (15, 26):
+        return "ItemDamageRanged"
+    if inv == 17:
+        return "ItemDamageTwoHandCaster" if caster else "ItemDamageTwoHand"
+    return "ItemDamageOneHandCaster" if caster else "ItemDamageOneHand"
+
+
+def build_gear(t: dict[str, list[dict]], sparse: dict[int, dict], item_cls: dict) -> tuple[dict, dict]:
+    """item id -> gear fields (short keys), plus which client columns were present."""
+    cols = set(next(iter(sparse.values())).keys()) if sparse else set()
+    has = {"stats": "StatModifier_bonusStat_0" in cols and "StatModifier_bonusAmount_0" in cols,
+           "armor": "Resistances_0" in cols, "damage_columns": "MinDamage_0" in cols and "MaxDamage_0" in cols,
+           "speed": "ItemDelay" in cols, "random": bool({"RandomSelect", "ItemRandomSuffixGroupID"} & cols),
+           "damage_tables": [n for n in DAMAGE_TABLES if t.get(n)], "equip_effects": bool(t.get("ItemEffect"))}
+    dmg_tab = {n: {_i(r.get("ItemLevel")): r for r in t.get(n) or []} for n in DAMAGE_TABLES}
+    # equip spells -> stat auras
+    fx_of_spell: dict[int, list[tuple[str, int]]] = defaultdict(list)
+    for r in t.get("SpellEffect") or []:
+        if _i(r.get("DifficultyID")) or _i(r.get("Effect")) != APPLY_AURA:
+            continue
+        key = _aura_stat(_i(r.get("EffectAura")), _i(r.get("EffectMiscValue_0")))
+        if key:
+            v = _i(r.get("EffectBasePoints")) + (1 if _i(r.get("EffectDieSides")) > 0 else 0)
+            if v:
+                fx_of_spell[_i(r["SpellID"])].append((key, v))
+    equip_spells: dict[int, list[int]] = defaultdict(list)
+    effects = {_i(r["ID"]): r for r in t.get("ItemEffect") or []}
+    links = [(_i(r["ItemID"]), _i(r["ItemEffectID"])) for r in t.get("ItemXItemEffect") or []]
+    links += [(_i(r.get("ParentItemID")), _i(r["ID"])) for r in effects.values() if _i(r.get("ParentItemID"))]
+    for item, eid in links:
+        e = effects.get(eid)
+        if e and _i(e.get("TriggerType")) == TRIGGER_ON_EQUIP and _i(e.get("SpellID")):
+            if _i(e["SpellID"]) not in equip_spells[item]:
+                equip_spells[item].append(_i(e["SpellID"]))
+    out = {}
+    for i, s in sparse.items():
+        cls, sub = item_cls.get(i) or (None, None)
+        inv = _i(s.get("InventoryType"))
+        if cls not in GEAR_CLASSES or inv <= 0:
+            continue
+        g: dict = {"inv": inv}
+        ac = _i(s.get("AllowableClass"), None)
+        if ac is not None and ac not in (0, -1):
+            g["acls"] = ac
+        if has["stats"]:
+            st: dict[str, int] = {}
+            for k in range(10):
+                typ, amt = _i(s.get(f"StatModifier_bonusStat_{k}"), -1), _i(s.get(f"StatModifier_bonusAmount_{k}"))
+                if typ >= 0 and amt and typ in ITEM_MOD:
+                    st[ITEM_MOD[typ]] = st.get(ITEM_MOD[typ], 0) + amt
+                elif typ >= 0 and amt:
+                    st[f"mod{typ}"] = st.get(f"mod{typ}", 0) + amt       # an unknown stat: kept, not scored
+            g["st"] = st
+        fx: dict[str, int] = {}
+        for sp in equip_spells.get(i, []):
+            for key, v in fx_of_spell.get(sp, []):
+                fx[key] = fx.get(key, 0) + v
+        if fx:
+            g["fx"] = fx
+        if has["armor"]:
+            g["armor"] = _i(s.get("Resistances_0"))
+        if cls == 2:
+            delay = _i(s.get("ItemDelay")) if has["speed"] else 0
+            if delay > 0:
+                g["spd"] = delay
+            lo, hi = (_i(s.get("MinDamage_0")), _i(s.get("MaxDamage_0"))) if has["damage_columns"] else (0, 0)
+            if hi > 0:
+                g["dmg"] = [lo, hi]
+            elif delay > 0:
+                caster = bool(_i(s.get("Flags_1")) & CASTER_WEAPON_FLAG)
+                row = dmg_tab.get(_damage_table(inv, sub or 0, caster), {}).get(_i(s.get("ItemLevel")))
+                q = _i(s.get("OverallQualityID"), -1)
+                dps = float(row.get(f"Quality_{q}") or 0) if row and q >= 0 else 0.0
+                if dps > 0:
+                    avg = dps * delay / 1000
+                    var = float(s.get("DmgVariance") or 0)
+                    g["dmg"] = [round(avg * (1 - var / 2), 1), round(avg * (1 + var / 2), 1)]
+                    g["dmg_src"] = "table"
+        if has["random"]:
+            g["rnd"] = 1 if (_i(s.get("RandomSelect")) > 0 or _i(s.get("ItemRandomSuffixGroupID")) > 0) else 0
+        out[i] = g
+    return out, has
 
 
 TABLES = {"Item": None, "SpellCooldowns": None, "SkillLine": None, "SpellName": None, "SpellEffect": None, "SkillLineAbility": None, "SpellReagents": None,
           "ItemSparse": None, "ItemEffect": None, "ItemXItemEffect": None}
+OPTIONAL_TABLES = DAMAGE_TABLES
 
 
 def run(out: Path, cache: Path | None = None, force: bool = False, now: int | None = None) -> dict | None:
@@ -203,15 +338,20 @@ def run(out: Path, cache: Path | None = None, force: bool = False, now: int | No
     man_path = out / "manifest.json"
     man = json.loads(man_path.read_text()) if man_path.exists() else {}
     cur = man.get("recipes") or {}
-    if not force and cur.get("item_class") and cur.get("cooldowns") and cur.get("items_scope") == "all" and cur.get("build") == BUILD and now - (cur.get("generated_at") or 0) < MAX_AGE_MS \
+    if not force and cur.get("gear") and cur.get("item_class") and cur.get("cooldowns") and cur.get("items_scope") == "all" and cur.get("build") == BUILD and now - (cur.get("generated_at") or 0) < MAX_AGE_MS \
             and (out / "recipes.json.gz").exists():
         print(f"recipes: up to date ({cur.get('count')} recipes, build {BUILD})")
         return cur
     tables = {name: fetch(name, BUILD, cache) for name in TABLES}
+    for name in OPTIONAL_TABLES:            # weapon damage by item level (only some clients need them)
+        try:
+            tables[name] = fetch(name, BUILD, cache)
+        except Exception as e:  # noqa: BLE001
+            print(f"recipes: optional table {name} not available ({e}); weapon damage from it left out")
     payload = build_recipes(tables)
     raw = json.dumps(payload, separators=(",", ":"), sort_keys=True).encode()
     (out / "recipes.json.gz").write_bytes(gzip.compress(raw, mtime=0))
-    entry = {"path": "recipes.json.gz", "build": BUILD, "items_scope": "all", "cooldowns": True, "item_class": True, "items": len(payload["items"]), "generated_at": now, "count": len(payload["recipes"]),
+    entry = {"path": "recipes.json.gz", "build": BUILD, "items_scope": "all", "cooldowns": True, "item_class": True, "gear": True, "items": len(payload["items"]), "generated_at": now, "count": len(payload["recipes"]),
              "sha256": hashlib.sha256(raw).hexdigest()}
     man = json.loads(man_path.read_text()) if man_path.exists() else {}
     man["recipes"] = entry

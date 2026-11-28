@@ -72,9 +72,12 @@ def _p_removed_early(lam: float, lo: float, hi: float, g: float, n: int = 12) ->
     return pe / (pe + px) if pe + px > 0 else 0.0
 
 
-def classify_pair(before: dict, after: dict, gap_ms: int, commodity: bool) -> dict:
+def classify_pair(before: dict, after: dict, gap_ms: int, commodity: bool,
+                  w_near: float = W_NEAR, w_high: float = W_HIGH) -> dict:
     """before/after: {auction_ref: (item_key, qty, unit_price or None, time_left)}.
-    Returns {item_key: [FIELDS...]} for every item listed in either snapshot (None if the gap is unusable)."""
+    Returns {item_key: [FIELDS...]} for every item listed in either snapshot (None if the gap is unusable).
+    w_near / w_high: the chance an early removal near / 20%+ above the cheapest price was a sale
+    (defaults W_NEAR / W_HIGH; the app passes weights measured on your own auctions when it has enough)."""
     if gap_ms <= 0 or gap_ms > MAX_GAP_MS:
         return {}
     g = gap_ms / 3_600_000
@@ -121,7 +124,7 @@ def classify_pair(before: dict, after: dict, gap_ms: int, commodity: bool) -> di
             return not (floor and unit and unit > HIGH_RATIO * floor)
 
         def w(unit):
-            return W_NEAR if near(unit) else W_HIGH
+            return w_near if near(unit) else w_high
         # removal rate per unit-hour, separately near the cheapest price and above it (buyers take
         # the cheap end, so cheap listings go much faster)
         exp_n = exp_h = rem_n = rem_h = 0.0
@@ -176,7 +179,7 @@ def classify_pair(before: dict, after: dict, gap_ms: int, commodity: bool) -> di
             if lam <= 0:
                 continue
             surv = (1 - math.exp(-lam * g)) / (lam * g)          # mean of e^(-lam*u), u uniform in [0, g]
-            invisible += qty * (1 / max(surv, 0.2) - 1) * (1.0 if near(unit) else W_HIGH)
+            invisible += qty * (1 / max(surv, 0.2) - 1) * (1.0 if near(unit) else w_high)
         invisible = min(invisible, 2.0 * sum(q for r, q, _, _ in a if r not in seen_before))
         est += invisible
         out[key] = [round(est, 2), partial, partial + early + amb_units, partial, early, cancels, amb_units,
