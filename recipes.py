@@ -233,6 +233,7 @@ def _aura_stat(aura: int, misc: int) -> str | None:
             49: "dodge", 47: "parry", 51: "block", 158: "blockval", 115: "heal"}.get(aura)
 
 
+GEAR_VERSION = 2              # bump to rebuild the gear fields on the next run
 DAMAGE_TABLES = ("ItemDamageOneHand", "ItemDamageOneHandCaster", "ItemDamageTwoHand", "ItemDamageTwoHandCaster",
                  "ItemDamageRanged", "ItemDamageThrown", "ItemDamageWand")
 CASTER_WEAPON_FLAG = 0x200                   # ItemSparse Flags_1
@@ -253,6 +254,12 @@ def _damage_table(inv: int, sub: int, caster: bool) -> str:
 def build_gear(t: dict[str, list[dict]], sparse: dict[int, dict], item_cls: dict) -> tuple[dict, dict]:
     """item id -> gear fields (short keys), plus which client columns were present."""
     cols = set(next(iter(sparse.values())).keys()) if sparse else set()
+    # The run's log names the client's real ItemSparse columns, so the stat mapping can be checked
+    # against Forever's build rather than assumed.
+    print("recipes: ItemSparse columns:", ",".join(sorted(cols)))
+    for probe in (8193, 4249, 2139):
+        if probe in sparse:
+            print(f"recipes: ItemSparse {probe}:", {k: v for k, v in sparse[probe].items() if v not in ("", "0", 0, None)})
     has = {"stats": "StatModifier_bonusStat_0" in cols and "StatModifier_bonusAmount_0" in cols,
            "armor": "Resistances_0" in cols, "damage_columns": "MinDamage_0" in cols and "MaxDamage_0" in cols,
            "speed": "ItemDelay" in cols, "random": bool({"RandomSelect", "ItemRandomSuffixGroupID"} & cols),
@@ -338,7 +345,7 @@ def run(out: Path, cache: Path | None = None, force: bool = False, now: int | No
     man_path = out / "manifest.json"
     man = json.loads(man_path.read_text()) if man_path.exists() else {}
     cur = man.get("recipes") or {}
-    if not force and cur.get("gear") and cur.get("item_class") and cur.get("cooldowns") and cur.get("items_scope") == "all" and cur.get("build") == BUILD and now - (cur.get("generated_at") or 0) < MAX_AGE_MS \
+    if not force and cur.get("gear") == GEAR_VERSION and cur.get("item_class") and cur.get("cooldowns") and cur.get("items_scope") == "all" and cur.get("build") == BUILD and now - (cur.get("generated_at") or 0) < MAX_AGE_MS \
             and (out / "recipes.json.gz").exists():
         print(f"recipes: up to date ({cur.get('count')} recipes, build {BUILD})")
         return cur
@@ -351,7 +358,7 @@ def run(out: Path, cache: Path | None = None, force: bool = False, now: int | No
     payload = build_recipes(tables)
     raw = json.dumps(payload, separators=(",", ":"), sort_keys=True).encode()
     (out / "recipes.json.gz").write_bytes(gzip.compress(raw, mtime=0))
-    entry = {"path": "recipes.json.gz", "build": BUILD, "items_scope": "all", "cooldowns": True, "item_class": True, "gear": True, "items": len(payload["items"]), "generated_at": now, "count": len(payload["recipes"]),
+    entry = {"path": "recipes.json.gz", "build": BUILD, "items_scope": "all", "cooldowns": True, "item_class": True, "gear": GEAR_VERSION, "items": len(payload["items"]), "generated_at": now, "count": len(payload["recipes"]),
              "sha256": hashlib.sha256(raw).hexdigest()}
     man = json.loads(man_path.read_text()) if man_path.exists() else {}
     man["recipes"] = entry
